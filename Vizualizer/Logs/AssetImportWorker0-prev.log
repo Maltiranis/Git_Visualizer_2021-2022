@@ -1,0 +1,159 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19041.1165; Version 2004; 64bit' Language: 'fr' Physical Memory: 16357 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+F:\_SOFTS\Unity Editor\2020.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+F:/_SOFTS/GitHub/Vizualizer
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+54223
+Successfully changed project path to: F:/_SOFTS/GitHub/Vizualizer
+F:/_SOFTS/GitHub/Vizualizer
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 53.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/_SOFTS/GitHub/Vizualizer/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   27.21.14.5751
+Initialize mono
+Mono path[0] = 'F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56044
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001541 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.96 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.216 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004250 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.110 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.22 seconds
+Refreshing native plugins compatible for Editor in 0.62 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1530 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.3 MB.
+System memory in use after: 84.0 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 1957.
+Total: 3.232100 ms (FindLiveObjects: 0.315500 ms CreateObjectMapping: 0.075500 ms MarkObjects: 2.206000 ms  DeleteObjects: 0.629900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/delorean.jpg
+  artifactKey: Guid(e250651b3b087fa4cbdfbb0661494283) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/delorean.jpg using Guid(e250651b3b087fa4cbdfbb0661494283) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a16e0656c92fa5560259280f256a992') in 0.415948 seconds 
+  Import took 0.419419 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/neon3.bmp
+  artifactKey: Guid(2c63a7c6245738c4b852547b5ab7e776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neon3.bmp using Guid(2c63a7c6245738c4b852547b5ab7e776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '712fcafe3780f5889c48b5a5e3042360') in 0.017743 seconds 
+  Import took 0.020783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/neon4.bmp
+  artifactKey: Guid(af513a83a655ee44b9f01b0e2f9ccf86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neon4.bmp using Guid(af513a83a655ee44b9f01b0e2f9ccf86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be18cb30f27130caee69afb1e2611565') in 0.013493 seconds 
+  Import took 0.017277 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/526235.jpg
+  artifactKey: Guid(bbc83825677a3da4b808992982284fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/526235.jpg using Guid(bbc83825677a3da4b808992982284fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01fb9afd6dbb84c0b3b82e7b11e4b0fa') in 0.014977 seconds 
+  Import took 0.017755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/neon2.bmp
+  artifactKey: Guid(4d82c81cbd4e1634890dbade9f321bd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neon2.bmp using Guid(4d82c81cbd4e1634890dbade9f321bd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c124f5bec2b7088f489b9e3f2588d6a') in 0.013973 seconds 
+  Import took 0.016692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/475187.jpg
+  artifactKey: Guid(9b246bc15fd0091489e9f8139a61a271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/475187.jpg using Guid(9b246bc15fd0091489e9f8139a61a271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3728c32c51b4e852631bf19d54cf8ef') in 0.013351 seconds 
+  Import took 0.015998 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/1277501-kavinsky.jpg
+  artifactKey: Guid(fa30572e12557f34fa2f3146624e1d71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1277501-kavinsky.jpg using Guid(fa30572e12557f34fa2f3146624e1d71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2d9483e7b2716d09ab7f31e03622591') in 0.016230 seconds 
+  Import took 0.019594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/neon.bmp
+  artifactKey: Guid(13c6a79c1ee8e884e87994caaa31af21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/neon.bmp using Guid(13c6a79c1ee8e884e87994caaa31af21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db9ece55e749b41a4835096010fd075e') in 0.011833 seconds 
+  Import took 0.014882 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 991.782729 seconds.
+  path: Assets/Finally!.unity
+  artifactKey: Guid(93e0a781ba512744585f378d71139cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Finally!.unity using Guid(93e0a781ba512744585f378d71139cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c930b3297c348fd4b07d3089e11216d') in 0.013585 seconds 
+  Import took 0.019813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015027 seconds.
+  path: Assets/Finally!.unity
+  artifactKey: Guid(93e0a781ba512744585f378d71139cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Finally!.unity using Guid(93e0a781ba512744585f378d71139cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c930b3297c348fd4b07d3089e11216d') in 0.002186 seconds 
+  Import took 0.005427 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

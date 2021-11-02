@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 7bed6d7049a22844fad1d31465b3750a
+timeCreated: 1486357796
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Battlestar
+  fontNames:
+  - Battlestar
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
