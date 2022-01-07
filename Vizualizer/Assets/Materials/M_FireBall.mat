@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_FireBall
+  m_Shader: {fileID: 4800000, guid: c3752c9a695da7f45b23604dbb7913e0, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _HeatSpeed: 0.5
+    - _NoiseScale: 0.25
+    - _PaternSpeed: 5
+    - _VoroPaternScale: 5
+    - _VoroScale: 5
+    - __dirty: 0
+    m_Colors:
+    - _HeatDirection: {r: 1, g: 0.5, b: 0, a: 0}
+    - _OpacityParameters: {r: 0, g: 0.5, b: 0, a: 0}
+    - _PrincipalColor: {r: 3.031433, g: 0, b: 0, a: 1}
+    - _SecondaryColor: {r: 2.6390157, g: 1.6669492, b: 0.68465036, a: 1}
+    - _SmoothStep: {r: -0.1, g: 0.4, b: 0, a: 0}
+  m_BuildTextureStacks: []

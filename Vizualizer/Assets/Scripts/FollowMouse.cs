@@ -6,6 +6,7 @@ public class FollowMouse : MonoBehaviour
 {
     public float offsetZ = 10.0f;
     public float speed = 2.0f;
+    public bool instantaneous = false;
 
     void Start()
     {
@@ -17,6 +18,9 @@ public class FollowMouse : MonoBehaviour
         Vector3 temp = Input.mousePosition;
         temp.z = offsetZ;
 
-        this.transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(temp), speed * Time.deltaTime);
+        if (instantaneous == false)
+            this.transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(temp), speed * Time.deltaTime);
+        else
+            this.transform.position = Camera.main.ScreenToWorldPoint(temp);
     }
 }
