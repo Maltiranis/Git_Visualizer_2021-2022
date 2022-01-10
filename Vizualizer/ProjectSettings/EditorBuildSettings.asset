@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FollowMouse.unity
-    guid: cc69431b99ab3fd449b6a6981cf24880
+    path: Assets/Scenes/Interfaces2.0.unity
+    guid: 3fd3206731640c4468bde76ff01f02dc
   m_configObjects: {}
