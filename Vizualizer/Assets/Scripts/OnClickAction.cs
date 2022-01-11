@@ -9,6 +9,8 @@ public class OnClickAction : MonoBehaviour
     public Vector3 position1;
     public Vector3 position2;
     bool isIn = false;
+    public Material mat1;
+    public Material mat2;
 
     public float transitionTime = 0.2f;
     float timeElapsed = 0.0f;
@@ -22,6 +24,7 @@ public class OnClickAction : MonoBehaviour
     {
         Deploy();
         ClickAction();
+        ChangeMatIfActif();
     }
 
     #region Deployment
@@ -60,6 +63,23 @@ public class OnClickAction : MonoBehaviour
         }
     }
     #endregion Clic
+
+    #region ChangeMat
+    private void ChangeMatIfActif () //require meshrenderer in Child(0)
+    {
+        if (mat1 != null && mat2 != null)
+        {
+            if(toActivate.activeInHierarchy)
+            {
+                transform.GetChild(0).GetComponent<Renderer>().material = mat2;
+            }
+            else
+            {
+                transform.GetChild(0).GetComponent<Renderer>().material = mat1;
+            }
+        }
+    }
+    #endregion ChangeMat
 
     private void OnTriggerEnter2D(Collider2D other)
     {
