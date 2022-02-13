@@ -194,24 +194,32 @@ namespace AmplifyShaderEditor
 		SurfaceData,
 		Textures,
 		Time,
-		TrignometryOperators,
+		TrigonometryOperators,
 		UVCoordinates,
 		VectorOperators,
 		VertexData
 	}
 
-	public enum TransformSpace
+	public enum TransformSpaceFrom
 	{
 		Object = 0,
 		World,
 		View,
-		Clip,
 		Tangent
-		//Screen??
+	}
+
+	public enum TransformSpaceTo
+	{
+		Object = 0,
+		World,
+		View,
+		Tangent,
+		Clip
 	}
 
 	public class UIUtils
 	{
+		public static string NewTemplateGUID;
 		public static int SerializeHelperCounter = 0;
 		public static bool IgnoreDeselectAll = false;
 
@@ -263,6 +271,7 @@ namespace AmplifyShaderEditor
 
 		public static GUIStyle EmptyStyle = new GUIStyle();
 
+		public static GUIStyle ConsoleLogLabel;
 		public static GUIStyle ConsoleLogMessage;
 		public static GUIStyle ConsoleLogCircle;
 
@@ -418,7 +427,7 @@ namespace AmplifyShaderEditor
 			"Surface Data",
 			"Textures",
 			"Time",
-			"Trignometry Operators",
+			"Trigonometry Operators",
 			"UV Coordinates",
 			"Vector Operators",
 			"Vertex Data"
@@ -527,7 +536,7 @@ namespace AmplifyShaderEditor
 			{TextureType.Texture2D,			"sampler2D" },
 			{TextureType.Texture3D,			"sampler3D" },
 			{TextureType.Cube ,				"samplerCUBE"},
-			{TextureType.Texture2DArray,	"sampler2D" },
+			{TextureType.Texture2DArray,	"sampler2DArray" },
 			{TextureType.ProceduralTexture,	"sampler2D" }
 		};
 
@@ -578,7 +587,8 @@ namespace AmplifyShaderEditor
 		private static Color[] m_dataTypeToColorMonoMode = { new Color( 0.5f, 0.5f, 0.5f, 1.0f ), Color.white };
 		private static Dictionary<WirePortDataType, Color> m_dataTypeToColor = new Dictionary<WirePortDataType, Color>( new WirePortDataTypeComparer() )
 		{
-			{  WirePortDataType.OBJECT,		Color.white},
+			{ WirePortDataType.OBJECT,		Color.white},
+			{ WirePortDataType.SAMPLERSTATE,Color.white},
 			{ WirePortDataType.FLOAT,		Color.gray},
 			{ WirePortDataType.FLOAT2,		new Color(1f,1f,0f,1f)},
 			{ WirePortDataType.FLOAT3,		new Color(0.5f,0.5f,1f,1f)},
@@ -586,11 +596,12 @@ namespace AmplifyShaderEditor
 			{ WirePortDataType.FLOAT3x3,	new Color(0.5f,1f,0.5f,1f)},
 			{ WirePortDataType.FLOAT4x4,	new Color(0.5f,1f,0.5f,1f)},
 			{ WirePortDataType.COLOR,		new Color(1f,0,1f,1f)},
-			{ WirePortDataType.INT,			Color.gray},
+			{ WirePortDataType.INT,         Color.white},
 			{ WirePortDataType.SAMPLER1D,	new Color(1f,0.5f,0f,1f)},
 			{ WirePortDataType.SAMPLER2D,	new Color(1f,0.5f,0f,1f)},
 			{ WirePortDataType.SAMPLER3D,	new Color(1f,0.5f,0f,1f)},
-			{ WirePortDataType.SAMPLERCUBE,	new Color(1f,0.5f,0f,1f)}
+			{ WirePortDataType.SAMPLERCUBE,	new Color(1f,0.5f,0f,1f)},
+			{ WirePortDataType.SAMPLER2DARRAY, new Color(1f,0.5f,0f,1f)}
 		};
 
 		private static Dictionary<WirePortDataType, string> m_dataTypeToName = new Dictionary<WirePortDataType, string>()
@@ -607,7 +618,9 @@ namespace AmplifyShaderEditor
 			{ WirePortDataType.SAMPLER1D,	"Sampler1D"},
 			{ WirePortDataType.SAMPLER2D,	"Sampler2D"},
 			{ WirePortDataType.SAMPLER3D,	"Sampler3D"},
-			{ WirePortDataType.SAMPLERCUBE,	"SamplerCUBE"}
+			{ WirePortDataType.SAMPLERCUBE,	"SamplerCUBE"},
+			{ WirePortDataType.SAMPLER2DARRAY, "Sampler2DArray"},
+			{ WirePortDataType.SAMPLERSTATE,"Sampler State"},
 		};
 
 		private static Dictionary<SurfaceInputs, string> m_inputTypeDeclaration = new Dictionary<SurfaceInputs, string>()
@@ -666,7 +679,45 @@ namespace AmplifyShaderEditor
 			{WirePortDataType.SAMPLER1D,    "sampler1D"},
 			{WirePortDataType.SAMPLER2D,    "sampler2D"},
 			{WirePortDataType.SAMPLER3D,    "sampler3D"},
-			{WirePortDataType.SAMPLERCUBE,  "samplerCUBE"}
+			{WirePortDataType.SAMPLERCUBE,  "samplerCUBE"},
+			{WirePortDataType.SAMPLER2DARRAY,    "sampler2DArray"},
+			{WirePortDataType.SAMPLERSTATE, "SamplerState"}
+		};
+
+		private static Dictionary<WirePortDataType, string> m_precisionWirePortToStandardMacroType = new Dictionary<WirePortDataType, string>()
+		{
+			{WirePortDataType.FLOAT,       "{0}"},
+			{WirePortDataType.FLOAT2,       "{0}2"},
+			{WirePortDataType.FLOAT3,       "{0}3"},
+			{WirePortDataType.FLOAT4,       "{0}4"},
+			{WirePortDataType.FLOAT3x3,     "{0}3x3"},
+			{WirePortDataType.FLOAT4x4,     "{0}4x4"},
+			{WirePortDataType.COLOR,        "{0}4"},
+			{WirePortDataType.INT,          "int"},
+			{WirePortDataType.SAMPLER1D,    "sampler1D"},
+			{WirePortDataType.SAMPLER2D,    "UNITY_DECLARE_TEX2D_NOSAMPLER("},
+			{WirePortDataType.SAMPLER3D,    "UNITY_DECLARE_TEX3D_NOSAMPLER("},
+			{WirePortDataType.SAMPLERCUBE,  "UNITY_DECLARE_TEXCUBE_NOSAMPLER("},
+			{WirePortDataType.SAMPLER2DARRAY,    "UNITY_DECLARE_TEX2DARRAY_NOSAMPLER("},
+			{WirePortDataType.SAMPLERSTATE, "SamplerState"}
+		};
+
+		private static Dictionary<WirePortDataType, string> m_precisionWirePortToSRPMacroType = new Dictionary<WirePortDataType, string>()
+		{
+			{WirePortDataType.FLOAT,       "{0}"},
+			{WirePortDataType.FLOAT2,       "{0}2"},
+			{WirePortDataType.FLOAT3,       "{0}3"},
+			{WirePortDataType.FLOAT4,       "{0}4"},
+			{WirePortDataType.FLOAT3x3,     "{0}3x3"},
+			{WirePortDataType.FLOAT4x4,     "{0}4x4"},
+			{WirePortDataType.COLOR,        "{0}4"},
+			{WirePortDataType.INT,          "int"},
+			{WirePortDataType.SAMPLER1D,    "sampler1D"},
+			{WirePortDataType.SAMPLER2D,    "TEXTURE2D("},
+			{WirePortDataType.SAMPLER3D,    "TEXTURE3D("},
+			{WirePortDataType.SAMPLERCUBE,  "TEXTURECUBE("},
+			{WirePortDataType.SAMPLER2DARRAY,    "TEXTURE2D_ARRAY("},
+			{WirePortDataType.SAMPLERSTATE, "SamplerState"}
 		};
 
 		private static Dictionary<WirePortDataType, string> m_wirePortToCgType = new Dictionary<WirePortDataType, string>()
@@ -683,7 +734,9 @@ namespace AmplifyShaderEditor
 			{WirePortDataType.SAMPLER2D,	"sampler2D"},
 			{WirePortDataType.SAMPLER3D,	"sampler3D"},
 			{WirePortDataType.SAMPLERCUBE,	"samplerCUBE"},
-			{WirePortDataType.UINT,			"uint"}
+			{WirePortDataType.SAMPLER2DARRAY,  "sampler2DArray"},
+			{WirePortDataType.UINT,			"uint"},
+			{WirePortDataType.SAMPLERSTATE, "SamplerState"}
 		};
 
 		private static Dictionary<KeyCode, string> m_keycodeToString = new Dictionary<KeyCode, string>()
@@ -723,11 +776,13 @@ namespace AmplifyShaderEditor
 		
 		private static Dictionary<WirePortDataType, int> m_portPriority = new Dictionary<WirePortDataType, int>()
 		{
-			{ WirePortDataType.OBJECT,      0},
+			{WirePortDataType.OBJECT,       0},
+			{WirePortDataType.SAMPLERSTATE, 0},
 			{WirePortDataType.SAMPLER1D,    0},
 			{WirePortDataType.SAMPLER2D,    0},
 			{WirePortDataType.SAMPLER3D,    0},
 			{WirePortDataType.SAMPLERCUBE,  0},
+			{WirePortDataType.SAMPLER2DARRAY,  0},
 			{WirePortDataType.FLOAT3x3,     1},
 			{WirePortDataType.FLOAT4x4,     2},
 			{WirePortDataType.INT,          3},
@@ -824,6 +879,7 @@ namespace AmplifyShaderEditor
 			GraphButton = null;
 			GraphDropDown = null;
 
+			ConsoleLogLabel = null;
 			ConsoleLogMessage = null;
 			ConsoleLogCircle = null;
 
@@ -989,6 +1045,8 @@ namespace AmplifyShaderEditor
 			RangedFloatSliderThumbStyle.active.background = null;
 			RangedFloatSliderThumbStyle.hover.background = null;
 			RangedFloatSliderThumbStyle.focused.background = null;
+			RangedFloatSliderThumbStyle.overflow = new RectOffset( 1, 1, -4, 4 );
+			RangedFloatSliderThumbStyle.margin = RectOffsetZero;
 
 			SwitchNodePopUp = new GUIStyle( (GUIStyle)"Popup" );
 			// RectOffset cannot be initiliazed on constructor
@@ -1004,7 +1062,7 @@ namespace AmplifyShaderEditor
 			GraphDropDown = new GUIStyle( MainSkin.customStyles[ (int)CustomStyle.GraphButton ] );
 			GraphDropDown.padding.right = 20;
 
-			Box = new GUIStyle( GUI.skin.box );
+			Box = new GUIStyle( MainSkin.box );
 			Button = new GUIStyle( GUI.skin.button );
 			TextArea = new GUIStyle( GUI.skin.textArea );
 			Label = new GUIStyle( GUI.skin.label );
@@ -1013,6 +1071,7 @@ namespace AmplifyShaderEditor
 			//ShaderIcon = EditorGUIUtility.IconContent( "Shader Icon" ).image;
 			//MaterialIcon = EditorGUIUtility.IconContent( "Material Icon" ).image;
 
+			ConsoleLogLabel = new GUIStyle( GUI.skin.label );
 			ConsoleLogMessage = new GUIStyle( MainSkin.customStyles[ (int)CustomStyle.ConsoleLogMessage ] );
 			ConsoleLogCircle = new GUIStyle( MainSkin.customStyles[ (int)CustomStyle.ConsoleLogCircle ] );
 
@@ -1265,6 +1324,61 @@ namespace AmplifyShaderEditor
 			return string.Format( m_precisionWirePortToCgType[ type ], m_precisionTypeToCg[ precisionType ] );
 		}
 
+		public static string PrecisionWirePortToTypeValue( PrecisionType precisionType, WirePortDataType type, string varName/*, bool isSRP, bool samplingMacro*/ )
+		{
+			string result = string.Empty;
+			string varType = string.Empty;
+			if( type == WirePortDataType.OBJECT )
+				varType = string.Empty;
+
+			if( type == WirePortDataType.INT )
+				varType = m_wirePortToCgType[ type ];
+
+			if( type == WirePortDataType.UINT )
+				varType = m_wirePortToCgType[ type ];
+
+			switch( type )
+			{
+				default:
+				case WirePortDataType.OBJECT:
+				case WirePortDataType.SAMPLERSTATE:
+				case WirePortDataType.FLOAT:
+				case WirePortDataType.FLOAT2:
+				case WirePortDataType.FLOAT3:
+				case WirePortDataType.FLOAT4:
+				case WirePortDataType.FLOAT3x3:
+				case WirePortDataType.FLOAT4x4:
+				case WirePortDataType.COLOR:
+				case WirePortDataType.UINT:
+				case WirePortDataType.INT:
+				case WirePortDataType.SAMPLER1D:
+				varType = string.Format( m_precisionWirePortToCgType[ type ], m_precisionTypeToCg[ precisionType ] );
+				result = varType + " " + varName;
+				break;
+				case WirePortDataType.SAMPLER2D:
+				case WirePortDataType.SAMPLER3D:
+				case WirePortDataType.SAMPLERCUBE:
+				case WirePortDataType.SAMPLER2DARRAY:
+				ParentGraph outsideGraph = UIUtils.CurrentWindow.OutsideGraph;
+				if( outsideGraph.SamplingMacros && !outsideGraph.IsStandardSurface )
+				{
+					if( outsideGraph.IsSRP )
+						varType = string.Format( m_precisionWirePortToSRPMacroType[ type ], m_precisionTypeToCg[ precisionType ] );
+					else
+						varType = string.Format( m_precisionWirePortToStandardMacroType[ type ], m_precisionTypeToCg[ precisionType ] );
+					result = varType + varName + ")";
+				}
+				else
+				{
+					varType = string.Format( m_precisionWirePortToCgType[ type ], m_precisionTypeToCg[ precisionType ] );
+					result = varType + " " + varName;
+				}
+				break;
+			}
+
+			return result;
+		}
+
 		public static string GetAutoSwizzle( WirePortDataType type )
 		{
 			return m_autoSwizzle[ type ];
@@ -1289,6 +1403,7 @@ namespace AmplifyShaderEditor
 			switch ( type )
 			{
 				case WirePortDataType.OBJECT:
+				case WirePortDataType.SAMPLERSTATE:
 				case WirePortDataType.FLOAT:
 				case WirePortDataType.FLOAT2:
 				case WirePortDataType.FLOAT3:
@@ -1301,6 +1416,7 @@ namespace AmplifyShaderEditor
 				case WirePortDataType.SAMPLER2D:
 				case WirePortDataType.SAMPLER3D:
 				case WirePortDataType.SAMPLERCUBE:
+				case WirePortDataType.SAMPLER2DARRAY:
 				return true;
 			}
 			return false;
@@ -1653,7 +1769,7 @@ namespace AmplifyShaderEditor
 				result = "0";
 				string warningStr = string.Format( "Unable to cast from {0} to {1}. Generating dummy data ( {2} )", oldType, newType, result );
 
-				if( oldType == WirePortDataType.SAMPLER1D || oldType == WirePortDataType.SAMPLER2D || oldType == WirePortDataType.SAMPLER3D || oldType == WirePortDataType.SAMPLERCUBE )
+				if( oldType == WirePortDataType.SAMPLER1D || oldType == WirePortDataType.SAMPLER2D || oldType == WirePortDataType.SAMPLER3D || oldType == WirePortDataType.SAMPLERCUBE || oldType == WirePortDataType.SAMPLER2DARRAY )
 				{
 					warningStr = string.Format( "Unable to cast from {0} to {1}. You might want to use a Texture Sample node and connect it to the 'Tex' port. Generating dummy data ( {2} )", oldType, newType, result );
 				}
@@ -1887,19 +2003,19 @@ namespace AmplifyShaderEditor
 
 		public static string InvalidParameter( ParentNode node )
 		{
-			ShowMessage( "Invalid entrance type on node" + node, MessageSeverity.Error );
+			ShowMessage( node.UniqueId, "Invalid entrance type on node" + node, MessageSeverity.Error );
 			return "0";
 		}
 
 		public static string NoConnection( ParentNode node )
 		{
-			ShowMessage( "No Input connection on node" + node, MessageSeverity.Error );
+			ShowMessage( node.UniqueId, "No Input connection on node" + node, MessageSeverity.Error );
 			return "0";
 		}
 
 		public static string UnknownError( ParentNode node )
 		{
-			ShowMessage( "Unknown error on node" + node, MessageSeverity.Error );
+			ShowMessage( node.UniqueId, "Unknown error on node" + node, MessageSeverity.Error );
 			return "0";
 		}
 
@@ -1967,7 +2083,7 @@ namespace AmplifyShaderEditor
 			return newShader;
 		}
 
-		public static Shader CreateNewEmpty( string customPath = null )
+		public static Shader CreateNewEmpty( string customPath = null , string customShaderName = null )
 		{
 			if( CurrentWindow == null )
 				return null;
@@ -1995,12 +2111,19 @@ namespace AmplifyShaderEditor
 			else
 			{
 				pathName = customPath;
-				shaderName = Constants.DefaultShaderName;
-				int indexOfAssets = pathName.IndexOf( "Assets" );
-				string uniquePath = ( indexOfAssets > 0 )? pathName.Remove( 0, indexOfAssets ) : pathName;
-				string assetPathAndName = AssetDatabase.GenerateUniqueAssetPath( uniquePath + shaderName + ".shader" );
-				pathName = assetPathAndName;
-				shaderName = assetPathAndName.Remove( 0, assetPathAndName.IndexOf( shaderName ) );
+				if( string.IsNullOrEmpty( customShaderName ) )
+				{
+					shaderName = Constants.DefaultShaderName;
+					int indexOfAssets = pathName.IndexOf( "Assets" );
+					string uniquePath = ( indexOfAssets > 0 ) ? pathName.Remove( 0, indexOfAssets ) : pathName;
+					string assetPathAndName = AssetDatabase.GenerateUniqueAssetPath( uniquePath + shaderName + ".shader" );
+					pathName = assetPathAndName;
+					shaderName = assetPathAndName.Remove( 0, assetPathAndName.IndexOf( shaderName ) );
+				}
+				else
+				{
+					shaderName = customShaderName;
+				}
 				shaderName = shaderName.Remove( shaderName.Length - 7 );
 			}
 			if( !System.String.IsNullOrEmpty( shaderName ) && !System.String.IsNullOrEmpty( pathName ) )
@@ -2020,7 +2143,7 @@ namespace AmplifyShaderEditor
 		}
 
 
-		public static Shader CreateNewEmptyTemplate( string templateGUID, string customPath = null )
+		public static Shader CreateNewEmptyTemplate( string templateGUID, string customPath = null, string customShaderName = null )
 		{
 			if( CurrentWindow == null )
 				return null;
@@ -2048,12 +2171,19 @@ namespace AmplifyShaderEditor
 			else
 			{
 				pathName = customPath;
-				shaderName = Constants.DefaultShaderName;
-				int indexOfAssets = pathName.IndexOf( "Assets" );
-				string uniquePath = ( indexOfAssets > 0 ) ? pathName.Remove( 0, indexOfAssets ) : pathName;
-				string assetPathAndName = AssetDatabase.GenerateUniqueAssetPath( uniquePath + shaderName + ".shader" );
-				pathName = assetPathAndName;
-				shaderName = assetPathAndName.Remove( 0, assetPathAndName.IndexOf( shaderName ) );
+				if( string.IsNullOrEmpty( customShaderName ) )
+				{
+					shaderName = Constants.DefaultShaderName;
+					int indexOfAssets = pathName.IndexOf( "Assets" );
+					string uniquePath = ( indexOfAssets > 0 ) ? pathName.Remove( 0, indexOfAssets ) : pathName;
+					string assetPathAndName = AssetDatabase.GenerateUniqueAssetPath( uniquePath + shaderName + ".shader" );
+					pathName = assetPathAndName;
+					shaderName = assetPathAndName.Remove( 0, assetPathAndName.IndexOf( shaderName ) );
+				}
+				else
+				{
+					shaderName = customShaderName;
+				}
 				shaderName = shaderName.Remove( shaderName.Length - 7 );
 			}
 			if( !System.String.IsNullOrEmpty( shaderName ) && !System.String.IsNullOrEmpty( pathName ) )
@@ -2190,6 +2320,14 @@ namespace AmplifyShaderEditor
 			}
 		}
 
+		public static void ShowMessage( int ownerId, string message, MessageSeverity severity = MessageSeverity.Normal, bool registerTimestamp = true )
+		{
+			if( CurrentWindow != null )
+			{
+				CurrentWindow.ShowMessage( ownerId, message, severity, registerTimestamp );
+			}
+		}
+
 		public static void ShowMessage( string message, MessageSeverity severity = MessageSeverity.Normal, bool registerTimestamp = true )
 		{
 			if( CurrentWindow != null )
@@ -2215,6 +2353,16 @@ namespace AmplifyShaderEditor
 			}
 			return null;
 		}
+
+		public static PropertyNode GetInternalTemplateNode( string propertyName )
+		{
+			if( CurrentWindow != null )
+			{
+				return CurrentWindow.CurrentGraph.GetInternalTemplateNode( propertyName );
+			}
+			return null;
+		}
+
 
 		public static void DeleteConnection( bool isInput, int nodeId, int portId, bool registerOnLog, bool propagateCallback )
 		{
@@ -2707,12 +2855,12 @@ namespace AmplifyShaderEditor
 		{
 			string inPortName = inPort.Name.Equals( Constants.EmptyPortValue ) ? inPort.PortId.ToString() : inPort.Name;
 			string outPortName = outPort.Name.Equals( Constants.EmptyPortValue ) ? outPort.PortId.ToString() : outPort.Name;
-			ShowMessage( string.Format( ( fromInput ? IncorrectInputConnectionErrorMsg : IncorrectOutputConnectionErrorMsg ), inPortName, inNode.Attributes.Name, inPort.DataType, outPort.DataType, outPortName, outNode.Attributes.Name ) );
+			ShowMessage( outNode.UniqueId, string.Format( ( fromInput ? IncorrectInputConnectionErrorMsg : IncorrectOutputConnectionErrorMsg ), inPortName, inNode.Attributes.Name, inPort.DataType, outPort.DataType, outPortName, outNode.Attributes.Name ) );
 		}
 
 		public static void ShowNoVertexModeNodeMessage( ParentNode node )
 		{
-			ShowMessage( string.Format( NoVertexModeNodeWarning, node.Attributes.Name ), MessageSeverity.Warning );
+			ShowMessage( node.UniqueId, string.Format( NoVertexModeNodeWarning, node.Attributes.Name ), MessageSeverity.Warning );
 		}
 
 		public static int TotalExampleMaterials { get { return m_exampleMaterialIDs.Count; } }

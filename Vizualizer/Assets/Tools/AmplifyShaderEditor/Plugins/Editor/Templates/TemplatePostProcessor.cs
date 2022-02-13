@@ -3,6 +3,11 @@
 
 using UnityEditor;
 using UnityEngine;
+using System.IO;
+using System.Security.AccessControl;
+using System.Security.Principal;
+using System.Text.RegularExpressions;
+using Debug = UnityEngine.Debug;
 
 namespace AmplifyShaderEditor
 {
@@ -21,6 +26,20 @@ namespace AmplifyShaderEditor
 
 		static void OnPostprocessAllAssets( string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths )
 		{
+			bool containsShaders = false;
+			for( int i = 0; i < importedAssets.Length; i++ )
+			{
+				if( importedAssets[ i ].EndsWith( ".shader" ) )
+				{
+					containsShaders = true;
+					break;
+				}
+			}
+
+			// leave early if there's no shaders among the imports
+			if( !containsShaders )
+				return;
+
 			TemplatesManager templatesManager;
 			bool firstTimeDummyFlag = false;
 			if( UIUtils.CurrentWindow == null )
@@ -60,16 +79,19 @@ namespace AmplifyShaderEditor
 					{
 						refreshMenuItems = templateData.Reload() || refreshMenuItems || firstTimeDummyFlag;
 						int windowCount = IOUtils.AllOpenedWindows.Count;
+						AmplifyShaderEditorWindow currWindow = UIUtils.CurrentWindow;
 						for( int windowIdx = 0; windowIdx < windowCount; windowIdx++ )
 						{
 							if( IOUtils.AllOpenedWindows[ windowIdx ].OutsideGraph.CurrentCanvasMode == NodeAvailability.TemplateShader )
 							{
 								if( IOUtils.AllOpenedWindows[ windowIdx ].OutsideGraph.MultiPassMasterNodes.NodesList[ 0 ].CurrentTemplate == templateData )
 								{
+									UIUtils.CurrentWindow = IOUtils.AllOpenedWindows[ windowIdx ];
 									IOUtils.AllOpenedWindows[ windowIdx ].OutsideGraph.ForceMultiPassMasterNodesRefresh();
 								}
 							}
 						}
+						UIUtils.CurrentWindow = currWindow;
 					}
 					else
 					{
@@ -134,12 +156,22 @@ namespace AmplifyShaderEditor
 				refreshMenuItems = false;
 				templatesManager.CreateTemplateMenuItems();
 
+				AmplifyShaderEditorWindow currWindow = UIUtils.CurrentWindow;
+
 				int windowCount = IOUtils.AllOpenedWindows.Count;
 				for( int windowIdx = 0; windowIdx < windowCount; windowIdx++ )
 				{
+					UIUtils.CurrentWindow = IOUtils.AllOpenedWindows[ windowIdx ];
 					IOUtils.AllOpenedWindows[ windowIdx ].CurrentGraph.ForceCategoryRefresh();
 				}
+				UIUtils.CurrentWindow = currWindow;
 			}
+
+			// reimport menu items at the end of everything, hopefully preventing import loops
+			templatesManager.ReimportMenuItems();
+
+			// destroying the DummyManager, not doing so will create leaks over time
+			Destroy();
 		}
 	}
 }

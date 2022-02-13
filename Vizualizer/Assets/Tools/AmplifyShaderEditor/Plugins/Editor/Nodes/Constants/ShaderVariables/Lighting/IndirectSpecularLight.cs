@@ -48,9 +48,16 @@ namespace AmplifyShaderEditor
 			base.SetPreviewInputs();
 
 			if( m_inputPorts[ 0 ].IsConnected )
-				m_previewMaterialPassId = 1;
+			{
+				if( m_normalSpace == ViewSpace.Tangent )
+					m_previewMaterialPassId = 1;
+				else
+					m_previewMaterialPassId = 2;
+			}
 			else
+			{
 				m_previewMaterialPassId = 0;
+			}
 		}
 
 		public override void DrawProperties()
@@ -162,14 +169,14 @@ namespace AmplifyShaderEditor
 					}
 					else if( dataCollector.CurrentSRPType == TemplateSRPType.HD )
 					{
-						UIUtils.ShowMessage( "Indirect Specular Light node currently not supported on HDRP" );
-						return "float3(0,0,0)";
+						UIUtils.ShowMessage( UniqueId, "Indirect Specular Light node currently not supported on HDRP" );
+						return m_outputPorts[0].ErrorValue;
 					}
 				}
 			}
 
 			if( dataCollector.GenType == PortGenType.NonCustomLighting || dataCollector.CurrentCanvasMode != NodeAvailability.CustomLighting )
-				return "float3(0,0,0)";
+				return m_outputPorts[0].ErrorValue;
 
 			string normal = string.Empty;
 			if( m_inputPorts[ 0 ].IsConnected )
@@ -243,7 +250,7 @@ namespace AmplifyShaderEditor
 			{
 				m_errorMessageTooltip = "Smoothness port was previously being used as Roughness, please check if you are correctly using it and save to confirm.";
 				m_upgradeMessage = true;
-				UIUtils.ShowMessage( "Indirect Specular Light node: Smoothness port was previously being used as Roughness, please check if you are correctly using it and save to confirm." );
+				UIUtils.ShowMessage( UniqueId, "Indirect Specular Light node: Smoothness port was previously being used as Roughness, please check if you are correctly using it and save to confirm." );
 			}
 
 			UpdatePort();

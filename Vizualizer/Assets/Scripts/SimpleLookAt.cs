@@ -8,6 +8,8 @@ public class SimpleLookAt : MonoBehaviour
     public Transform looked;
     public float lookatSpeed = 2.0f;
     public float rotSpeed = 10.0f;
+    public Vector2 rotTimeRange;
+    public Vector2 rotSpeedRange;
 
     float brassage = 0.0f;
 

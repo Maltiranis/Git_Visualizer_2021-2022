@@ -202,16 +202,16 @@ namespace AmplifyShaderEditor
 		public override string GenerateShaderForOutput( int outputId, ref MasterNodeDataCollector dataCollector, bool ignoreLocalvar )
 		{
 			if( dataCollector.IsTemplate )
-				return "float3(0,0,0)";
+				return m_outputPorts[0].ErrorValue;
 
 			if( dataCollector.IsFragmentCategory )
 			{
-				UIUtils.ShowMessage( ErrorMessage );
-				return "float3(0,0,0)";
+				UIUtils.ShowMessage( UniqueId, ErrorMessage );
+				return m_outputPorts[ 0 ].ErrorValue;
 			}
 
 			if( m_outputPorts[ 0 ].IsLocalValue( dataCollector.PortCategory ) )
-				return "float3(0,0,0)";
+				return m_outputPorts[ 0 ].ErrorValue;
 
 			m_outputPorts[ 0 ].SetLocalValue( "0", dataCollector.PortCategory );
 
@@ -289,6 +289,8 @@ namespace AmplifyShaderEditor
 			if( outlineDataCollector.UsingWorldNormal )
 				outlineDataCollector.AddInstructions( ( addTabs ? "\n\t\t\t" : "" ) + "o.Normal = float3(0,0,-1);" );
 
+			outlineDataCollector.AddASEMacros();
+
 			if( masterNode != null )
 			{
 				//masterNode.AdditionalIncludes.AddToDataCollector( ref outlineDataCollector );
@@ -303,9 +305,12 @@ namespace AmplifyShaderEditor
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.Includes = outlineDataCollector.Includes;
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.Pragmas = outlineDataCollector.Pragmas;
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.Defines = outlineDataCollector.Defines;
+			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.StandardAdditionalDirectives = outlineDataCollector.StandardAdditionalDirectives;
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.Uniforms = outlineDataCollector.Uniforms;
+			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.InstancedProperties = outlineDataCollector.InstancedProperties;
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.GrabPasses = outlineDataCollector.GrabPass;
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.UniformList = outlineDataCollector.UniformsList;
+			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.InstancedPropertiesList = outlineDataCollector.InstancedPropertiesList;
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.VertexData = outlineDataCollector.VertexData;
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.Instructions = outlineDataCollector.Instructions;
 			UIUtils.CurrentWindow.OutsideGraph.CurrentStandardSurface.OutlineHelper.Functions = outlineDataCollector.Functions;

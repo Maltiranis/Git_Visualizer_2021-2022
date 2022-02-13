@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_MaskingObjects
+  m_Shader: {fileID: 4800000, guid: db640af45afa0784d8c0a3133539663d, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CamObjects:
+        m_Texture: {fileID: 8600000, guid: fca4fe9614a08c24587ad1af7bb337fc, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CamObjects1:
+        m_Texture: {fileID: 8600000, guid: fca4fe9614a08c24587ad1af7bb337fc, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 8600000, guid: fca4fe9614a08c24587ad1af7bb337fc, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _DepthFadePower: 5
+    - _DepthMult: 0
+    - _Dist: 0.84
+    - _Offset: -3.3
+    - _PosMult: 0
+    - _ReverseDepth: 3.96
+    - _WeirdNoise: 0.94
+    - __dirty: 0
+    - _outline: 0.06
+    - _pow: 0.05
+    - _voroscale: 1000
+    m_Colors:
+    - _Color0: {r: 0, g: 0, b: 0, a: 1}
+    - _Color1: {r: 2, g: 2, b: 2, a: 1}
+    - _Color2: {r: 0.21698111, g: 0.17650484, b: 0.16273583, a: 1}
+    - _Color3: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+    - _SmoothStep: {r: 0, g: 2.74, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _WeirdNoise: {r: 0.54, g: 0.55, b: 0, a: 0}
+    - _ddddddd: {r: -0.04, g: -0.13, b: -0.31, a: 0}
+    - _outline: {r: 0.26, g: -0.66, b: 0, a: 0}
+    - _pow: {r: 5, g: -5, b: 0, a: 0}
+  m_BuildTextureStacks: []

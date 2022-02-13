@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_StargateEventHorizon
+  m_Shader: {fileID: 4800000, guid: 894bc028a20e52244b7a2ef554bcf531, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ANGLE: 2.34
+    - _CenterPower: 0.2
+    - _CenterScale: 0.8
+    - _ChromaticAberration: 0
+    - _Divide: 10
+    - _EntranceOpened: 0
+    - _EntranceRim: 1.5
+    - _FresnelPower: 1.1
+    - _Offset: 0
+    - _Opacity: 10
+    - _Patern2Power: -1
+    - _PaternLerps: -1
+    - _PaternMult: 0.02
+    - _PaternPower: 3.5
+    - _PowerWave: 0.8
+    - _RimNoise: -0.2
+    - _RimScale: 5.75
+    - _RimSmoothStep: 1.41
+    - _SCALE: 2
+    - _Scale: 1.5
+    - _Scale2: 1.5
+    - _ScaleWave: 1
+    - _ScaleWoosh: -0.12
+    - _Size: 0
+    - _Tiling: 1.5
+    - _TransAmbient: 0.2
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0.1
+    - _TransScattering: 2
+    - _TransShadow: 0.9
+    - _Translucency: 1
+    - _VertexDef: 1
+    - _VoroAngle: 1
+    - _VoroAngleSpeed: 2
+    - _VoroAngleSpeed2: 2.5
+    - _Woosh: 7.35
+    - __dirty: 0
+    - _tess: 1
+    m_Colors:
+    - _BSP: {r: 0.52, g: 50, b: 0.1, a: 0}
+    - _CenterColor: {r: 1, g: 0, b: 0, a: 0}
+    - _CenterPowerPos: {r: 0, g: 0, b: 0, a: 0}
+    - _Color0: {r: 0, g: 0.5824175, b: 1, a: 1}
+    - _Color1: {r: 1, g: 1, b: 1, a: 1}
+    - _DoorNoises: {r: 0.8962695, g: 0.8962695, b: 0.8962695, a: 1}
+    - _PaternsMixer: {r: 1, g: 1, b: 0, a: 0}
+    - _RimColor: {r: 5.992157, g: 5.992157, b: 5.992157, a: 1}
+    - _SpeedPanner: {r: 1.5, g: 0, b: 0, a: 0}
+    - _StepWoosh: {r: 0.62, g: 0.79, b: 0, a: 0}
+    - _WorldToObject: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

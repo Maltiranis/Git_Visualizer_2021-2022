@@ -36,6 +36,7 @@ namespace AmplifyShaderEditor
 			AddOutputVectorPorts( WirePortDataType.FLOAT4, "XYZW" );
 			m_previewShaderGUID = "aac241d0e47a5a84fbd2edcd640788dc";
 			m_srpBatcherCompatible = true;
+			m_showHybridInstancedUI = true;
 		}
 
 		public override void CopyDefaultsToMaterial()
@@ -243,7 +244,7 @@ namespace AmplifyShaderEditor
 
 			if ( result.Equals( string.Empty ) )
 			{
-				UIUtils.ShowMessage( "Vector4Node generating empty code", MessageSeverity.Warning );
+				UIUtils.ShowMessage( UniqueId, "Vector4Node generating empty code", MessageSeverity.Warning );
 			}
 			return result;
 		}
@@ -273,8 +274,11 @@ namespace AmplifyShaderEditor
 
 		public override void ForceUpdateFromMaterial( Material material )
 		{
-			if ( UIUtils.IsProperty( m_currentParameterType ) && material.HasProperty( m_propertyName ) )
+			if( UIUtils.IsProperty( m_currentParameterType ) && material.HasProperty( m_propertyName ) )
+			{
 				m_materialValue = material.GetVector( m_propertyName );
+				PreviewIsDirty = true;
+			}
 		}
 
 		public override void ReadFromString( ref string[] nodeParams )

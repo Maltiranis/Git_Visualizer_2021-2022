@@ -34,8 +34,7 @@ namespace AmplifyShaderEditor
 			new RenderPlatformInfo(){Label = " PlayStation 4", Value = RenderPlatforms.ps4},
 			new RenderPlatformInfo(){Label = " PlayStation Vita", Value = RenderPlatforms.psp2},
 			new RenderPlatformInfo(){Label = " Nintendo 3DS", Value = RenderPlatforms.n3ds},
-			new RenderPlatformInfo(){Label = " Nintendo Wii U", Value = RenderPlatforms.wiiu},
-			new RenderPlatformInfo(){Label = " Nintendo Switch", Value = RenderPlatforms.@switch},
+			new RenderPlatformInfo(){Label = " Nintendo Wii U", Value = RenderPlatforms.wiiu}
 		};
 
 		// Values from this dictionary must be the indices corresponding from the list above
@@ -54,8 +53,7 @@ namespace AmplifyShaderEditor
 			{RenderPlatforms.ps4,		10},
 			{RenderPlatforms.psp2,		11},
 			{RenderPlatforms.n3ds,		12},
-			{RenderPlatforms.wiiu,		13},
-			{RenderPlatforms.@switch,   14}
+			{RenderPlatforms.wiiu,		13}
 		};
 
 		
@@ -178,11 +176,6 @@ namespace AmplifyShaderEditor
 				if( activeCount == count )
 				{
 					m_renderingPlatformValues[ PlatformToIndex[ RenderPlatforms.vulkan ] ] = true;
-				}
-
-				if (activeCount == count)
-				{
-					m_renderingPlatformValues[ PlatformToIndex[ RenderPlatforms.@switch ] ] = true;
 				}
 			}
 			else

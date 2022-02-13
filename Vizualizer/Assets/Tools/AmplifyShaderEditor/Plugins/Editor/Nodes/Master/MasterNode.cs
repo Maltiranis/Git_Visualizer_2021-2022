@@ -87,6 +87,9 @@ namespace AmplifyShaderEditor
 		protected int m_masterNodeCategory = 0;// MasterNodeCategories.SurfaceShader;
 
 		[SerializeField]
+		protected bool m_samplingMacros = true;
+
+		[SerializeField]
 		protected string m_currentShaderData = string.Empty;
 
 		private Texture2D m_masterNodeOnTex;
@@ -158,6 +161,20 @@ namespace AmplifyShaderEditor
 				m_availableCategories[ idx ] = new MasterNodeCategoriesData( AvailableShaderTypes.Template, templateData.GUID );
 				m_availableCategoryLabels[ idx ] = new GUIContent( templateData.Name );
 			}
+		}
+
+		public void SetMasterNodeCategoryFromGUID( string GUID )
+		{
+			if( m_availableCategories == null )
+				InitAvailableCategories();
+
+			m_masterNodeCategory = 0;
+			for( int i = 1; i < m_availableCategories.Length; i++ )
+			{
+				if( m_availableCategories[ i ].Name.Equals( GUID ) )
+					m_masterNodeCategory = i;
+			}
+
 		}
 
 		public override void SetupNodeCategories()
@@ -280,6 +297,11 @@ namespace AmplifyShaderEditor
 
 		protected void DrawShaderName()
 		{
+#if UNITY_2019_1_OR_NEWER
+			// this is a hack to control the automatic selection of text fields when the window is selected after serialization
+			// by having a selectable label the focus happens on it instead and doesn't interupt the usual flow of the editor
+			EditorGUILayout.SelectableLabel( "", GUILayout.Height( 0 ) );
+#endif
 			EditorGUI.BeginChangeCheck();
 			string newShaderName = EditorGUILayoutTextField( m_shaderNameContent, m_shaderName );
 			if( EditorGUI.EndChangeCheck() )
@@ -296,6 +318,11 @@ namespace AmplifyShaderEditor
 				ContainerGraph.ParentWindow.UpdateTabTitle( ShaderName, true );
 			}
 			m_shaderNameContent.tooltip = m_shaderName;
+		}
+
+		protected void DrawSamplingMacros()
+		{
+			m_samplingMacros = EditorGUILayoutToggle( "Use Sampling Macros", m_samplingMacros );
 		}
 
 		public void DrawShaderKeywords()
@@ -469,7 +496,7 @@ namespace AmplifyShaderEditor
 
 			if( UIUtils.CurrentShaderVersion() > 6101 )
 			{
-				m_shaderLOD = Convert.ToInt32( GetCurrentParam( ref nodeParams ) );
+				ShaderLOD = Convert.ToInt32( GetCurrentParam( ref nodeParams ) );
 			}
 
 			if( UIUtils.CurrentShaderVersion() >= 13001 )
@@ -596,7 +623,12 @@ namespace AmplifyShaderEditor
 					if( m_currentMaterial.shader != m_currentShader )
 						m_currentMaterial.shader = m_currentShader;
 
-					m_currentDataCollector.UpdateMaterialOnPropertyNodes( m_currentMaterial );
+					//m_currentDataCollector.UpdateMaterialOnPropertyNodes( m_currentMaterial );
+					//This master node UpdateMaterial is needed on Standard Surface node to update its internal properties
+					UpdateMaterial( m_currentMaterial );
+
+					UIUtils.CurrentWindow.OutsideGraph.UpdateMaterialOnPropertyNodes( m_currentMaterial );
+
 					FireMaterialChangedEvt();
 					// need to always get asset datapath because a user can change and asset location from the project window
 					//AssetDatabase.ImportAsset( AssetDatabase.GetAssetPath( m_currentMaterial ) );
@@ -948,5 +980,14 @@ namespace AmplifyShaderEditor
 		public ReorderableList PropertyReordableList { get { return m_propertyReordableList; } }
 		public int ReordableListLastCount { get { return m_lastCount; } }
 		public MasterNodeCategoriesData CurrentCategoriesData { get { return m_availableCategories[ m_masterNodeCategory ]; } }
+		public int ShaderLOD
+		{
+			get { return m_shaderLOD; }
+			set
+			{
+				m_shaderLOD = Mathf.Max( 0, value );
+			}
+		}
+		public bool SamplingMacros { get { return m_samplingMacros; } }
 	}
 }

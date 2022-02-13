@@ -6,6 +6,7 @@ namespace AmplifyShaderEditor
 	public static class GeneratorUtils
 	{
 		public const string ObjectScaleStr = "ase_objectScale";
+		public const string ParentObjectScaleStr = "ase_parentObjectScale";
 		public const string ScreenDepthStr = "ase_screenDepth";
 		public const string ViewPositionStr = "ase_viewPos";
 		public const string WorldViewDirectionStr = "ase_worldViewDir";
@@ -26,6 +27,7 @@ namespace AmplifyShaderEditor
 		public const string WorldPositionStr = "ase_worldPos";
 		public const string RelativeWorldPositionStr = "ase_relWorldPos";
 		public const string VFaceStr = "ase_vface";
+		public const string ShadowCoordsStr = "ase_shadowCoords";
 		public const string WorldLightDirStr = "ase_worldlightDir";
 		public const string ObjectLightDirStr = "ase_objectlightDir";
 		public const string WorldNormalStr = "ase_worldNormal";
@@ -43,6 +45,7 @@ namespace AmplifyShaderEditor
 		private const string Float4Format = "float4 {0} = {1};";
 		private const string GrabFunctionHeader = "inline float4 ASE_ComputeGrabScreenPos( float4 pos )";
 		private const string GrabFunctionCall = "ASE_ComputeGrabScreenPos( {0} )";
+		private const string Identity4x4 = "ase_identity4x4";
 		private static readonly string[] GrabFunctionBody = {
 			"#if UNITY_UV_STARTS_AT_TOP",
 			"float scale = -1.0;",
@@ -54,6 +57,14 @@ namespace AmplifyShaderEditor
 			"o.y = ( pos.y - o.y ) * _ProjectionParams.x * scale + o.y;",
 			"return o;"
 		};
+
+		// MATRIX IDENTITY
+		static public string GenerateIdentity4x4( ref MasterNodeDataCollector dataCollector, int uniqueId )
+		{
+			dataCollector.AddLocalVariable( uniqueId, "float4x4 ase_identity4x4 = float4x4(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1);" );
+			return Identity4x4;
+		}
+
 
 		// OBJECT SCALE
 		static public string GenerateObjectScale( ref MasterNodeDataCollector dataCollector, int uniqueId )
@@ -67,13 +78,24 @@ namespace AmplifyShaderEditor
 			return ObjectScaleStr;
 		}
 
+		static public string GenerateRotationIndependentObjectScale( ref MasterNodeDataCollector dataCollector, int uniqueId )
+		{
+			if( dataCollector.IsTemplate )
+				return dataCollector.TemplateDataCollectorInstance.GenerateRotationIndependentObjectScale( ref dataCollector, uniqueId );
+
+			string value = "(1.0/float3( length( unity_WorldToObject[ 0 ].xyz ), length( unity_WorldToObject[ 1 ].xyz ), length( unity_WorldToObject[ 2 ].xyz ) ))";
+			dataCollector.AddLocalVariable( uniqueId, PrecisionType.Float, WirePortDataType.FLOAT3, ParentObjectScaleStr, value );
+			return ParentObjectScaleStr;
+		}
+
 		// WORLD POSITION
 		static public string GenerateWorldPosition( ref MasterNodeDataCollector dataCollector, int uniqueId )
 		{
+			PrecisionType precision = PrecisionType.Float;
 			if( dataCollector.IsTemplate )
 				return dataCollector.TemplateDataCollectorInstance.GetWorldPos();
 
-			dataCollector.AddToInput( -1, SurfaceInputs.WORLD_POS );
+			dataCollector.AddToInput( -1, SurfaceInputs.WORLD_POS, precision );
 
 			string result = Constants.InputVarStr + ".worldPos";
 
@@ -81,7 +103,7 @@ namespace AmplifyShaderEditor
 				result = "mul( unity_ObjectToWorld, " + Constants.VertexShaderInputStr + ".vertex )";
 
 			//dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, string.Format( Float3Format, WorldPositionStr, result ) );
-			dataCollector.AddLocalVariable(  uniqueId, UIUtils.CurrentWindow.CurrentGraph.CurrentPrecision,WirePortDataType.FLOAT3, WorldPositionStr, result );
+			dataCollector.AddLocalVariable(  uniqueId, precision, WirePortDataType.FLOAT3, WorldPositionStr, result );
 			
 			return WorldPositionStr;
 		}
@@ -277,55 +299,221 @@ namespace AmplifyShaderEditor
 			return TangentToWorldPreciseStr;
 		}
 
+		// SAMPLER STATES
+		static public string GenerateSamplerState( ref MasterNodeDataCollector dataCollector, int uniqueId, string propertyName, bool returnPropertyName = false )
+		{
+
+			string sampler = string.Format( Constants.SamplerFormat, propertyName );
+			string samplerDecl = string.Empty;
+
+			ParentGraph outsideGraph = UIUtils.CurrentWindow.OutsideGraph;
+#if !UNITY_2018_1_OR_NEWER
+			if( outsideGraph.IsStandardSurface )
+				return string.Empty;
+#endif
+			if( outsideGraph.IsSRP )
+				//if( dataCollector.IsSRP )
+				samplerDecl = string.Format( Constants.SamplerDeclSRPFormat, sampler ) + ";";
+			else
+				samplerDecl = string.Format( Constants.SamplerDeclFormat, sampler ) + ";";
+			dataCollector.AddToUniforms( uniqueId, samplerDecl );
+
+			if( returnPropertyName )
+				return propertyName;
+			else
+				return sampler;
+		}
+
+		public static string GetPropertyFromSamplerState( string sampler )
+		{
+			if( sampler.StartsWith( "sampler" ) )
+				return sampler.Remove( 0, 7 );
+			else 
+				return sampler;
+		}
+
+		public static string GetSamplerDeclaraction( string texture, WirePortDataType type, string termination = "" )
+		{
+			return GetSamplerDeclaraction( texture, Constants.WireToTexture[ type ], termination );
+		}
+
+		public static string GetSamplerDeclaraction( string sampler, TextureType type, string termination = "" )
+		{
+			ParentGraph outsideGraph = UIUtils.CurrentWindow.OutsideGraph;
+#if UNITY_2018_1_OR_NEWER
+			if( outsideGraph.SamplingMacros || type == TextureType.Texture2DArray )
+#else
+			if( ( outsideGraph.SamplingMacros || type == TextureType.Texture2DArray ) && !outsideGraph.IsStandardSurface /*) || type == TextureType.Texture2DArray*/ )
+#endif
+			{
+				if( outsideGraph.IsSRP )
+					return string.Format( Constants.SamplerDeclSRPFormat, sampler ) + termination;
+				else
+					return string.Format( Constants.SamplerDeclFormat, sampler ) + termination;
+			}
+
+			// we don't use sampler states when macros are not available
+			return string.Empty;
+		}
+
+		// PROPERTY MACRO
+		public static string GetPropertyDeclaraction( string texture, WirePortDataType type, string termination = "" )
+		{
+			return GetPropertyDeclaraction( texture, Constants.WireToTexture[ type ], termination );
+		}
+
+		public static string GetPropertyDeclaraction( string texture, TextureType type, string termination = "" )
+		{
+			if( type == TextureType.Texture1D )
+				return "sampler1D " + texture + termination;
+
+			ParentGraph outsideGraph = UIUtils.CurrentWindow.OutsideGraph;
+#if UNITY_2018_1_OR_NEWER
+			if( outsideGraph.SamplingMacros || type == TextureType.Texture2DArray )
+#else
+			if( ( outsideGraph.SamplingMacros || type == TextureType.Texture2DArray ) && !outsideGraph.IsStandardSurface )
+#endif
+			{
+				if( outsideGraph.IsSRP )
+					return string.Format( Constants.TexDeclarationNoSamplerSRPMacros[ type ], texture ) + termination;
+				else
+					return string.Format( Constants.TexDeclarationNoSamplerStandardMacros[ type ], texture ) + termination;
+			}
+
+			return UIUtils.TextureTypeToCgType( type )+ " " + texture + termination;
+		}
+
+		// SAMPLING CALL
+		public static string GenerateSamplingCall( ref MasterNodeDataCollector dataCollector, WirePortDataType type, string property, string samplerState, string uv, MipType mip = MipType.Auto, params string[] mipData )
+		{
+			ParentGraph ousideGraph = UIUtils.CurrentWindow.OutsideGraph;
+			string result = string.Empty;
+			string mipSuffix = string.Empty;
+
+			//samplerState = GetPropertyFromSamplerState( samplerState );
+			TextureType textureType = Constants.WireToTexture[ type ];
+
+			bool usingMacro = false;
+#if UNITY_2018_1_OR_NEWER
+			if( ousideGraph.SamplingMacros || textureType == TextureType.Texture2DArray )
+#else
+			if( ( ousideGraph.SamplingMacros && !ousideGraph.IsStandardSurface ) || textureType == TextureType.Texture2DArray )
+#endif
+				usingMacro = true;
+
+			switch( mip )
+			{
+				default:
+				case MipType.Auto:
+				break;
+				case MipType.MipLevel:
+				mipSuffix = usingMacro ? "_LOD" : "lod";
+				break;
+				case MipType.MipBias:
+				mipSuffix = usingMacro ? "_BIAS" : "bias";
+				break;
+				case MipType.Derivative:
+				mipSuffix = usingMacro ? "_GRAD" : "grad";
+				break;
+			}
+
+			string mipParams = string.Empty;
+			if( mip != MipType.Auto )
+			{
+				for( int i = 0; i < mipData.Length; i++ )
+				{
+					mipParams += ", " + mipData[ i ];
+				}
+			}
+
+			if( usingMacro )
+			{
+				if( ousideGraph.IsSRP )
+				{
+					if( textureType == TextureType.Texture3D && ( mip == MipType.MipBias || mip == MipType.Derivative ) )
+						AddCustom3DSRPMacros( ref dataCollector );
+					// srp macro
+					result = string.Format( Constants.TexSampleSRPMacros[ textureType ], mipSuffix, property, samplerState, uv + mipParams );
+				}
+				else
+				{
+					AddCustomStandardSamplingMacros( ref dataCollector, type, mip );
+#if !UNITY_2018_1_OR_NEWER
+					if( ousideGraph.IsStandardSurface )
+						result = string.Format( Constants.TexSampleStandardMacros[ textureType ], mipSuffix, property, samplerState, uv + mipParams );
+					else
+#endif
+						result = string.Format( Constants.TexSampleSamplerStandardMacros[ textureType ], mipSuffix, property, samplerState, uv + mipParams );
+
+				}
+			}
+			else
+			{
+				//no macro : builtin and srp
+				string uvs = uv + mipParams;
+				string emptyParam = ", 0";
+				if( textureType == TextureType.Texture3D || textureType == TextureType.Cube )
+					emptyParam = string.Empty;
+
+				if( ( mip == MipType.MipBias || mip == MipType.MipLevel ) )
+					uvs = "float4(" + uv + emptyParam + mipParams + ")";
+
+				result = string.Format( Constants.TexSampleStandard[ textureType ], mipSuffix, property, uvs );
+			}
+			return result;
+		}
+
 		// AUTOMATIC UVS
 		static public string GenerateAutoUVs( ref MasterNodeDataCollector dataCollector, int uniqueId, int index, string propertyName = null, WirePortDataType size = WirePortDataType.FLOAT2, string scale = null, string offset = null, string outputId = null )
 		{
 			string result = string.Empty;
 			string varName = string.Empty;
+			string indexStr = index > 0 ? ( index + 1 ).ToString() : "";
+			string sizeDif = string.Empty;
+			if( size == WirePortDataType.FLOAT3 )
+				sizeDif = "3";
+			else if( size == WirePortDataType.FLOAT4 )
+				sizeDif = "4";
+
 			if( !dataCollector.IsTemplate && index > 3 )
 			{
-				string texCoordName = TemplateHelperFunctions.BaseInterpolatorName + index;
+				string texCoordNameIn = TemplateHelperFunctions.BaseInterpolatorName + index;
+				string texCoordNameOut = TemplateHelperFunctions.BaseInterpolatorName + ( index + 1 ).ToString();
 				if( dataCollector.IsFragmentCategory )
 				{
 
-					GenerateValueInVertex( ref dataCollector, uniqueId, size, PrecisionType.Float, Constants.VertexShaderInputStr + "." + texCoordName, texCoordName, true );
-					result = Constants.InputVarStr + "." + texCoordName;
+					GenerateValueInVertex( ref dataCollector, uniqueId, size, PrecisionType.Float, Constants.VertexShaderInputStr + "." + texCoordNameIn, texCoordNameOut, true );
+					result = Constants.InputVarStr + "." + texCoordNameOut;
 				}
 				else
 				{
-					result = Constants.VertexShaderInputStr + "." + texCoordName;
+					result = Constants.VertexShaderInputStr + "." + texCoordNameOut;
 				}
-
+				
 				if( !string.IsNullOrEmpty( propertyName ) )
 				{
+
+					varName = "uv" + indexStr + ( size != WirePortDataType.FLOAT2 ? "s" + sizeDif : "" ) + propertyName;
 					dataCollector.AddToUniforms( uniqueId, "uniform float4 " + propertyName + "_ST;" );
 					if( size > WirePortDataType.FLOAT2 )
 					{
 						dataCollector.UsingHigherSizeTexcoords = true;
-						dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, PrecisionType.Float, size, "uv" + propertyName, result );
-						dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, "uv" + propertyName + ".xy = " + result + ".xy * " + propertyName + "_ST.xy + " + propertyName + "_ST.zw;" );
+						dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, PrecisionType.Float, size, varName, result );
+						dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, varName + ".xy = " + result + ".xy * " + propertyName + "_ST.xy + " + propertyName + "_ST.zw;" );
 					}
 					else
 					{
-						dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, PrecisionType.Float, size, "uv" + propertyName, result + " * " + propertyName + "_ST.xy + " + propertyName + "_ST.zw" );
+						dataCollector.AddToLocalVariables( dataCollector.PortCategory, uniqueId, PrecisionType.Float, size, varName, result + " * " + propertyName + "_ST.xy + " + propertyName + "_ST.zw" );
 					}
 
-					result = "uv" + propertyName;
+					result = varName;
 				}
 
 				return result;
 			}
 
-			string indexStr = index > 0 ? ( index + 1 ).ToString() : "";
-
 			if( dataCollector.PortCategory == MasterNodePortCategory.Fragment || dataCollector.PortCategory == MasterNodePortCategory.Debug )
 			{
-				string sizeDif = string.Empty;
-				if( size == WirePortDataType.FLOAT3 )
-					sizeDif = "3";
-				else if( size == WirePortDataType.FLOAT4 )
-					sizeDif = "4";
-
 				string dummyPropUV = "_tex" + sizeDif + "coord" + indexStr;
 				string dummyUV = "uv" + indexStr + dummyPropUV;
 
@@ -359,11 +547,11 @@ namespace AmplifyShaderEditor
 				}
 			}
 
-			varName = "uv" + indexStr + "_TexCoord" + outputId;
+			varName = "uv" + indexStr + ( size != WirePortDataType.FLOAT2 ? "s" + sizeDif : "" ) + "_TexCoord" + outputId;
 
 			if( !string.IsNullOrEmpty( propertyName ) )
 			{
-				string finalVarName = "uv" + index + propertyName;
+				string finalVarName = "uv" + indexStr + ( size != WirePortDataType.FLOAT2 ? "s" + sizeDif : "" ) + propertyName;
 
 				dataCollector.AddToUniforms( uniqueId, "uniform float4 " + propertyName + "_ST;" );
 				if( size > WirePortDataType.FLOAT2 )
@@ -770,6 +958,42 @@ namespace AmplifyShaderEditor
 			return ObjectLightDirStr;
 		}
 
+		// UNPACK NORMALS
+		public static string GenerateUnpackNormalStr( ref MasterNodeDataCollector dataCollector, PrecisionType precision, int uniqueId, string outputId, string src, bool applyScale, string scale )
+		{
+			string funcName;
+			if( dataCollector.IsTemplate && dataCollector.IsSRP )
+			{
+#if UNITY_2018_3_OR_NEWER
+				if( ASEPackageManagerHelper.CurrentHDVersion > ASESRPVersions.ASE_SRP_7_2_1 )
+				{
+					if( applyScale )
+					{
+						dataCollector.AddLocalVariable( uniqueId, precision, WirePortDataType.FLOAT3, "unpack" + outputId, "UnpackNormalScale( " + src + ", " + scale + " )" );
+						dataCollector.AddLocalVariable( uniqueId, "unpack" + outputId + ".z = lerp( 1, unpack" + outputId + ".z, saturate(" + scale + ") );" );
+						funcName = "unpack" + outputId;
+					}
+					else
+					{
+						funcName = "UnpackNormalScale( " + src + ", " + scale + " )";
+					}
+				} 
+				else
+#endif
+				{
+					if( dataCollector.TemplateDataCollectorInstance.IsHDRP )
+						funcName = "UnpackNormalmapRGorAG( " + src + ", " + scale + " )";
+					else
+						funcName = "UnpackNormalScale( " + src + ", " + scale + " )";
+				}
+			}
+			else
+			{
+				funcName = applyScale ? "UnpackScaleNormal( " + src + ", " + scale + " )" : "UnpackNormal( " + src + " )";
+			}
+			return funcName;
+		}
+
 		//MATRIX INVERSE
 		// 3x3
 		public static string Inverse3x3Header = "Inverse3x3( {0} )";
@@ -893,19 +1117,72 @@ namespace AmplifyShaderEditor
 			}
 		}
 
-		public static void AddCustomStandardSamplingMacros( ref MasterNodeDataCollector dataCollector )
+		public static void AddCustomStandardSamplingMacros( ref MasterNodeDataCollector dataCollector, TextureType type, MipType mip )
 		{
-			for( int i = 0; i < Constants.CustomStandardSamplingMacros.Length; i++ )
-				dataCollector.AddToDirectives( Constants.CustomStandardSamplingMacros[ i ] );
+			AddCustomStandardSamplingMacros( ref dataCollector, Constants.TextureToWire[ type ], mip );
+		}
+
+		public static void AddCustomStandardSamplingMacros( ref MasterNodeDataCollector dataCollector, WirePortDataType type, MipType mip )
+		{
+			MacrosMask result = MacrosMask.NONE;
+			switch( mip )
+			{
+				default:
+				case MipType.Auto:
+				result |= MacrosMask.AUTO;
+				break;
+				case MipType.MipLevel:
+				result |= MacrosMask.LOD;
+				break;
+				case MipType.MipBias:
+				result |= MacrosMask.BIAS;
+				break;
+				case MipType.Derivative:
+				result |= MacrosMask.GRAD;
+				break;
+			}
+
+			switch( type )
+			{
+				default:
+				case WirePortDataType.SAMPLER2D:
+				dataCollector.Using2DMacrosMask |= result;
+				break;
+				case WirePortDataType.SAMPLER3D:
+				dataCollector.Using3DMacrosMask |= result;
+				break;
+				case WirePortDataType.SAMPLERCUBE:
+				dataCollector.UsingCUBEMacrosMask |= result;
+				break;
+				case WirePortDataType.SAMPLER2DARRAY:
+				dataCollector.Using2DArrayMacrosMask |= result;
+				break;
+			}
+		}
+
+		public static void AddCustom3DSRPMacros( ref MasterNodeDataCollector dataCollector )
+		{
+			// add just once
+			if( dataCollector.UsingExtra3DSRPMacros )
+				return;
+			
+			dataCollector.UsingExtra3DSRPMacros = true;
+			for( int i = 0; i < Constants.CustomSRPSamplingMacros.Length; i++ )
+				dataCollector.AddToDirectives( Constants.CustomSRPSamplingMacros[ i ] );
 		}
 
 		public static void AddCustomArraySamplingMacros( ref MasterNodeDataCollector dataCollector )
 		{
+			// add just once
+			if( dataCollector.UsingArrayDerivatives )
+				return;
+
+			dataCollector.UsingArrayDerivatives = true;
 			for( int i = 0; i < Constants.CustomArraySamplingMacros.Length; i++ )
 				dataCollector.AddToDirectives( Constants.CustomArraySamplingMacros[ i ] );
 		}
 
-		public static void AddCustomASEMacros( ref MasterNodeDataCollector dataCollector )
+		/*public static void AddCustomASEMacros( ref MasterNodeDataCollector dataCollector )
 		{
 			string varPrefix = dataCollector.IsSRP ? varPrefix = "TEXTURE" : "UNITY_DECLARE_TEX";
 
@@ -977,7 +1254,7 @@ namespace AmplifyShaderEditor
 				}
 				dataCollector.AddToDirectives( Constants.CustomASEStandarSamplingMacrosHelper[ 2 ] );
 			}
-		}
+		}*/
 
 		public static void RegisterUnity2019MatrixDefines( ref MasterNodeDataCollector dataCollector )
 		{

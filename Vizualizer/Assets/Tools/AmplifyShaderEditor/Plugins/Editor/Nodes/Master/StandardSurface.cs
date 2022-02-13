@@ -88,7 +88,6 @@ namespace AmplifyShaderEditor
 		psp2,
 		n3ds,
 		wiiu,
-		@switch,
 		vulkan,
 		all
 	}
@@ -747,6 +746,11 @@ namespace AmplifyShaderEditor
 
 			m_receiveShadows = EditorGUILayoutToggle( ReceiveShadowsContent, m_receiveShadows );
 
+			EditorGUI.BeginChangeCheck();
+			DrawSamplingMacros();
+			if( EditorGUI.EndChangeCheck() )
+				ContainerGraph.SamplingMacros = m_samplingMacros;
+
 			m_drawInstancedHelper.Draw( this );
 
 			m_queueOrder = EditorGUILayoutIntField( QueueIndexContent, m_queueOrder );
@@ -758,7 +762,7 @@ namespace AmplifyShaderEditor
 				m_sizeIsDirty = true;
 			}
 
-			m_shaderLOD = Mathf.Clamp( EditorGUILayoutIntField( ShaderLODContent, m_shaderLOD ), 0, Shader.globalMaximumLOD );
+			ShaderLOD = Mathf.Clamp( EditorGUILayoutIntField( ShaderLODContent, ShaderLOD ), 0, Shader.globalMaximumLOD );
 			////m_lodCrossfade = EditorGUILayoutToggle( LODCrossfadeContent, m_lodCrossfade );
 			m_fallbackHelper.Draw( this );
 			DrawInspectorProperty();
@@ -926,9 +930,9 @@ namespace AmplifyShaderEditor
 						}
 					}
 
-					EditorGUIUtility.labelWidth = 130;
+					//EditorGUIUtility.labelWidth = 130;
 					m_inlineAlphaToCoverage.CustomDrawer( ref inst, ( x ) => { m_alphaToCoverage = EditorGUILayoutToggle( AlphaToCoverageStr, m_alphaToCoverage ); }, AlphaToCoverageStr.text );
-					EditorGUIUtility.labelWidth = cachedLabelWidth;
+					//EditorGUIUtility.labelWidth = cachedLabelWidth;
 					EditorGUI.EndDisabledGroup();
 
 					EditorGUILayout.Separator();
@@ -1268,7 +1272,7 @@ namespace AmplifyShaderEditor
 			return vertexInstructions;
 		}
 
-		public void CreateInstructionsForPort( InputPort port, string portName, bool addCustomDelimiters = false, string customDelimiterIn = null, string customDelimiterOut = null, bool ignoreLocalVar = false, bool normalIsConnected = false )
+		public void CreateInstructionsForPort( InputPort port, string portName, bool addCustomDelimiters = false, string customDelimiterIn = null, string customDelimiterOut = null, bool ignoreLocalVar = false, bool normalIsConnected = false , bool isDebugPort = false )
 		{
 			WireReference connection = port.GetConnection();
 			ParentNode node = UIUtils.GetNode( connection.NodeId );
@@ -1293,10 +1297,10 @@ namespace AmplifyShaderEditor
 				m_currentDataCollector.DirtyNormal = true;
 				m_currentDataCollector.ForceNormal = false;
 			}
-
+			
 			m_currentDataCollector.AddInstructions( addCustomDelimiters ? customDelimiterIn : ( "\t\t\t" + portName + " = " ) );
 			m_currentDataCollector.AddInstructions( newInstruction );
-			m_currentDataCollector.AddInstructions( addCustomDelimiters ? customDelimiterOut : ";\n" );
+			m_currentDataCollector.AddInstructions( addCustomDelimiters ? customDelimiterOut :((isDebugPort)?" + 1E-5;\n":";\n") );
 		}
 
 		public string CreateInstructionStringForPort( InputPort port, bool ignoreLocalVar = false )
@@ -1512,7 +1516,7 @@ namespace AmplifyShaderEditor
 				}
 				else
 				{
-					CreateInstructionsForPort( debugPort, Constants.OutputVarStr + ".Emission", false, null, null, false, false );
+					CreateInstructionsForPort( debugPort, Constants.OutputVarStr + ".Emission", false, null, null, false, false,true );
 				}
 			}
 			else
@@ -1672,11 +1676,11 @@ namespace AmplifyShaderEditor
 							{
 								string clipIn = "\t\t\tclip( ";
 								string clipOut = " - " + m_inlineOpacityMaskClipValue.GetValueOrProperty( IOUtils.MaskClipValueName, false ) + " );\n";
-								if( ( m_alphaToCoverage || m_inlineAlphaToCoverage.Active ) && m_castShadows )
-								{
-									clipIn = "\t\t\t#if UNITY_PASS_SHADOWCASTER\n" + clipIn;
-									clipOut = clipOut + "\t\t\t#endif\n";
-								}
+								//if( ( m_alphaToCoverage || m_inlineAlphaToCoverage.Active ) && m_castShadows )
+								//{
+								//	clipIn = "\t\t\t#if UNITY_PASS_SHADOWCASTER\n" + clipIn;
+								//	clipOut = clipOut + "\t\t\t#endif\n";
+								//}
 								CreateInstructionsForPort( sortedPorts[ i ], Constants.OutputVarStr + "." + sortedPorts[ i ].DataName, true, clipIn, clipOut, false, normalIsConnected );
 							}
 						}
@@ -1902,7 +1906,7 @@ namespace AmplifyShaderEditor
 					if( m_outlineHelper.EnableOutline || ( m_currentDataCollector.UsingCustomOutlineColor || m_currentDataCollector.CustomOutlineSelectedAlpha > 0 || m_currentDataCollector.UsingCustomOutlineWidth ) )
 					{
 						if( !usingDebugPort )
-							AddMultilineBody( ref ShaderBody, m_outlineHelper.OutlineFunctionBody( ref m_currentDataCollector, isInstancedShader, m_customShadowCaster, UIUtils.RemoveInvalidCharacters( ShaderName ), ( m_billboardOpHelper.IsBillboard && !usingDebugPort ? m_billboardOpHelper.GetInternalMultilineInstructions() : null ), ref m_tessOpHelper, ShaderModelTypeArr[ m_shaderModelIdx ] ) );
+							AddMultilineBody( ref ShaderBody, m_outlineHelper.OutlineFunctionBody( ref m_currentDataCollector, isInstancedShader, m_customShadowCaster, UIUtils.RemoveInvalidCharacters( ShaderName ), ( m_billboardOpHelper.IsBillboard && !usingDebugPort ? m_billboardOpHelper.GetInternalMultilineInstructions() : null ), ref m_tessOpHelper, ShaderModelTypeArr[ m_shaderModelIdx ], CurrentPrecisionType ) );
 					}
 
 					//Add SubShader tags
@@ -1921,7 +1925,7 @@ namespace AmplifyShaderEditor
 					}
 
 					AddRenderTags( ref ShaderBody, tags );
-					AddShaderLOD( ref ShaderBody, m_shaderLOD );
+					AddShaderLOD( ref ShaderBody, ShaderLOD );
 					AddRenderState( ref ShaderBody, "Cull", m_inlineCullMode.GetValueOrProperty( m_cullMode.ToString() ) );
 					m_customBlendAvailable = ( m_alphaMode == AlphaMode.Custom || m_alphaMode == AlphaMode.Opaque );
 					if( ( m_zBufferHelper.IsActive && m_customBlendAvailable ) || m_outlineHelper.UsingZWrite || m_outlineHelper.UsingZTest )
@@ -2031,6 +2035,7 @@ namespace AmplifyShaderEditor
 						if( m_currentDataCollector.DirtyPragmas/* && !m_customShadowCaster */)
 							ShaderBody += m_currentDataCollector.Pragmas;
 
+						m_currentDataCollector.AddASEMacros();
 						if( m_currentDataCollector.DirtyAdditionalDirectives )
 							ShaderBody += m_currentDataCollector.StandardAdditionalDirectives;
 
@@ -2312,8 +2317,8 @@ namespace AmplifyShaderEditor
 							ShaderBody += "\t\t\t#endif\n";
 							ShaderBody += "\t\t\tfloat2 projScreenPos = ( screenPos / screenPos.w ).xy;\n";
 							ShaderBody += "\t\t\tfloat3 worldViewDir = normalize( UnityWorldSpaceViewDir( " + Constants.InputVarStr + ".worldPos ) );\n";
-							ShaderBody += "\t\t\tfloat3 refractionOffset = ( ( ( ( indexOfRefraction - 1.0 ) * mul( UNITY_MATRIX_V, float4( worldNormal, 0.0 ) ) ) * ( 1.0 / ( screenPos.z + 1.0 ) ) ) * ( 1.0 - dot( worldNormal, worldViewDir ) ) );\n";
-							ShaderBody += "\t\t\tfloat2 cameraRefraction = float2( refractionOffset.x, -( refractionOffset.y * _ProjectionParams.x ) );\n";
+							ShaderBody += "\t\t\tfloat3 refractionOffset = ( indexOfRefraction - 1.0 ) * mul( UNITY_MATRIX_V, float4( worldNormal, 0.0 ) ) * ( 1.0 - dot( worldNormal, worldViewDir ) );\n";
+							ShaderBody += "\t\t\tfloat2 cameraRefraction = float2( refractionOffset.x, refractionOffset.y );\n";
 
 							string grabpass = "_GrabTexture";
 							if( m_grabOrder != 0 )
@@ -3028,7 +3033,7 @@ namespace AmplifyShaderEditor
 
 				if( UIUtils.CurrentShaderVersion() > 6102 )
 				{
-					m_shaderLOD = Convert.ToInt32( GetCurrentParam( ref nodeParams ) );
+					ShaderLOD = Convert.ToInt32( GetCurrentParam( ref nodeParams ) );
 					m_fallbackHelper.ReadFromString( ref m_currentReadParamIdx, ref nodeParams );
 				}
 
@@ -3113,6 +3118,11 @@ namespace AmplifyShaderEditor
 				if( UIUtils.CurrentShaderVersion() > 16207 )
 					m_inlineAlphaToCoverage.ReadFromString( ref m_currentReadParamIdx, ref nodeParams );
 
+				if( UIUtils.CurrentShaderVersion() > 18302 )
+					m_samplingMacros = Convert.ToBoolean( GetCurrentParam( ref nodeParams ) );
+				else
+					m_samplingMacros = false;
+
 				m_lightModelChanged = true;
 				m_lastLightModel = m_currentLightModel;
 				DeleteAllInputConnections( true );
@@ -3121,6 +3131,7 @@ namespace AmplifyShaderEditor
 				m_customBlendMode = TestCustomBlendMode();
 
 				ContainerGraph.CurrentPrecision = m_currentPrecisionType;
+				ContainerGraph.SamplingMacros = m_samplingMacros;
 			}
 			catch( Exception e )
 			{
@@ -3171,7 +3182,7 @@ namespace AmplifyShaderEditor
 			m_outlineHelper.WriteToString( ref nodeInfo );
 			m_billboardOpHelper.WriteToString( ref nodeInfo );
 			IOUtils.AddFieldValueToString( ref nodeInfo, m_vertexMode );
-			IOUtils.AddFieldValueToString( ref nodeInfo, m_shaderLOD );
+			IOUtils.AddFieldValueToString( ref nodeInfo, ShaderLOD );
 			m_fallbackHelper.WriteToString( ref nodeInfo );
 			IOUtils.AddFieldValueToString( ref nodeInfo, ( m_maskClipReorder != null ) ? m_maskClipReorder.OrderIndex : -1 );
 			IOUtils.AddFieldValueToString( ref nodeInfo, ( m_translucencyReorder != null ) ? m_translucencyReorder.OrderIndex : -1 );
@@ -3192,6 +3203,7 @@ namespace AmplifyShaderEditor
 			m_drawInstancedHelper.WriteToString( ref nodeInfo );
 			m_inlineChromaticAberration.WriteToString( ref nodeInfo );
 			m_inlineAlphaToCoverage.WriteToString( ref nodeInfo );
+			IOUtils.AddFieldValueToString( ref nodeInfo, m_samplingMacros );
 		}
 
 		private bool TestCustomBlendMode()

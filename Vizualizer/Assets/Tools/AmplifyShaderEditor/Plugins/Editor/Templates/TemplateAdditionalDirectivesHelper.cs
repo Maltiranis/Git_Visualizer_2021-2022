@@ -62,6 +62,18 @@ namespace AmplifyShaderEditor
 		public string GUIDValue = string.Empty;
 		public AdditionalContainerOrigin Origin = AdditionalContainerOrigin.Custom;
 		public TextAsset LibObject = null;
+		public string OwnerId = string.Empty;
+
+		public void Init( string ownerId, AdditionalDirectiveContainer item )
+		{
+			 LineType = item.LineType;
+			 LineValue = item.LineValue;
+			 GUIDToggle = item.GUIDToggle;
+			 GUIDValue = item.GUIDValue;
+			 Origin = item.Origin;
+			 LibObject = item.LibObject;
+			 OwnerId = ownerId;
+		}
 
 		public void Init( AdditionalDirectiveContainerSaveItem item )
 		{
@@ -144,11 +156,8 @@ namespace AmplifyShaderEditor
 	[Serializable]
 	public sealed class TemplateAdditionalDirectivesHelper : TemplateModuleParent
 	{
-#if UNITY_2019_3_OR_NEWER
-		private string NativeFoldoutStr = "Native ( Locked on Unity 2019.3 and above )";
-#else
 		private string NativeFoldoutStr = "Native";
-#endif
+
 		[SerializeField]
 		private List<AdditionalDirectiveContainer> m_additionalDirectives = new List<AdditionalDirectiveContainer>();
 
@@ -196,18 +205,40 @@ namespace AmplifyShaderEditor
 		//	}
 		//}
 
-		public void AddShaderFunctionItems( List<AdditionalDirectiveContainer> functionList )
+		public void AddShaderFunctionItems( string ownerOutputId, List<AdditionalDirectiveContainer> functionList )
 		{
+			RemoveShaderFunctionItems( ownerOutputId );
 			if( functionList.Count > 0 )
-				m_shaderFunctionDirectives.AddRange( functionList );
+			{
+				for( int i = 0; i < functionList.Count; i++ )
+				{
+					AdditionalDirectiveContainer item = ScriptableObject.CreateInstance<AdditionalDirectiveContainer>();
+					item.Init( ownerOutputId, functionList[ i ] );
+					m_shaderFunctionDirectives.Add( item );
+				}
+			}
+			//if( functionList.Count > 0 )
+			//{
+
+			//	m_shaderFunctionDirectives.AddRange( functionList );
+			//}
 		}
 
-		public void RemoveShaderFunctionItems( List<AdditionalDirectiveContainer> functionList )
+		public void RemoveShaderFunctionItems( string ownerOutputId/*, List<AdditionalDirectiveContainer> functionList */)
 		{
-			for( int i = 0; i < functionList.Count; i++ )
+			List<AdditionalDirectiveContainer>  list = m_shaderFunctionDirectives.FindAll( ( x ) => x.OwnerId.Equals( ownerOutputId ));
+			for( int i = 0; i < list.Count; i++ )
 			{
-				m_shaderFunctionDirectives.Remove( functionList[ i ] );
+				m_shaderFunctionDirectives.Remove( list[ i ] );
+				ScriptableObject.DestroyImmediate( list[ i ] );
 			}
+			list.Clear();
+			list = null;
+
+			//for( int i = 0; i < functionList.Count; i++ )
+			//{
+			//	m_shaderFunctionDirectives.Remove( functionList[ i ] );
+			//}
 		}
 
 		//public void RemoveShaderFunctionItem( AdditionalLineType type, string item )
@@ -345,7 +376,7 @@ namespace AmplifyShaderEditor
 								rect.xMin -= 1;
 							}
 
-							float popUpWidth = style ? 75 : 60f;
+							float popUpWidth = style ? 80 : 65f;
 							float widthAdjust = m_additionalDirectives[ index ].LineType == AdditionalLineType.Include ? -14 : 0;
 							Rect popupPos = new Rect( rect.x, rect.y, popUpWidth, EditorGUIUtility.singleLineHeight );
 							Rect GUIDTogglePos = m_additionalDirectives[ index ].LineType == AdditionalLineType.Include ? new Rect( rect.x + rect.width - 3 * Constants.PlusMinusButtonLayoutWidth, rect.y, Constants.PlusMinusButtonLayoutWidth, Constants.PlusMinusButtonLayoutWidth ) : new Rect();
@@ -357,14 +388,14 @@ namespace AmplifyShaderEditor
 							if( m_additionalDirectives[ index ].Origin == AdditionalContainerOrigin.Native )
 							{
 								m_nativeRect = rect;
+#if UNITY_2019_3_OR_NEWER
+								m_nativeRect.y -= ( m_nativeRect.height - ( EditorGUIUtility.singleLineHeight + 5 ) ) * 0.5f;
+#endif
 								m_nativeRect.xMin += 2;
 								m_nativeRect.xMax -= 2;
 								m_nativeRect.yMax -= 2;
-#if UNITY_2019_3_OR_NEWER
-								EditorGUI.LabelField(m_nativeRect, NativeFoldoutStr );
-#else
+
 								NodeUtils.DrawNestedPropertyGroup( ref m_nativeDirectivesFoldout, rect, NativeFoldoutStr, DrawNativeItemsRect, 4 );
-#endif
 								return;
 							}
 
@@ -785,6 +816,15 @@ namespace AmplifyShaderEditor
 
 			m_additionalDirectives.Clear();
 			m_additionalDirectives = null;
+
+			for( int i = 0; i < m_shaderFunctionDirectives.Count; i++ )
+			{
+				ScriptableObject.DestroyImmediate( m_shaderFunctionDirectives[ i ] );
+			}
+
+			m_shaderFunctionDirectives.Clear();
+			m_shaderFunctionDirectives = null;
+
 
 			m_propertyAdjustment = null;
 			m_reordableList = null;
