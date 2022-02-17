@@ -18,6 +18,8 @@ Shader "Custom/SH_Galaxy"
 		_CenterPower("CenterPower", Float) = 20
 		_DividePatern("DividePatern", Float) = 17
 		_WhirlArms("WhirlArms", Float) = 1.1
+		_Opacity("Opacity", Float) = 0
+		_EmPower("EmPower", Float) = 0
 		_WhirlTiling("WhirlTiling", Vector) = (1,1,0,0)
 		_WhirlWidth("WhirlWidth", Float) = 1.1
 		_WhirlRotation("WhirlRotation", Float) = 1.1
@@ -40,6 +42,7 @@ Shader "Custom/SH_Galaxy"
 			float2 uv_texcoord;
 		};
 
+		uniform float _EmPower;
 		uniform float _TilingColor1;
 		uniform float2 _WhirlTiling;
 		uniform float _WhirlRotation;
@@ -56,6 +59,7 @@ Shader "Custom/SH_Galaxy"
 		uniform float _Scale2;
 		uniform float _VoroAngle2;
 		uniform float _voro2;
+		uniform float _Opacity;
 		uniform float _Cutoff = 0.5;
 		uniform float _EdgeLength;
 
@@ -238,61 +242,61 @@ Shader "Custom/SH_Galaxy"
 			float2 temp_cast_0 = (_TilingColor1).xx;
 			float2 temp_cast_1 = (( _TilingColor1 * -0.5 )).xx;
 			float2 uv_TexCoord69 = i.uv_texcoord * temp_cast_0 + temp_cast_1;
+			float2 CenteredUV15_g159 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
+			float2 break17_g159 = CenteredUV15_g159;
+			float2 appendResult23_g159 = (float2(( length( CenteredUV15_g159 ) * 1.0 * 2.0 ) , ( atan2( break17_g159.x , break17_g159.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
+			float2 break12_g158 = appendResult23_g159;
+			float temp_output_15_0_g158 = ( ( break12_g158.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g158.x ) ) * _WhirlArms );
+			float temp_output_20_0_g158 = ( abs( ( temp_output_15_0_g158 - round( temp_output_15_0_g158 ) ) ) * _WhirlWidth );
+			float smoothstepResult22_g158 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g158);
+			float2 CenteredUV15_g153 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
+			float2 break17_g153 = CenteredUV15_g153;
+			float2 appendResult23_g153 = (float2(( length( CenteredUV15_g153 ) * 1.0 * 2.0 ) , ( atan2( break17_g153.x , break17_g153.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
+			float2 break12_g152 = appendResult23_g153;
+			float temp_output_15_0_g152 = ( ( break12_g152.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g152.x ) ) * _WhirlArms );
+			float temp_output_79_0 = ( _WhirlWidth + _PaternDif );
+			float temp_output_20_0_g152 = ( abs( ( temp_output_15_0_g152 - round( temp_output_15_0_g152 ) ) ) * temp_output_79_0 );
+			float smoothstepResult22_g152 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g152);
+			float2 CenteredUV15_g144 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
+			float2 break17_g144 = CenteredUV15_g144;
+			float2 appendResult23_g144 = (float2(( length( CenteredUV15_g144 ) * 1.0 * 2.0 ) , ( atan2( break17_g144.x , break17_g144.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
+			float2 break12_g143 = appendResult23_g144;
+			float temp_output_15_0_g143 = ( ( break12_g143.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g143.x ) ) * _WhirlArms );
+			float temp_output_82_0 = ( temp_output_79_0 + _PaternDif );
+			float temp_output_20_0_g143 = ( abs( ( temp_output_15_0_g143 - round( temp_output_15_0_g143 ) ) ) * temp_output_82_0 );
+			float smoothstepResult22_g143 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g143);
+			float2 CenteredUV15_g141 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
+			float2 break17_g141 = CenteredUV15_g141;
+			float2 appendResult23_g141 = (float2(( length( CenteredUV15_g141 ) * 1.0 * 2.0 ) , ( atan2( break17_g141.x , break17_g141.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
+			float2 break12_g140 = appendResult23_g141;
+			float temp_output_15_0_g140 = ( ( break12_g140.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g140.x ) ) * _WhirlArms );
+			float temp_output_83_0 = ( temp_output_82_0 + _PaternDif );
+			float temp_output_20_0_g140 = ( abs( ( temp_output_15_0_g140 - round( temp_output_15_0_g140 ) ) ) * temp_output_83_0 );
+			float smoothstepResult22_g140 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g140);
+			float2 CenteredUV15_g147 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
+			float2 break17_g147 = CenteredUV15_g147;
+			float2 appendResult23_g147 = (float2(( length( CenteredUV15_g147 ) * 1.0 * 2.0 ) , ( atan2( break17_g147.x , break17_g147.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
+			float2 break12_g146 = appendResult23_g147;
+			float temp_output_15_0_g146 = ( ( break12_g146.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g146.x ) ) * _WhirlArms );
+			float temp_output_85_0 = ( temp_output_83_0 + _PaternDif );
+			float temp_output_20_0_g146 = ( abs( ( temp_output_15_0_g146 - round( temp_output_15_0_g146 ) ) ) * temp_output_85_0 );
+			float smoothstepResult22_g146 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g146);
 			float2 CenteredUV15_g135 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
 			float2 break17_g135 = CenteredUV15_g135;
 			float2 appendResult23_g135 = (float2(( length( CenteredUV15_g135 ) * 1.0 * 2.0 ) , ( atan2( break17_g135.x , break17_g135.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
 			float2 break12_g134 = appendResult23_g135;
 			float temp_output_15_0_g134 = ( ( break12_g134.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g134.x ) ) * _WhirlArms );
-			float temp_output_20_0_g134 = ( abs( ( temp_output_15_0_g134 - round( temp_output_15_0_g134 ) ) ) * _WhirlWidth );
-			float smoothstepResult22_g134 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g134);
-			float2 CenteredUV15_g108 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
-			float2 break17_g108 = CenteredUV15_g108;
-			float2 appendResult23_g108 = (float2(( length( CenteredUV15_g108 ) * 1.0 * 2.0 ) , ( atan2( break17_g108.x , break17_g108.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
-			float2 break12_g107 = appendResult23_g108;
-			float temp_output_15_0_g107 = ( ( break12_g107.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g107.x ) ) * _WhirlArms );
-			float temp_output_79_0 = ( _WhirlWidth + _PaternDif );
-			float temp_output_20_0_g107 = ( abs( ( temp_output_15_0_g107 - round( temp_output_15_0_g107 ) ) ) * temp_output_79_0 );
-			float smoothstepResult22_g107 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g107);
-			float2 CenteredUV15_g114 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
-			float2 break17_g114 = CenteredUV15_g114;
-			float2 appendResult23_g114 = (float2(( length( CenteredUV15_g114 ) * 1.0 * 2.0 ) , ( atan2( break17_g114.x , break17_g114.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
-			float2 break12_g113 = appendResult23_g114;
-			float temp_output_15_0_g113 = ( ( break12_g113.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g113.x ) ) * _WhirlArms );
-			float temp_output_82_0 = ( temp_output_79_0 + _PaternDif );
-			float temp_output_20_0_g113 = ( abs( ( temp_output_15_0_g113 - round( temp_output_15_0_g113 ) ) ) * temp_output_82_0 );
-			float smoothstepResult22_g113 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g113);
-			float2 CenteredUV15_g123 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
-			float2 break17_g123 = CenteredUV15_g123;
-			float2 appendResult23_g123 = (float2(( length( CenteredUV15_g123 ) * 1.0 * 2.0 ) , ( atan2( break17_g123.x , break17_g123.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
-			float2 break12_g122 = appendResult23_g123;
-			float temp_output_15_0_g122 = ( ( break12_g122.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g122.x ) ) * _WhirlArms );
-			float temp_output_83_0 = ( temp_output_82_0 + _PaternDif );
-			float temp_output_20_0_g122 = ( abs( ( temp_output_15_0_g122 - round( temp_output_15_0_g122 ) ) ) * temp_output_83_0 );
-			float smoothstepResult22_g122 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g122);
-			float2 CenteredUV15_g117 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
-			float2 break17_g117 = CenteredUV15_g117;
-			float2 appendResult23_g117 = (float2(( length( CenteredUV15_g117 ) * 1.0 * 2.0 ) , ( atan2( break17_g117.x , break17_g117.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
-			float2 break12_g116 = appendResult23_g117;
-			float temp_output_15_0_g116 = ( ( break12_g116.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g116.x ) ) * _WhirlArms );
-			float temp_output_85_0 = ( temp_output_83_0 + _PaternDif );
-			float temp_output_20_0_g116 = ( abs( ( temp_output_15_0_g116 - round( temp_output_15_0_g116 ) ) ) * temp_output_85_0 );
-			float smoothstepResult22_g116 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g116);
-			float2 CenteredUV15_g129 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
-			float2 break17_g129 = CenteredUV15_g129;
-			float2 appendResult23_g129 = (float2(( length( CenteredUV15_g129 ) * 1.0 * 2.0 ) , ( atan2( break17_g129.x , break17_g129.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
-			float2 break12_g128 = appendResult23_g129;
-			float temp_output_15_0_g128 = ( ( break12_g128.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g128.x ) ) * _WhirlArms );
 			float temp_output_84_0 = ( temp_output_85_0 + _PaternDif );
-			float temp_output_20_0_g128 = ( abs( ( temp_output_15_0_g128 - round( temp_output_15_0_g128 ) ) ) * temp_output_84_0 );
-			float smoothstepResult22_g128 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g128);
-			float2 CenteredUV15_g111 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
-			float2 break17_g111 = CenteredUV15_g111;
-			float2 appendResult23_g111 = (float2(( length( CenteredUV15_g111 ) * 1.0 * 2.0 ) , ( atan2( break17_g111.x , break17_g111.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
-			float2 break12_g110 = appendResult23_g111;
-			float temp_output_15_0_g110 = ( ( break12_g110.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g110.x ) ) * _WhirlArms );
+			float temp_output_20_0_g134 = ( abs( ( temp_output_15_0_g134 - round( temp_output_15_0_g134 ) ) ) * temp_output_84_0 );
+			float smoothstepResult22_g134 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g134);
+			float2 CenteredUV15_g150 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
+			float2 break17_g150 = CenteredUV15_g150;
+			float2 appendResult23_g150 = (float2(( length( CenteredUV15_g150 ) * 1.0 * 2.0 ) , ( atan2( break17_g150.x , break17_g150.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
+			float2 break12_g149 = appendResult23_g150;
+			float temp_output_15_0_g149 = ( ( break12_g149.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g149.x ) ) * _WhirlArms );
 			float temp_output_86_0 = ( temp_output_84_0 + _PaternDif );
-			float temp_output_20_0_g110 = ( abs( ( temp_output_15_0_g110 - round( temp_output_15_0_g110 ) ) ) * temp_output_86_0 );
-			float smoothstepResult22_g110 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g110);
+			float temp_output_20_0_g149 = ( abs( ( temp_output_15_0_g149 - round( temp_output_15_0_g149 ) ) ) * temp_output_86_0 );
+			float smoothstepResult22_g149 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g149);
 			float2 CenteredUV15_g132 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
 			float2 break17_g132 = CenteredUV15_g132;
 			float2 appendResult23_g132 = (float2(( length( CenteredUV15_g132 ) * 1.0 * 2.0 ) , ( atan2( break17_g132.x , break17_g132.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
@@ -301,22 +305,22 @@ Shader "Custom/SH_Galaxy"
 			float temp_output_89_0 = ( temp_output_86_0 + _PaternDif );
 			float temp_output_20_0_g131 = ( abs( ( temp_output_15_0_g131 - round( temp_output_15_0_g131 ) ) ) * temp_output_89_0 );
 			float smoothstepResult22_g131 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g131);
-			float2 CenteredUV15_g120 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
-			float2 break17_g120 = CenteredUV15_g120;
-			float2 appendResult23_g120 = (float2(( length( CenteredUV15_g120 ) * 1.0 * 2.0 ) , ( atan2( break17_g120.x , break17_g120.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
-			float2 break12_g119 = appendResult23_g120;
-			float temp_output_15_0_g119 = ( ( break12_g119.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g119.x ) ) * _WhirlArms );
+			float2 CenteredUV15_g156 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
+			float2 break17_g156 = CenteredUV15_g156;
+			float2 appendResult23_g156 = (float2(( length( CenteredUV15_g156 ) * 1.0 * 2.0 ) , ( atan2( break17_g156.x , break17_g156.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
+			float2 break12_g155 = appendResult23_g156;
+			float temp_output_15_0_g155 = ( ( break12_g155.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g155.x ) ) * _WhirlArms );
 			float temp_output_87_0 = ( temp_output_89_0 + _PaternDif );
-			float temp_output_20_0_g119 = ( abs( ( temp_output_15_0_g119 - round( temp_output_15_0_g119 ) ) ) * temp_output_87_0 );
-			float smoothstepResult22_g119 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g119);
-			float2 CenteredUV15_g126 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
-			float2 break17_g126 = CenteredUV15_g126;
-			float2 appendResult23_g126 = (float2(( length( CenteredUV15_g126 ) * 1.0 * 2.0 ) , ( atan2( break17_g126.x , break17_g126.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
-			float2 break12_g125 = appendResult23_g126;
-			float temp_output_15_0_g125 = ( ( break12_g125.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g125.x ) ) * _WhirlArms );
-			float temp_output_20_0_g125 = ( abs( ( temp_output_15_0_g125 - round( temp_output_15_0_g125 ) ) ) * ( temp_output_87_0 + _PaternDif ) );
-			float smoothstepResult22_g125 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g125);
-			float temp_output_99_0 = ( smoothstepResult22_g134 + ( smoothstepResult22_g107 / 2.0 ) + ( smoothstepResult22_g113 / 3.0 ) + ( smoothstepResult22_g122 / 4.0 ) + ( smoothstepResult22_g116 / 5.0 ) + ( smoothstepResult22_g128 / 6.0 ) + ( smoothstepResult22_g110 / 7.0 ) + ( smoothstepResult22_g131 / 8.0 ) + ( smoothstepResult22_g119 / 9.0 ) + ( smoothstepResult22_g125 / 10.0 ) );
+			float temp_output_20_0_g155 = ( abs( ( temp_output_15_0_g155 - round( temp_output_15_0_g155 ) ) ) * temp_output_87_0 );
+			float smoothstepResult22_g155 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g155);
+			float2 CenteredUV15_g138 = ( ( i.uv_texcoord * _WhirlTiling ) - float2( 0.5,0.5 ) );
+			float2 break17_g138 = CenteredUV15_g138;
+			float2 appendResult23_g138 = (float2(( length( CenteredUV15_g138 ) * 1.0 * 2.0 ) , ( atan2( break17_g138.x , break17_g138.y ) * ( 1.0 / 6.28318548202515 ) * 1.0 )));
+			float2 break12_g137 = appendResult23_g138;
+			float temp_output_15_0_g137 = ( ( break12_g137.y - ( ( _WhirlRotation / 6.28318548202515 ) * break12_g137.x ) ) * _WhirlArms );
+			float temp_output_20_0_g137 = ( abs( ( temp_output_15_0_g137 - round( temp_output_15_0_g137 ) ) ) * ( temp_output_87_0 + _PaternDif ) );
+			float smoothstepResult22_g137 = smoothstep( 0.45 , 0.55 , temp_output_20_0_g137);
+			float temp_output_99_0 = ( smoothstepResult22_g158 + ( smoothstepResult22_g152 / 2.0 ) + ( smoothstepResult22_g143 / 3.0 ) + ( smoothstepResult22_g140 / 4.0 ) + ( smoothstepResult22_g146 / 5.0 ) + ( smoothstepResult22_g134 / 6.0 ) + ( smoothstepResult22_g149 / 7.0 ) + ( smoothstepResult22_g131 / 8.0 ) + ( smoothstepResult22_g155 / 9.0 ) + ( smoothstepResult22_g137 / 10.0 ) );
 			float2 temp_cast_2 = (_Tiling).xx;
 			float2 temp_cast_3 = (( _Tiling * -0.5 )).xx;
 			float2 uv_TexCoord3 = i.uv_texcoord * temp_cast_2 + temp_cast_3;
@@ -368,8 +372,8 @@ Shader "Custom/SH_Galaxy"
 			voroi50 /= rest50;
 			float smoothstepResult47 = smoothstep( _SmoothStepS.x , _SmoothStepS.y , voroi50);
 			float3 temp_output_48_0 = ( ( ( temp_output_20_0 * ( 1.0 - ( temp_output_20_0 * voroi60 ) ) ) - temp_cast_4 ) + ( smoothstepResult47 * _voro2 ) );
-			o.Emission = ( SampleGradient( gradient131, length( uv_TexCoord69 ) ) * float4( saturate( temp_output_48_0 ) , 0.0 ) ).rgb;
-			o.Alpha = 1;
+			o.Emission = ( _EmPower * ( SampleGradient( gradient131, length( uv_TexCoord69 ) ) * float4( saturate( temp_output_48_0 ) , 0.0 ) ) ).rgb;
+			o.Alpha = _Opacity;
 			float3 temp_cast_7 = (( smoothstepResult40 * _voro1 )).xxx;
 			clip( saturate( temp_output_48_0 ).x - _Cutoff );
 		}
@@ -380,9 +384,9 @@ Shader "Custom/SH_Galaxy"
 }
 /*ASEBEGIN
 Version=18400
-0;0;1920;1019;5925.136;2537.843;1.739025;True;False
-Node;AmplifyShaderEditor.RangedFloatNode;35;-4925.915,-2339.455;Inherit;False;Property;_WhirlWidth;WhirlWidth;19;0;Create;True;0;0;False;0;False;1.1;-2;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;81;-5124.399,-1798.014;Inherit;False;Property;_PaternDif;PaternDif;21;0;Create;True;0;0;False;0;False;0.1;1;0;0;0;1;FLOAT;0
+7;18;1920;1001;950.3148;1401.93;1.358305;True;False
+Node;AmplifyShaderEditor.RangedFloatNode;35;-4925.915,-2339.455;Inherit;False;Property;_WhirlWidth;WhirlWidth;21;0;Create;True;0;0;False;0;False;1.1;-2;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;81;-5124.399,-1798.014;Inherit;False;Property;_PaternDif;PaternDif;23;0;Create;True;0;0;False;0;False;0.1;1;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;79;-4431.543,-2194.503;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;82;-4437.586,-2028.021;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;83;-4434.64,-1828.384;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
@@ -394,20 +398,22 @@ Node;AmplifyShaderEditor.RangedFloatNode;1;-3933.518,-785.1102;Inherit;False;Pro
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;32;-3843.44,-564.3887;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;-0.5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;87;-4475.55,-1048.198;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;132;-4882.872,-1645.008;Inherit;False;Property;_WhirlArms;WhirlArms;17;0;Create;True;0;0;False;0;False;1.1;5;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.Vector2Node;134;-5318.506,-1910.161;Inherit;False;Property;_WhirlTiling;WhirlTiling;18;0;Create;True;0;0;False;0;False;1,1;1,1;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
-Node;AmplifyShaderEditor.RangedFloatNode;133;-5298.284,-1701.586;Inherit;False;Property;_WhirlRotation;WhirlRotation;20;0;Create;True;0;0;False;0;False;1.1;5;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.Vector2Node;134;-5318.506,-1910.161;Inherit;False;Property;_WhirlTiling;WhirlTiling;20;0;Create;True;0;0;False;0;False;1,1;1,1;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
+Node;AmplifyShaderEditor.RangedFloatNode;133;-5298.284,-1701.586;Inherit;False;Property;_WhirlRotation;WhirlRotation;22;0;Create;True;0;0;False;0;False;1.1;5;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.TextureCoordinatesNode;3;-3708.792,-765.8743;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;-0.5,-0.5;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleAddOpNode;88;-4515.778,-920.4025;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;92;-4227.209,-1903.717;Inherit;False;Whirl;-1;;140;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.LengthOpNode;6;-3291.261,-756.0258;Inherit;True;1;0;FLOAT2;0,0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.FunctionNode;95;-4270.137,-1269.198;Inherit;False;Whirl;-1;;131;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;97;-4247.323,-1577.524;Inherit;False;Whirl;-1;;128;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;98;-4259.222,-954.3842;Inherit;False;Whirl;-1;;125;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;92;-4227.209,-1903.717;Inherit;False;Whirl;-1;;122;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;91;-4225.638,-2069.818;Inherit;False;Whirl;-1;;113;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;94;-4239.859,-1732.6;Inherit;False;Whirl;-1;;116;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;96;-4257.007,-1430.041;Inherit;False;Whirl;-1;;110;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;90;-4224.563,-2231.623;Inherit;False;Whirl;-1;;107;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;93;-4275.683,-1122.357;Inherit;False;Whirl;-1;;119;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;98;-4259.222,-954.3842;Inherit;False;Whirl;-1;;137;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;97;-4247.323,-1577.524;Inherit;False;Whirl;-1;;134;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;96;-4257.007,-1430.041;Inherit;False;Whirl;-1;;149;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;94;-4239.859,-1732.6;Inherit;False;Whirl;-1;;146;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;90;-4224.563,-2231.623;Inherit;False;Whirl;-1;;152;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;93;-4275.683,-1122.357;Inherit;False;Whirl;-1;;155;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;91;-4225.638,-2069.818;Inherit;False;Whirl;-1;;143;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleDivideOpNode;101;-3889.248,-1118.295;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;10;False;1;FLOAT;0
+Node;AmplifyShaderEditor.OneMinusNode;21;-3080.615,-762.5837;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleDivideOpNode;109;-3856.163,-2196.861;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;2;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleDivideOpNode;106;-3872.511,-1780.41;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleDivideOpNode;107;-3866.878,-1908.621;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;4;False;1;FLOAT;0
@@ -417,9 +423,7 @@ Node;AmplifyShaderEditor.SimpleDivideOpNode;108;-3864.947,-2052.88;Inherit;False
 Node;AmplifyShaderEditor.RangedFloatNode;23;-3101.87,-637.9824;Inherit;False;Property;_CenterPower;CenterPower;15;0;Create;True;0;0;False;0;False;20;18;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleDivideOpNode;105;-3869.668,-1657.442;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;6;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleDivideOpNode;102;-3881.118,-1271.8;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;9;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleDivideOpNode;101;-3889.248,-1118.295;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;10;False;1;FLOAT;0
-Node;AmplifyShaderEditor.OneMinusNode;21;-3080.615,-762.5837;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.FunctionNode;18;-4253.421,-2447.227;Inherit;True;Whirl;-1;;134;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.FunctionNode;18;-4253.421,-2447.227;Inherit;True;Whirl;-1;;158;7d75aee9e4d352a4299928ac98404afc;2,26,0,25,1;6;27;FLOAT2;0,0;False;1;FLOAT2;1,1;False;7;FLOAT2;0.5,0.5;False;16;FLOAT;5;False;21;FLOAT;3.86;False;10;FLOAT;5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;99;-3274.547,-1911.981;Inherit;True;10;10;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT;0;False;7;FLOAT;0;False;8;FLOAT;0;False;9;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;22;-2866.215,-786.582;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;19;-2564.026,-966.8161;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
@@ -438,27 +442,30 @@ Node;AmplifyShaderEditor.RangedFloatNode;51;-2118.835,-134.0602;Inherit;False;Pr
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;64;-1057.962,-798.7251;Inherit;True;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.VoronoiNode;16;-1912.426,-378.5426;Inherit;True;0;0;1;3;8;False;1;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2
 Node;AmplifyShaderEditor.RangedFloatNode;52;-2108.419,-24.85726;Inherit;False;Property;_Scale2;Scale2;9;0;Create;True;0;0;False;0;False;100;200;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;71;-987.3313,-1191.804;Inherit;False;Property;_TilingColor1;TilingColor1;11;0;Create;True;0;0;False;0;False;0.1;4;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.OneMinusNode;65;-738.7693,-803.8157;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.VoronoiNode;50;-1907.234,-102.1938;Inherit;True;0;0;1;3;8;False;1;False;False;4;0;FLOAT2;0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;0;False;3;FLOAT;0;FLOAT2;1;FLOAT2;2
+Node;AmplifyShaderEditor.OneMinusNode;65;-738.7693,-803.8157;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.SmoothstepOpNode;40;-808.3627,-423.7018;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0.5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;126;-1080.532,-514.0949;Inherit;False;Property;_voro1;voro1;13;0;Create;True;0;0;False;0;False;-2;-2;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;71;-987.3313,-1191.804;Inherit;False;Property;_TilingColor1;TilingColor1;11;0;Create;True;0;0;False;0;False;0.1;4;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SmoothstepOpNode;47;-786.4699,-299.6334;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0.5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;72;-842.4053,-1107.618;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;-0.5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;127;-538.5752,-134.2726;Inherit;False;Property;_voro2;voro2;12;0;Create;True;0;0;False;0;False;2;2;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;61;-446.4664,-916.7318;Inherit;True;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;45;-539.7313,-559.8687;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;-2;False;1;FLOAT;0
-Node;AmplifyShaderEditor.TextureCoordinatesNode;69;-746.8259,-1240.804;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;-0.5,-0.5;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleSubtractOpNode;44;-181.7901,-699.1298;Inherit;True;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.TextureCoordinatesNode;69;-746.8259,-1240.804;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;-0.5,-0.5;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;49;-441.1603,-329.2314;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;2;False;1;FLOAT;0
 Node;AmplifyShaderEditor.GradientNode;131;-116.8134,-1279.793;Inherit;False;0;4;2;1,1,1,0;1,0.7219421,0.4764151,0.02941939;1,0.5153113,0,0.2352941;0.2877358,0.653853,1,1;1,0;1,1;0;1;OBJECT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;48;57.68382,-576.2734;Inherit;True;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.LengthOpNode;70;-424.4338,-1241.564;Inherit;True;1;0;FLOAT2;0,0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SaturateNode;77;364.6556,-744.0162;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.GradientSampleNode;130;140.2756,-1133.784;Inherit;True;2;0;OBJECT;;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SaturateNode;77;364.6556,-744.0162;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.RangedFloatNode;136;727.1913,-1029.755;Inherit;False;Property;_EmPower;EmPower;19;0;Create;True;0;0;False;0;False;0;2;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;75;538.6417,-837.6964;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;135;762.5065,-891.2079;Inherit;False;2;2;0;FLOAT;0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.RangedFloatNode;137;667.426,-400.8597;Inherit;False;Property;_Opacity;Opacity;18;0;Create;True;0;0;False;0;False;0;1;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;78;-3116.575,-1227.875;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SaturateNode;110;555.4212,-522.7675;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;75;538.6417,-837.6964;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;891.1423,-729.3149;Float;False;True;-1;6;ASEMaterialInspector;0;0;Standard;Custom/SH_Galaxy;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Off;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Custom;0.5;True;False;0;True;Transparent;;Geometry;All;14;all;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;True;2;15;10;25;False;0.5;False;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;5;-1;-1;0;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;True;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;79;0;35;0
 WireConnection;79;1;81;0
@@ -481,35 +488,31 @@ WireConnection;3;0;1;0
 WireConnection;3;1;32;0
 WireConnection;88;0;87;0
 WireConnection;88;1;81;0
+WireConnection;92;1;134;0
+WireConnection;92;16;132;0
+WireConnection;92;21;83;0
+WireConnection;92;10;133;0
 WireConnection;6;0;3;0
 WireConnection;95;1;134;0
 WireConnection;95;16;132;0
 WireConnection;95;21;89;0
 WireConnection;95;10;133;0
-WireConnection;97;1;134;0
-WireConnection;97;16;132;0
-WireConnection;97;21;84;0
-WireConnection;97;10;133;0
 WireConnection;98;1;134;0
 WireConnection;98;16;132;0
 WireConnection;98;21;88;0
 WireConnection;98;10;133;0
-WireConnection;92;1;134;0
-WireConnection;92;16;132;0
-WireConnection;92;21;83;0
-WireConnection;92;10;133;0
-WireConnection;91;1;134;0
-WireConnection;91;16;132;0
-WireConnection;91;21;82;0
-WireConnection;91;10;133;0
-WireConnection;94;1;134;0
-WireConnection;94;16;132;0
-WireConnection;94;21;85;0
-WireConnection;94;10;133;0
+WireConnection;97;1;134;0
+WireConnection;97;16;132;0
+WireConnection;97;21;84;0
+WireConnection;97;10;133;0
 WireConnection;96;1;134;0
 WireConnection;96;16;132;0
 WireConnection;96;21;86;0
 WireConnection;96;10;133;0
+WireConnection;94;1;134;0
+WireConnection;94;16;132;0
+WireConnection;94;21;85;0
+WireConnection;94;10;133;0
 WireConnection;90;1;134;0
 WireConnection;90;16;132;0
 WireConnection;90;21;79;0
@@ -518,6 +521,12 @@ WireConnection;93;1;134;0
 WireConnection;93;16;132;0
 WireConnection;93;21;87;0
 WireConnection;93;10;133;0
+WireConnection;91;1;134;0
+WireConnection;91;16;132;0
+WireConnection;91;21;82;0
+WireConnection;91;10;133;0
+WireConnection;101;0;98;0
+WireConnection;21;0;6;0
 WireConnection;109;0;90;0
 WireConnection;106;0;94;0
 WireConnection;107;0;92;0
@@ -526,8 +535,6 @@ WireConnection;104;0;96;0
 WireConnection;108;0;91;0
 WireConnection;105;0;97;0
 WireConnection;102;0;93;0
-WireConnection;101;0;98;0
-WireConnection;21;0;6;0
 WireConnection;18;1;134;0
 WireConnection;18;16;132;0
 WireConnection;18;21;35;0
@@ -559,9 +566,9 @@ WireConnection;64;0;20;0
 WireConnection;64;1;60;0
 WireConnection;16;1;12;0
 WireConnection;16;2;15;0
-WireConnection;65;0;64;0
 WireConnection;50;1;51;0
 WireConnection;50;2;52;0
+WireConnection;65;0;64;0
 WireConnection;40;0;16;0
 WireConnection;40;1;129;1
 WireConnection;40;2;129;2
@@ -573,22 +580,25 @@ WireConnection;61;0;20;0
 WireConnection;61;1;65;0
 WireConnection;45;0;40;0
 WireConnection;45;1;126;0
-WireConnection;69;0;71;0
-WireConnection;69;1;72;0
 WireConnection;44;0;61;0
 WireConnection;44;1;45;0
+WireConnection;69;0;71;0
+WireConnection;69;1;72;0
 WireConnection;49;0;47;0
 WireConnection;49;1;127;0
 WireConnection;48;0;44;0
 WireConnection;48;1;49;0
 WireConnection;70;0;69;0
-WireConnection;77;0;48;0
 WireConnection;130;0;131;0
 WireConnection;130;1;70;0
-WireConnection;110;0;48;0
+WireConnection;77;0;48;0
 WireConnection;75;0;130;0
 WireConnection;75;1;77;0
-WireConnection;0;2;75;0
+WireConnection;135;0;136;0
+WireConnection;135;1;75;0
+WireConnection;110;0;48;0
+WireConnection;0;2;135;0
+WireConnection;0;9;137;0
 WireConnection;0;10;110;0
 ASEEND*/
-//CHKSM=1B9CD5193D08F674AEBEAEACFC95DE979C41C35A
+//CHKSM=FEBFB9993F87EA6F0B7A064DA16EFC56A273EDDA

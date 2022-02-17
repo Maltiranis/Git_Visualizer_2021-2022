@@ -32,12 +32,14 @@ Material:
     - _Cutoff: 0.5
     - _DividePatern: 15
     - _EdgeLength: 15
+    - _EmPower: 1
     - _Glossiness: 0.5
     - _Metallic: 0
+    - _Opacity: 0
     - _PaternDif: 1
     - _PaternWidth: -2
     - _Scale: 200
-    - _Scale2: 200
+    - _Scale2: 30
     - _Tiling: 10
     - _TilingColor: 1
     - _TilingColor1: 4
@@ -59,6 +61,6 @@ Material:
     - _Color1: {r: 0, g: 0.19215687, b: 0.7490196, a: 1}
     - _Color2: {r: 0.7490196, g: 0.35686275, b: 0, a: 0}
     - _Color3: {r: 0, g: 0.8398378, b: 1, a: 0}
-    - _SmoothStepS: {r: 0.2, g: 0.15, b: 0, a: 0}
+    - _SmoothStepS: {r: 0.36, g: 0.15, b: 0, a: 0}
     - _WhirlTiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
