@@ -28,39 +28,40 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _CenterPower: 18
+    - _CenterPower: 17.3
     - _Cutoff: 0.5
-    - _DividePatern: 15
-    - _EdgeLength: 15
-    - _EmPower: 1
+    - _DividePatern: 20.3
+    - _EdgeLength: 2
+    - _EmPower: 0.49
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _Opacity: 0
-    - _PaternDif: 1
+    - _Opacity: 5.11
+    - _PaternDif: 0.9
     - _PaternWidth: -2
-    - _Scale: 200
-    - _Scale2: 30
-    - _Tiling: 10
+    - _Scale: 102.99
+    - _Scale2: 27.6
+    - _Tiling: 5.98
     - _TilingColor: 1
-    - _TilingColor1: 4
+    - _TilingColor1: 6.4
     - _TilingColor2: 1
     - _TilingColor3: 1
-    - _VoroAngle: 200
-    - _VoroAngle2: 0
+    - _VoroAngle: 173.2
+    - _VoroAngle2: 24.6
     - _WhirlArms: 5
-    - _WhirlRotation: 5
-    - _WhirlWidth: -2
+    - _WhirlRotation: 3
+    - _WhirlWidth: -2.83
     - __dirty: 0
     - _tess: 0.1
     - _vertexoffset: 1.57
-    - _voro1: -2
-    - _voro2: 2
+    - _voro1: 50.1
+    - _voro2: -69.3
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0, g: 0.10770178, b: 1, a: 0}
-    - _Color1: {r: 0, g: 0.19215687, b: 0.7490196, a: 1}
-    - _Color2: {r: 0.7490196, g: 0.35686275, b: 0, a: 0}
+    - _Color0: {r: 1, g: 1, b: 1, a: 0}
+    - _Color1: {r: 2.3245068, g: 1.4215015, b: 0.75656116, a: 0}
+    - _Color2: {r: 1, g: 0.6095519, b: 0.3915094, a: 0}
     - _Color3: {r: 0, g: 0.8398378, b: 1, a: 0}
-    - _SmoothStepS: {r: 0.36, g: 0.15, b: 0, a: 0}
+    - _SmoothStepCenter: {r: -0.13, g: 0.6, b: 0, a: 0}
+    - _SmoothStepS: {r: -65.1, g: 43.88, b: 0, a: 0}
     - _WhirlTiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
