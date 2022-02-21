@@ -32,7 +32,7 @@ Material:
     - _Cutoff: 0.5
     - _DividePatern: 149
     - _EdgeLength: 2
-    - _EmPower: 0.01
+    - _EmPower: 1
     - _Glossiness: 0.5
     - _Metallic: 0
     - _Opacity: 1
@@ -42,7 +42,7 @@ Material:
     - _Scale2: 27.6
     - _Tiling: 5
     - _TilingColor: 1
-    - _TilingColor1: 1000
+    - _TilingColor1: 10
     - _TilingColor2: 1
     - _TilingColor3: 1
     - _VoroAngle: 135.7
@@ -53,16 +53,16 @@ Material:
     - __dirty: 0
     - _tess: 0.1
     - _vertexoffset: 1.57
-    - _voro1: 8.22
+    - _voro1: 73.3
     - _voro2: 13.68
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color0: {r: 0, g: 0.36370105, b: 0.4433962, a: 0}
-    - _Color1: {r: 1, g: 0.7924528, b: 0.740566, a: 0}
-    - _Color2: {r: 1, g: 1, b: 1, a: 0}
+    - _Color0: {r: 0.45020467, g: 0.63084656, b: 0.6320754, a: 0}
+    - _Color1: {r: 1.3350785, g: 1.0024629, b: 0.72421706, a: 0}
+    - _Color2: {r: 0, g: 0, b: 0, a: 0}
     - _Color3: {r: 0, g: 0.8398378, b: 1, a: 0}
-    - _SmoothStepCenter: {r: 0, g: 100, b: 0, a: 0}
-    - _SmoothStepS: {r: 1, g: -0.55, b: 0, a: 0}
+    - _SmoothStepCenter: {r: 0, g: -10, b: 0, a: 0}
+    - _SmoothStepS: {r: 1, g: -0.4, b: 0, a: 0}
     - _WhirlTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _voro2: {r: -0.3, g: 1.23, b: 0, a: 0}
+    - _voro2: {r: 0, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
