@@ -86,14 +86,14 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
-    - _angl: -127.19
-    - _niose: 798.5
-    - _smth: 2.34
+    - _angl: 0
+    - _niose: 69.9
+    - _smth: -0.69
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0.2924528, g: 0, b: 0, a: 0.3764706}
-    - _Color1: {r: 0.8705506, g: 0.8705506, b: 0.8705506, a: 0}
+    - _Color1: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 0}
     - _EmissionColor: {r: 2, g: 0, b: 0, a: 1}
     - _Vector0: {r: 10, g: 10, b: 0, a: 0}
-    - _scale: {r: 185.7, g: 0.1, b: 0, a: 0}
+    - _scale: {r: 100, g: 100, b: 0, a: 0}
   m_BuildTextureStacks: []
