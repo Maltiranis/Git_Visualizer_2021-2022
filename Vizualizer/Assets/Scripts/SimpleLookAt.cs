@@ -5,6 +5,7 @@ using UnityEngine;
 public class SimpleLookAt : MonoBehaviour
 {
     //public bool _fromVelocity = true;
+    public bool rotateInertia = true;
     public Transform looked;
     public float lookatSpeed = 2.0f;
     public float rotSpeed = 10.0f;
@@ -20,10 +21,25 @@ public class SimpleLookAt : MonoBehaviour
 
     void Update()
     {
-        Quaternion toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
+        if (!rotateInertia)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
-        transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * brassage * Time.deltaTime, Space.World);
+            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
+            transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * brassage * Time.deltaTime, Space.World);
+        }
+        else
+        {
+            Vector3 myPos = transform.position;
+            Vector3 curPos = looked.position;
+
+            Vector3 relativePos = curPos - myPos;
+            Vector3 addVectors = (relativePos - transform.forward) + Vector3.forward/4;
+
+            Quaternion toRotation = Quaternion.LookRotation(-relativePos, -addVectors);
+            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
+            //transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * brassage * Time.deltaTime, Space.World);
+        }
     }
 
     IEnumerator rotationPilot()

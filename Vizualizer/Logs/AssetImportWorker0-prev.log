@@ -1,71 +1,71 @@
 Using pre-set license
 Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1526; Version 2009; 64bit' Language: 'fr' Physical Memory: 16258 MB
+OS: 'Windows 10 Pro; OS build 19041.1415; Version 2004; 64bit' Language: 'fr' Physical Memory: 16357 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-F:\Program Files\2020.3.12f1\Editor\Unity.exe
+F:\_SOFTS\Unity Editor\2020.3.12f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-F:/_GITHUB/Git_Visualizer_2021-2022/Vizualizer
+F:/_SOFTS/GitHub/Git_Visualizer_2021-2022/Vizualizer
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-25718
-Successfully changed project path to: F:/_GITHUB/Git_Visualizer_2021-2022/Vizualizer
-F:/_GITHUB/Git_Visualizer_2021-2022/Vizualizer
+60238
+Successfully changed project path to: F:/_SOFTS/GitHub/Git_Visualizer_2021-2022/Vizualizer
+F:/_SOFTS/GitHub/Git_Visualizer_2021-2022/Vizualizer
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 76.98 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 73.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.12f1 (b3b2c6512326)
-[Subsystems] Discovering subsystems at path F:/Program Files/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path F:/_GITHUB/Git_Visualizer_2021-2022/Vizualizer/Assets
+[Subsystems] Discovering subsystems at path F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/_SOFTS/GitHub/Git_Visualizer_2021-2022/Vizualizer/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
     Vendor:   
-    VRAM:     8079 MB
-    Driver:   30.0.15.1179
+    VRAM:     6052 MB
+    Driver:   27.21.14.5751
 Initialize mono
-Mono path[0] = 'F:/Program Files/2020.3.12f1/Editor/Data/Managed'
-Mono path[1] = 'F:/Program Files/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'F:/Program Files/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56420
+Mono path[0] = 'F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56696
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: F:/Program Files/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001618 seconds.
+Register platform support module: F:/_SOFTS/Unity Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001533 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 66.60 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 72.32 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.518 seconds
+- Completed reload, in  1.222 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006181 seconds.
+Registered in 0.004021 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.263 seconds
+- Completed reload, in  1.440 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2376 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 159.6 MB.
-System memory in use after: 159.8 MB.
+Unloading 2377 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.8 MB.
+System memory in use after: 234.0 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2820.
-Total: 3.838500 ms (FindLiveObjects: 0.438100 ms CreateObjectMapping: 0.222300 ms MarkObjects: 3.142000 ms  DeleteObjects: 0.033900 ms)
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2835.
+Total: 2.760800 ms (FindLiveObjects: 0.319200 ms CreateObjectMapping: 0.097800 ms MarkObjects: 2.293500 ms  DeleteObjects: 0.048500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -74,499 +74,96 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs & Physicals/Hangar/Materials/M_Ground01.mat
-  artifactKey: Guid(d3c73aedb0a58f2408b0b911c6eba511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Hangar/Materials/M_Ground01.mat using Guid(d3c73aedb0a58f2408b0b911c6eba511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a4a3027382ff96023f0c5567f1c02a4') in 0.199892 seconds 
-  Import took 0.205664 seconds .
+  path: Assets/Scenes/2021-2022.unity
+  artifactKey: Guid(ff03546a841283b40aeee2112c97a48a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/2021-2022.unity using Guid(ff03546a841283b40aeee2112c97a48a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c05101a93ec3458ffb0042410ce5e71b') in 0.120072 seconds 
+  Import took 0.212187 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000365 seconds.
-  path: Assets/Prefabs & Physicals/Hangar/Materials/M_Ground02.mat
-  artifactKey: Guid(adefe07d4acf83444b563deafa3de4f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Hangar/Materials/M_Ground02.mat using Guid(adefe07d4acf83444b563deafa3de4f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cb915e073916aa6a003b4a8a3c2f3d5') in 0.019625 seconds 
-  Import took 0.024858 seconds .
+  Time since last request: 0.000721 seconds.
+  path: Assets/Scenes/_Hangar.unity
+  artifactKey: Guid(36547e6cb99e99844ab946b0a1ed90c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/_Hangar.unity using Guid(36547e6cb99e99844ab946b0a1ed90c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8982f7547e5a8873e0ef5f44725b7190') in 0.007017 seconds 
+  Import took 0.068590 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/Prefabs & Physicals/Hangar/Materials/EmissiveBlanche.mat
-  artifactKey: Guid(da7d5192073594949b5910b76a6c3fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Hangar/Materials/EmissiveBlanche.mat using Guid(da7d5192073594949b5910b76a6c3fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e996ea612dfd6ae5e0eda7b048bf41a0') in 0.014870 seconds 
-  Import took 0.020322 seconds .
+  Time since last request: 0.000397 seconds.
+  path: Assets/Scenes/Interfaces2.0.unity
+  artifactKey: Guid(3fd3206731640c4468bde76ff01f02dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Interfaces2.0.unity using Guid(3fd3206731640c4468bde76ff01f02dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df9a5a003f9e7d763f45abb0597a4ed4') in 0.038350 seconds 
+  Import took 0.058878 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 51.183937 seconds.
-  path: Assets/Prefabs & Physicals/Hangar17022022.fbx
-  artifactKey: Guid(2972e1b66ce1e5e48826ba5441e91395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Hangar17022022.fbx using Guid(2972e1b66ce1e5e48826ba5441e91395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55094e3f6742748b03f6fe73b00e9771') in 0.247840 seconds 
-  Import took 0.256389 seconds .
+  Time since last request: 106.163841 seconds.
+  path: Assets/Prefabs & Physicals/InterceptorSith
+  artifactKey: Guid(6036588240a3b9d45a23b2ca4fe00d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs & Physicals/InterceptorSith using Guid(6036588240a3b9d45a23b2ca4fe00d59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '775c83a52371d777a34156c24a662a06') in 0.007147 seconds 
+  Import took 0.040524 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.123331 seconds.
-  path: Assets/Prefabs & Physicals/Prefabs
-  artifactKey: Guid(8698de4cdfe7cde43b2e922f1a336015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Prefabs using Guid(8698de4cdfe7cde43b2e922f1a336015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe5cae8a1f7bc0a61d33d32a5060ff72') in 0.005613 seconds 
-  Import took 0.008799 seconds .
+  Time since last request: 8.707111 seconds.
+  path: Assets/Prefabs & Physicals/InterceptorSith/Interceptor02032022.fbx
+  artifactKey: Guid(72d0891f9d42d0e49887fddd66b34635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs & Physicals/InterceptorSith/Interceptor02032022.fbx using Guid(72d0891f9d42d0e49887fddd66b34635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43ddc82b77b7679001d630ce9f096666') in 0.462198 seconds 
+  Import took 0.491249 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.005236 seconds.
-  path: Assets/Prefabs & Physicals/Prefabs
-  artifactKey: Guid(8698de4cdfe7cde43b2e922f1a336015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Prefabs using Guid(8698de4cdfe7cde43b2e922f1a336015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe5cae8a1f7bc0a61d33d32a5060ff72') in 0.002299 seconds 
-  Import took 0.006196 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.051474 seconds.
-  path: Assets/Prefabs & Physicals/Prefabs/LightSaber_Black.prefab
-  artifactKey: Guid(64a9befffb6f2fc43a177f5d77664b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Prefabs/LightSaber_Black.prefab using Guid(64a9befffb6f2fc43a177f5d77664b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00c28a3bbe7acfa74de04db122602855') in 0.015719 seconds 
-  Import took 0.019270 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/Prefabs & Physicals/Prefabs/LightSaber_KyloRen.prefab
-  artifactKey: Guid(f1e69eefb34c2174bbc956f2fd003e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Prefabs/LightSaber_KyloRen.prefab using Guid(f1e69eefb34c2174bbc956f2fd003e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc3946699dbe633efa9be52ae886754c') in 0.016405 seconds 
-  Import took 0.020430 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000220 seconds.
-  path: Assets/Prefabs & Physicals/Prefabs/LightSaber_Luke.prefab
-  artifactKey: Guid(59f1216117b5b394d9b939599b48756a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Prefabs/LightSaber_Luke.prefab using Guid(59f1216117b5b394d9b939599b48756a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feef3fd4b47277f1db731acbef263f21') in 0.010457 seconds 
-  Import took 0.013714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/Prefabs & Physicals/Prefabs/LightSaber_KyloRen.prefab
-  artifactKey: Guid(f1e69eefb34c2174bbc956f2fd003e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Prefabs/LightSaber_KyloRen.prefab using Guid(f1e69eefb34c2174bbc956f2fd003e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc3946699dbe633efa9be52ae886754c') in 0.008901 seconds 
-  Import took 0.012933 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000225 seconds.
-  path: Assets/Prefabs & Physicals/Prefabs/LightSaber_Luke.prefab
-  artifactKey: Guid(59f1216117b5b394d9b939599b48756a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Prefabs/LightSaber_Luke.prefab using Guid(59f1216117b5b394d9b939599b48756a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feef3fd4b47277f1db731acbef263f21') in 0.006971 seconds 
-  Import took 0.011378 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.750914 seconds.
-  path: Assets/Prefabs & Physicals/LightSabers
-  artifactKey: Guid(8698de4cdfe7cde43b2e922f1a336015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/LightSabers using Guid(8698de4cdfe7cde43b2e922f1a336015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35443b357c9860e0bc96db4ff5da9b86') in 0.006112 seconds 
-  Import took 0.009944 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.230866 seconds.
-  path: Assets/Prefabs & Physicals/Planets
-  artifactKey: Guid(b2bcc0825f0d2cd44996b69041817fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets using Guid(b2bcc0825f0d2cd44996b69041817fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0bef2d93ca270a49ead526ab902c6a3') in 0.006029 seconds 
-  Import took 0.010339 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001242 seconds.
-  path: Assets/Prefabs & Physicals/Planets
-  artifactKey: Guid(b2bcc0825f0d2cd44996b69041817fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets using Guid(b2bcc0825f0d2cd44996b69041817fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0bef2d93ca270a49ead526ab902c6a3') in 0.002728 seconds 
-  Import took 0.006669 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.225523 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet04.fbx
-  artifactKey: Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet04.fbx using Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64ca7a80a86303595684056a44d272d3') in 0.039044 seconds 
-  Import took 0.042605 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.424562 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet04.fbx
-  artifactKey: Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet04.fbx using Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8cba86facf4134bc53b52192d73d676') in 0.030996 seconds 
-  Import took 0.034721 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 37.934672 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Atmos001.mat
-  artifactKey: Guid(d0a54371b5ea2ed4ea18a5ab723e2d87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Atmos001.mat using Guid(d0a54371b5ea2ed4ea18a5ab723e2d87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86a233c9715da0ff8a5d7de6c1b6276a') in 0.012309 seconds 
-  Import took 0.015698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000267 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Clouds001.mat
-  artifactKey: Guid(fa4267c2bd38dbb46a00a39adb2ecb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Clouds001.mat using Guid(fa4267c2bd38dbb46a00a39adb2ecb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4621d0a4af4ccaabfdd8c5009bd39f17') in 0.010713 seconds 
-  Import took 0.014667 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1166.410217 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e21e82fd834bcb64e28eb8702b802d7c') in 0.022090 seconds 
-  Import took 0.026485 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 68.512044 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet04.fbx
-  artifactKey: Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet04.fbx using Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efa04268b5fc1453ef5a314be689475b') in 0.032589 seconds 
-  Import took 0.036996 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.510412 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58289073921205a0f0bbe78ac0aa6e6d') in 0.031275 seconds 
-  Import took 0.034749 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.661086 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aa67aa22ad87b4f2ab2061a81429904') in 0.015471 seconds 
-  Import took 0.019613 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.672814 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6383cb57c860ed5c0747ff4dae8c5a18') in 0.018393 seconds 
-  Import took 0.022271 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.896940 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d071e7464d7e7672ddfb1d78073dad1') in 0.009616 seconds 
-  Import took 0.014091 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.039867 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25cdf470ebfade534a04d66b03209a72') in 0.010899 seconds 
-  Import took 0.015005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 112.609777 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd37e6be5802ba8afd34177d07f68d7c5') in 0.010572 seconds 
-  Import took 0.014148 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.923784 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '531ab46cbaebb17f6949b34b3e4f797c') in 0.009543 seconds 
-  Import took 0.014011 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 521.510760 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4236eee7f81c5cbd5b141bf6a38d66cc') in 0.012870 seconds 
-  Import took 0.017540 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 145.583286 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet04.fbx
-  artifactKey: Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet04.fbx using Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bde2ebce5c0246c21165e15cb902b8a7') in 0.050806 seconds 
-  Import took 0.054643 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.627048 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet001.mat
-  artifactKey: Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet001.mat using Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0829d28bca0f6bddcd9de66a0c67cde') in 0.017706 seconds 
-  Import took 0.021676 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet04.fbx
-  artifactKey: Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet04.fbx using Guid(601c37484ee92f54b8268c8b2224979d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3bd3d6c71e4dae24c1c083dd48fde6c') in 0.055000 seconds 
-  Import took 0.058736 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 572.863193 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_em.png
-  artifactKey: Guid(ab0884ac98838b24cae46f09c9e75c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_em.png using Guid(ab0884ac98838b24cae46f09c9e75c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a8b300e25020886287342837a1bfeb1') in 0.016233 seconds 
-  Import took 0.020979 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_normal.png
-  artifactKey: Guid(2a35ac32ec3594b47996a2f152ced980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_normal.png using Guid(2a35ac32ec3594b47996a2f152ced980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b67860a2739d1fbd70d7cfe5f9f81e9') in 0.014415 seconds 
-  Import took 0.018336 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_roughness.png
-  artifactKey: Guid(714d22168ccca9b4daa157078d350c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_roughness.png using Guid(714d22168ccca9b4daa157078d350c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22b42c5887f55b61225f0c7ea1e111a0') in 0.013358 seconds 
-  Import took 0.017491 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 146.116711 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_normal.png
-  artifactKey: Guid(2a35ac32ec3594b47996a2f152ced980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_normal.png using Guid(2a35ac32ec3594b47996a2f152ced980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0735233479915e12d768d65d154c9cea') in 0.019661 seconds 
-  Import took 0.023561 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.070917 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_roughness.png
-  artifactKey: Guid(714d22168ccca9b4daa157078d350c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_roughness.png using Guid(714d22168ccca9b4daa157078d350c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b2a276eab05980fe1f60ac743dd2e49') in 0.013745 seconds 
-  Import took 0.018271 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 847.691056 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c48cb081b97a8edb1c4e4b81888aba61') in 0.013610 seconds 
-  Import took 0.017878 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002918 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_texture.png
-  artifactKey: Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_texture.png using Guid(29a8354bc5292f44b98e916a35abf408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c48cb081b97a8edb1c4e4b81888aba61') in 0.011128 seconds 
-  Import took 0.015119 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 735.133779 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_clouds_texture.png
-  artifactKey: Guid(4960a6a4270bc444792e6d044eb8aa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_clouds_texture.png using Guid(4960a6a4270bc444792e6d044eb8aa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebf9910b8cc154bd10f046be6044c1a7') in 0.019742 seconds 
-  Import took 0.024632 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001277 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_clouds_texture.png
-  artifactKey: Guid(4960a6a4270bc444792e6d044eb8aa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_clouds_texture.png using Guid(4960a6a4270bc444792e6d044eb8aa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebf9910b8cc154bd10f046be6044c1a7') in 0.006599 seconds 
-  Import took 0.010593 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 976.642910 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_clouds_texture.png
-  artifactKey: Guid(4960a6a4270bc444792e6d044eb8aa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_clouds_texture.png using Guid(4960a6a4270bc444792e6d044eb8aa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17db3b2240bfcc7816bdcbdc3ebe3d1a') in 0.019205 seconds 
-  Import took 0.023354 seconds .
+  Time since last request: 4.321228 seconds.
+  path: Assets/Prefabs & Physicals/InterceptorSith/Interceptor02032022.fbx
+  artifactKey: Guid(72d0891f9d42d0e49887fddd66b34635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs & Physicals/InterceptorSith/Interceptor02032022.fbx using Guid(72d0891f9d42d0e49887fddd66b34635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4015c66d2e8c30144357c0994ba967e7') in 0.151009 seconds 
+  Import took 0.166825 seconds .
 
 ========================================================================
 Received Prepare
+Refreshing native plugins compatible for Editor in 3.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.4 MB.
+System memory in use after: 164.7 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2878.
+Total: 4.220600 ms (FindLiveObjects: 0.268700 ms CreateObjectMapping: 0.096800 ms MarkObjects: 3.813400 ms  DeleteObjects: 0.038700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.098057 seconds.
+Registered in 0.005277 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 35.524 seconds
+- Completed reload, in  1.337 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.97 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2040 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 130.6 MB.
-System memory in use after: 130.8 MB.
+System memory in use before: 204.6 MB.
+System memory in use after: 204.8 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2877.
-Total: 3.519700 ms (FindLiveObjects: 0.399500 ms CreateObjectMapping: 0.115700 ms MarkObjects: 2.895100 ms  DeleteObjects: 0.108000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 1873.397613 seconds.
-  path: Assets/Prefabs & Physicals/Materials/aMfJGCr.mat
-  artifactKey: Guid(b0d0c42b376332a41966c1c101a8c7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Materials/aMfJGCr.mat using Guid(b0d0c42b376332a41966c1c101a8c7d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e27d31e6d7692caa28f14124e021ea87') in 41.019095 seconds 
-  Import took 41.074283 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000365 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Mustafar
-  artifactKey: Guid(a18a1386e96ec7248bbe536d1fb383b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Mustafar using Guid(a18a1386e96ec7248bbe536d1fb383b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27f7d7506162fe6ea46540261e3e078b') in 0.021244 seconds 
-  Import took 0.038989 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.315673 seconds.
-  path: Assets/Prefabs & Physicals/Planets/m_atmosphere01.mat
-  artifactKey: Guid(181eee70201144d43a8b240e0f27dd31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/m_atmosphere01.mat using Guid(181eee70201144d43a8b240e0f27dd31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf32165848a66d9d18524659e7a40227') in 0.028594 seconds 
-  Import took 0.033100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1142.251991 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_atmos_texture.png
-  artifactKey: Guid(efcc7a4a0ea464b4487872127f7e61ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_atmos_texture.png using Guid(efcc7a4a0ea464b4487872127f7e61ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdf8e757907b63cb3b69cb06db17d202') in 0.022198 seconds 
-  Import took 0.026175 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002696 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet4_atmos_texture.png
-  artifactKey: Guid(efcc7a4a0ea464b4487872127f7e61ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet4_atmos_texture.png using Guid(efcc7a4a0ea464b4487872127f7e61ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdf8e757907b63cb3b69cb06db17d202') in 0.010584 seconds 
-  Import took 0.014856 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 93.596814 seconds.
-  path: Assets/Prefabs & Physicals/Planets/m_atmos.shader
-  artifactKey: Guid(f5c45fe5f5e28d94c90ab83b0523aad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/m_atmos.shader using Guid(f5c45fe5f5e28d94c90ab83b0523aad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152ab6f71d96bcdbfce7b1a3378ab658') in 0.016489 seconds 
-  Import took 0.021442 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4355.817014 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Atmos001.mat
-  artifactKey: Guid(d0a54371b5ea2ed4ea18a5ab723e2d87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Atmos001.mat using Guid(d0a54371b5ea2ed4ea18a5ab723e2d87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '541a4920cf8ca5834bccc7481f4ae91f') in 0.053316 seconds 
-  Import took 0.065649 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet001.mat
-  artifactKey: Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet001.mat using Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db7eafaa7d6d0be223121ba9e0d0b512') in 0.061927 seconds 
-  Import took 0.066844 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000242 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Atmos001.mat
-  artifactKey: Guid(d0a54371b5ea2ed4ea18a5ab723e2d87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Atmos001.mat using Guid(d0a54371b5ea2ed4ea18a5ab723e2d87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '541a4920cf8ca5834bccc7481f4ae91f') in 0.015515 seconds 
-  Import took 0.019661 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet001.mat
-  artifactKey: Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet001.mat using Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db7eafaa7d6d0be223121ba9e0d0b512') in 0.018111 seconds 
-  Import took 0.022583 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.437468 seconds.
-  path: Assets/Prefabs & Physicals/Planets/m_atmos.shader
-  artifactKey: Guid(f5c45fe5f5e28d94c90ab83b0523aad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/m_atmos.shader using Guid(f5c45fe5f5e28d94c90ab83b0523aad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e9d050443b5cd8a4bd2f7c00ef8c75d') in 0.007326 seconds 
-  Import took 0.016354 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.011213 seconds.
-  path: Assets/Prefabs & Physicals/Planets/m_atmos.shader
-  artifactKey: Guid(f5c45fe5f5e28d94c90ab83b0523aad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/m_atmos.shader using Guid(f5c45fe5f5e28d94c90ab83b0523aad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e9d050443b5cd8a4bd2f7c00ef8c75d') in 0.004181 seconds 
-  Import took 0.008449 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.300444 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Mustafar/Clouds001.mat
-  artifactKey: Guid(fa4267c2bd38dbb46a00a39adb2ecb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Mustafar/Clouds001.mat using Guid(fa4267c2bd38dbb46a00a39adb2ecb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c828fc6962cc01f30ae556ab3f2c91ba') in 0.128157 seconds 
-  Import took 0.137137 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003068 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Mustafar/Clouds001.mat
-  artifactKey: Guid(fa4267c2bd38dbb46a00a39adb2ecb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Mustafar/Clouds001.mat using Guid(fa4267c2bd38dbb46a00a39adb2ecb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c828fc6962cc01f30ae556ab3f2c91ba') in 0.020127 seconds 
-  Import took 0.023967 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004374 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.068 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2041 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.1 MB.
-System memory in use after: 203.3 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2884.
-Total: 2.539500 ms (FindLiveObjects: 0.267700 ms CreateObjectMapping: 0.125400 ms MarkObjects: 2.115300 ms  DeleteObjects: 0.029900 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2881.
+Total: 2.549000 ms (FindLiveObjects: 0.257200 ms CreateObjectMapping: 0.099100 ms MarkObjects: 2.161300 ms  DeleteObjects: 0.029800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -575,299 +172,19 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 1198.031613 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet3_texture.png
-  artifactKey: Guid(748876a5364343c40903b7f99da8264d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet3_texture.png using Guid(748876a5364343c40903b7f99da8264d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c892abc8a9461cf7d3a5a3f137b7f62c') in 0.192873 seconds 
-  Import took 0.196903 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.477087 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Mustafar/Clouds001.mat
-  artifactKey: Guid(fa4267c2bd38dbb46a00a39adb2ecb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Mustafar/Clouds001.mat using Guid(fa4267c2bd38dbb46a00a39adb2ecb52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b7ba548645d4104f5533a0a2eb214ae') in 0.036460 seconds 
-  Import took 0.046083 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Mustafar/Planet001.mat
-  artifactKey: Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Mustafar/Planet001.mat using Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '705a22c716bd4cf43dc248cd6a98a562') in 0.024794 seconds 
-  Import took 0.029250 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004126 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Mustafar/Planet001.mat
-  artifactKey: Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Mustafar/Planet001.mat using Guid(c7755055ae69e3b46bae7b57d61ea14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '705a22c716bd4cf43dc248cd6a98a562') in 0.022412 seconds 
-  Import took 0.026219 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 87.119080 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet001 1.mat
-  artifactKey: Guid(4f1e943bb50eb9e4f8badb8e213d86b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet001 1.mat using Guid(4f1e943bb50eb9e4f8badb8e213d86b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c38748df499c8e9672d6d6e50fcf56bd') in 0.015095 seconds 
-  Import took 0.018522 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 140.299477 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet3_normal.png
-  artifactKey: Guid(bb0b2b00c61ceab42ae7b06b46510c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet3_normal.png using Guid(bb0b2b00c61ceab42ae7b06b46510c8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16ca8198188043cecef846a6d5da7d0e') in 0.018401 seconds 
-  Import took 0.023378 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 176.018270 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Mustafar/Clouds001 1.mat
-  artifactKey: Guid(6b4d82bb642202845a722002747fb64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Mustafar/Clouds001 1.mat using Guid(6b4d82bb642202845a722002747fb64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e960e6e59486d9e4a353f5fbcd4a4e9') in 0.012512 seconds 
-  Import took 0.016426 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.670540 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Atmos001 1.mat
-  artifactKey: Guid(2ee76b97549c40245b27ceca3668ebcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Atmos001 1.mat using Guid(2ee76b97549c40245b27ceca3668ebcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0afd693ac064346a37ff1e7b9a1a3eb') in 0.010975 seconds 
-  Import took 0.019653 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet001 1.mat
-  artifactKey: Guid(4f1e943bb50eb9e4f8badb8e213d86b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet001 1.mat using Guid(4f1e943bb50eb9e4f8badb8e213d86b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b2bda4341b6514107e79dbc3386c81c') in 0.033619 seconds 
-  Import took 0.036781 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 108.915347 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet3_clouds_texture.png
-  artifactKey: Guid(d1419f1214e0014449139982d3309e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet3_clouds_texture.png using Guid(d1419f1214e0014449139982d3309e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a708b14c9fe80a151b42dd58f917e974') in 0.012654 seconds 
-  Import took 0.017568 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 173.054950 seconds.
-  path: ProjectSettings/TagManager.asset
-  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95df672b4aaba54310d34c83eef51bb8') in 0.008919 seconds 
-  Import took 0.013033 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004467 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.046 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2040 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.9 MB.
-System memory in use after: 203.1 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2888.
-Total: 2.320500 ms (FindLiveObjects: 0.261600 ms CreateObjectMapping: 0.115700 ms MarkObjects: 1.917800 ms  DeleteObjects: 0.024300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 460.141963 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Clouds001 1.mat
-  artifactKey: Guid(6b4d82bb642202845a722002747fb64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Clouds001 1.mat using Guid(6b4d82bb642202845a722002747fb64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62559731278456ac32e960d5c2a379f2') in 0.175325 seconds 
-  Import took 0.179635 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000361 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Atmos001 1.mat
-  artifactKey: Guid(2ee76b97549c40245b27ceca3668ebcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Atmos001 1.mat using Guid(2ee76b97549c40245b27ceca3668ebcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25e757c779daeb864a7010367fa6fdf4') in 0.011388 seconds 
-  Import took 0.015268 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2680.502373 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Planet2_normal.png
-  artifactKey: Guid(9703cec08d92e074c980838517bf3f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Planet2_normal.png using Guid(9703cec08d92e074c980838517bf3f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6cbc1b76a470c0501ad0fa0abe2aa9a') in 0.030870 seconds 
-  Import took 0.041880 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.454406 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Vespen
-  artifactKey: Guid(50b29a8b10ca5644cb5609a39212e933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Vespen using Guid(50b29a8b10ca5644cb5609a39212e933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd277a7d3bb513affef10f7bea1a74ad1') in 0.007500 seconds 
-  Import took 0.015728 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 68.319363 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra
-  artifactKey: Guid(50b29a8b10ca5644cb5609a39212e933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra using Guid(50b29a8b10ca5644cb5609a39212e933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69ab83cc8a76faf8db8ff05878bcea01') in 0.007040 seconds 
-  Import took 0.011191 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.539661 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Vespen
-  artifactKey: Guid(9b4f02136e37c0240a4f47ab91eeb5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Vespen using Guid(9b4f02136e37c0240a4f47ab91eeb5b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ea5ca8efd0833cbd198b32c3df295e2') in 0.002507 seconds 
-  Import took 0.011065 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.867876 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra/Planet3_normal 1.png
-  artifactKey: Guid(ef2a7add4ad9d5a4e80cbfd9f42f06e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra/Planet3_normal 1.png using Guid(ef2a7add4ad9d5a4e80cbfd9f42f06e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d54fb050e0bb85d6a2407d7c29856af') in 0.011361 seconds 
-  Import took 0.020369 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.408554 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra/Planet3_texture 1.png
-  artifactKey: Guid(5c0292fcee64df243a5725da23cec61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra/Planet3_texture 1.png using Guid(5c0292fcee64df243a5725da23cec61a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10026834aa7dc2c78054880ec7dd9b47') in 0.025329 seconds 
-  Import took 0.029881 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.380706 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra/Atmos001 2.mat
-  artifactKey: Guid(d67bfbfc8e42b3f44bccb6c21dbde345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra/Atmos001 2.mat using Guid(d67bfbfc8e42b3f44bccb6c21dbde345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f486ce4332063633e7b88e7832a5328') in 0.024534 seconds 
-  Import took 0.032915 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000376 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra/Clouds001 2.mat
-  artifactKey: Guid(1ca4c1393775adb4cac890b76e45d9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra/Clouds001 2.mat using Guid(1ca4c1393775adb4cac890b76e45d9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9be6f1e5bc5b90646fb49dd7ad8bd4c2') in 0.020997 seconds 
-  Import took 0.024739 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra/Planet2_texture.png
-  artifactKey: Guid(6508af81c733be9449f95a0997b78911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra/Planet2_texture.png using Guid(6508af81c733be9449f95a0997b78911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a331057502e23e1f1c0cf95ef71ca8fd') in 0.010927 seconds 
-  Import took 0.015279 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 298.878882 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra/Atmos001 2.mat
-  artifactKey: Guid(d67bfbfc8e42b3f44bccb6c21dbde345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra/Atmos001 2.mat using Guid(d67bfbfc8e42b3f44bccb6c21dbde345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d8c671e4c4aa4b1bb55b9551543fb0') in 0.012660 seconds 
-  Import took 0.021739 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000344 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra/Planet001 2.mat
-  artifactKey: Guid(b43e0b416734986498fa9104bdd26000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra/Planet001 2.mat using Guid(b43e0b416734986498fa9104bdd26000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b49141ffd71d548cd99c74b5d0860ae1') in 0.090151 seconds 
-  Import took 0.094041 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 253.785503 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra/Planet02.fbx
-  artifactKey: Guid(07cd8f557c7a2f142b5a43d8d6c27611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra/Planet02.fbx using Guid(07cd8f557c7a2f142b5a43d8d6c27611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afeccde997b06a07973d9871311f31b0') in 0.079172 seconds 
-  Import took 0.083423 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 81.628793 seconds.
-  path: Assets/Prefabs & Physicals/Planets/Terra/Planet001 2.mat
-  artifactKey: Guid(b43e0b416734986498fa9104bdd26000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs & Physicals/Planets/Terra/Planet001 2.mat using Guid(b43e0b416734986498fa9104bdd26000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93f1638e4a002924ae30585b30ceb47a') in 0.030978 seconds 
-  Import took 0.036037 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004899 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.213 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2040 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.0 MB.
-System memory in use after: 203.2 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2892.
-Total: 2.085000 ms (FindLiveObjects: 0.255000 ms CreateObjectMapping: 0.133100 ms MarkObjects: 1.675600 ms  DeleteObjects: 0.020500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004704 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 3.33 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.112 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2040 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.9 MB.
-System memory in use after: 203.1 MB.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.3 MB.
+System memory in use after: 164.6 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2895.
-Total: 2.091100 ms (FindLiveObjects: 0.327700 ms CreateObjectMapping: 0.140600 ms MarkObjects: 1.605400 ms  DeleteObjects: 0.016400 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2881.
+Total: 2.980100 ms (FindLiveObjects: 0.486700 ms CreateObjectMapping: 0.125700 ms MarkObjects: 2.341900 ms  DeleteObjects: 0.023700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -876,38 +193,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005429 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.079 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2040 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.0 MB.
-System memory in use after: 203.2 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2898.
-Total: 2.266900 ms (FindLiveObjects: 0.248100 ms CreateObjectMapping: 0.118400 ms MarkObjects: 1.881000 ms  DeleteObjects: 0.018100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
