@@ -1,8 +1,9 @@
+using FishNet.Object;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowMouse : MonoBehaviour
+public class FollowMouse : NetworkBehaviour
 {
     public float offsetZ = 10.0f;
     public float speed = 2.0f;
@@ -15,6 +16,9 @@ public class FollowMouse : MonoBehaviour
 
    void Update ()
     {
+        if (!base.IsOwner)
+            return;
+
         Vector3 temp = Input.mousePosition;
         temp.z = offsetZ;
 

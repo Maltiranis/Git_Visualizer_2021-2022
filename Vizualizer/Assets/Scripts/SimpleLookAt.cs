@@ -1,8 +1,9 @@
+using FishNet.Object;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleLookAt : MonoBehaviour
+public class SimpleLookAt : NetworkBehaviour
 {
     //public bool _fromVelocity = true;
     public bool rotateInertia = true;
@@ -16,11 +17,17 @@ public class SimpleLookAt : MonoBehaviour
 
     private void Start()
     {
+        if (!base.IsOwner)
+            return;
+
         StartCoroutine(rotationPilot());
     }
 
     void Update()
     {
+        if (!base.IsOwner)
+            return;
+
         if (!rotateInertia)
         {
             Quaternion toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);

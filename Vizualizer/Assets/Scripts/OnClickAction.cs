@@ -1,13 +1,16 @@
+using FishNet.Object;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnClickAction : MonoBehaviour
+public class OnClickAction : NetworkBehaviour
 {
     public bool activator = true;
     public GameObject toActivate;
-    public Vector3 position1;
-    public Vector3 position2;
+    public float xStart = -11.625f;
+    public float xEnd = -9.5f;
+    Vector3 position1;
+    Vector3 position2;
     bool isIn = false;
     public Material mat1;
     public Material mat2;
@@ -22,6 +25,9 @@ public class OnClickAction : MonoBehaviour
 
     void Update()
     {
+        if (!base.IsOwner)
+            return;
+
         Deploy();
         ClickAction();
         ChangeMatIfActif();
@@ -32,10 +38,12 @@ public class OnClickAction : MonoBehaviour
     {
         if (isIn)
         {
+            position2 = new Vector3(xEnd, transform.position.y, transform.position.z);
             MoveFunction(position2);
         }
         if (!isIn)
         {
+            position1 = new Vector3(xStart, transform.position.y, transform.position.z);
             MoveFunction(position1);
         }
     }
@@ -83,12 +91,18 @@ public class OnClickAction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!base.IsOwner)
+            return;
+
         isIn = true;
         timeElapsed = 0.0f;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (!base.IsOwner)
+            return;
+
         isIn = false;
         timeElapsed = 0.0f;
     }
