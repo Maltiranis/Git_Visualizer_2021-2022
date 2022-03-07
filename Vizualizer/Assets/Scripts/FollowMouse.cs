@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FollowMouse : NetworkBehaviour
 {
+    public GameObject myCam;
     public float offsetZ = 10.0f;
     public float speed = 2.0f;
     public bool instantaneous = false;
@@ -23,7 +24,7 @@ public class FollowMouse : NetworkBehaviour
         temp.z = offsetZ;
 
         if (instantaneous == false)
-            this.transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(temp), speed * Time.deltaTime);
+            this.transform.position = Vector3.Lerp(transform.position, myCam.GetComponent<Camera>().ScreenToWorldPoint(temp), speed * Time.deltaTime);
         else
             this.transform.position = Camera.main.ScreenToWorldPoint(temp);
     }
