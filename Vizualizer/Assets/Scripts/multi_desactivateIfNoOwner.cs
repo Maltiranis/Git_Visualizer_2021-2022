@@ -1,13 +1,12 @@
-using FishNet.Object;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class multi_desactivateIfNoOwner : NetworkBehaviour
+public class multi_desactivateIfNoOwner : MonoBehaviour
 {
     void Start()
     {
-        if (!base.IsOwner)
-            gameObject.SetActive(false);
+        /*if (!base.IsOwner)
+            gameObject.SetActive(false);*/
     }
 }

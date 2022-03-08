@@ -1,9 +1,8 @@
-using FishNet.Object;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnClickAction : NetworkBehaviour
+public class OnClickAction : MonoBehaviour
 {
     public bool activator = true;
     public GameObject toActivate;
@@ -25,9 +24,6 @@ public class OnClickAction : NetworkBehaviour
 
     void Update()
     {
-        if (!base.IsOwner)
-            return;
-
         Deploy();
         ClickAction();
         ChangeMatIfActif();
@@ -91,18 +87,12 @@ public class OnClickAction : NetworkBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!base.IsOwner)
-            return;
-
         isIn = true;
         timeElapsed = 0.0f;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (!base.IsOwner)
-            return;
-
         isIn = false;
         timeElapsed = 0.0f;
     }
