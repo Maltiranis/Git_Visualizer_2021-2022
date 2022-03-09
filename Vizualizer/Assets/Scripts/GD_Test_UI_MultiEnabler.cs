@@ -1,31 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class GD_Test_UI_MultiEnabler : MonoBehaviour
+public class GD_Test_UI_MultiEnabler : NetworkBehaviour
 {
-    public GameObject[] toActivateList;
-    public GameObject[] toDesactivateList;
+    public GameObject[] objectsList;
+    [SerializeField]
+    private NetworkVariable<int> activatedOne = new NetworkVariable<int>();
 
-    public void ActiveThem()
+    public void ActiveThisOne(int thisOne)
     {
-        foreach (GameObject go in toActivateList)
+        if (IsClient && IsOwner)
+            UpdateClientPositionServerRpc(thisOne);
+        if (IsServer)
         {
-            go.SetActive(true);
+            for (int i = 0; i < objectsList.Length; i++)
+            {
+                objectsList[i].SetActive(false);
+            }
+            if (thisOne != -1)
+                objectsList[thisOne].SetActive(true);
+            UpdateClientPositionServerRpc(thisOne);
         }
     }
 
-    public void DesactiveThem()
+    [ServerRpc]
+    private void UpdateClientPositionServerRpc (int newOne)
     {
-        foreach (GameObject go in toDesactivateList)
+        activatedOne.Value = newOne;
+        for (int i = 0; i < objectsList.Length; i++)
         {
-            go.SetActive(false);
+            objectsList[i].SetActive(false);
         }
-    }
-
-    public void DoBothFunctions ()
-    {
-        ActiveThem();
-        DesactiveThem();
+        if (newOne != -1)
+            objectsList[newOne].SetActive(true);
     }
 }
