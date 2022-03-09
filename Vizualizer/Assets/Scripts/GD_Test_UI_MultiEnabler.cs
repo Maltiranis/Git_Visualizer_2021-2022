@@ -5,35 +5,44 @@ using Unity.Netcode;
 
 public class GD_Test_UI_MultiEnabler : NetworkBehaviour
 {
+    [SerializeField]
     public GameObject[] objectsList;
     [SerializeField]
-    private NetworkVariable<int> activatedOne = new NetworkVariable<int>();
+    private NetworkVariable<int> ActivatedOne = new NetworkVariable<int>();
 
     public void ActiveThisOne(int thisOne)
     {
-        if (IsClient && IsOwner)
-            UpdateClientPositionServerRpc(thisOne);
-        if (IsServer)
-        {
-            for (int i = 0; i < objectsList.Length; i++)
-            {
-                objectsList[i].SetActive(false);
-            }
-            if (thisOne != -1)
-                objectsList[thisOne].SetActive(true);
-            UpdateClientPositionServerRpc(thisOne);
-        }
-    }
+        if (IsOwner)
+            ActivateFromOwner(thisOne);
 
-    [ServerRpc]
-    private void UpdateClientPositionServerRpc (int newOne)
-    {
-        activatedOne.Value = newOne;
         for (int i = 0; i < objectsList.Length; i++)
         {
             objectsList[i].SetActive(false);
         }
-        if (newOne != -1)
-            objectsList[newOne].SetActive(true);
+        if (ActivatedOne.Value != -1)
+            objectsList[ActivatedOne.Value].SetActive(true);
+    }
+
+    void ActivateFromOwner(int tO)
+    {
+        if (NetworkManager.Singleton.IsServer)
+        {
+            ActivatedOne.Value = tO;
+        }
+        else
+        {
+            UpdateClientPositionServerRpc(tO);
+        }
+    }
+
+    static int GetGoodNumber(int i)
+    {
+        return i;
+    }
+
+    [ServerRpc]
+    private void UpdateClientPositionServerRpc (int newOne, ServerRpcParams rpcParams = default)
+    {
+        ActivatedOne.Value = GetGoodNumber(newOne);
     }
 }
