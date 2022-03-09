@@ -1,8 +1,7 @@
-using Unity.Netcode;
 using UnityEngine;
 
-public class FollowMouse : NetworkBehaviour
-{
+public class FollowMouse : MonoBehaviour
+{/*
     //public GameObject myCam;
     public float offsetZ = 10.0f;
     public float speed = 2.0f;
@@ -50,5 +49,5 @@ public class FollowMouse : NetworkBehaviour
             this.transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(Position.Value), speed * Time.deltaTime);
         else
             this.transform.position = Camera.main.ScreenToWorldPoint(Position.Value);
-    }
+    }*/
 }

@@ -1,20 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
 
-public class GD_Test_UI_MultiEnabler : NetworkBehaviour
-{
+public class GD_Test_UI_MultiEnabler : MonoBehaviour
+{/*
     [SerializeField]
     public GameObject[] objectsList;
     [SerializeField]
     private NetworkVariable<int> ActivatedOne = new NetworkVariable<int>();
 
+    int countIt = 0;
+
+    private void Start()
+    {
+        if (!IsOwner)
+            gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (countIt <= 0)
+        {
+            for (int i = 0; i < objectsList.Length; i++)
+            {
+                if (objectsList[i].activeInHierarchy == true)
+                {
+                    countIt++;
+                }
+            }
+            objectsList[ActivatedOne.Value].SetActive(true);
+        }
+    }
+
     public void ActiveThisOne(int thisOne)
     {
-        if (IsOwner)
-            ActivateFromOwner(thisOne);
+        if (IsServer)
+        {
+            UpdateActivateOnServer();
+        }
+        if (IsClient && IsOwner)
+        {
+            UpdateActivateOnClient(thisOne);
+        }
+    }
 
+    public void UpdateActivateOnServer()
+    {
         for (int i = 0; i < objectsList.Length; i++)
         {
             objectsList[i].SetActive(false);
@@ -23,26 +54,21 @@ public class GD_Test_UI_MultiEnabler : NetworkBehaviour
             objectsList[ActivatedOne.Value].SetActive(true);
     }
 
-    void ActivateFromOwner(int tO)
+    public void UpdateActivateOnClient(int thisOne)
     {
-        if (NetworkManager.Singleton.IsServer)
+        for (int i = 0; i < objectsList.Length; i++)
         {
-            ActivatedOne.Value = tO;
+            objectsList[i].SetActive(false);
         }
-        else
-        {
-            UpdateClientPositionServerRpc(tO);
-        }
-    }
+        if (thisOne != -1)
+            objectsList[thisOne].SetActive(true);
 
-    static int GetGoodNumber(int i)
-    {
-        return i;
+        UpdateClientActivatedServerRpc(thisOne);
     }
 
     [ServerRpc]
-    private void UpdateClientPositionServerRpc (int newOne, ServerRpcParams rpcParams = default)
+    void UpdateClientActivatedServerRpc(int thisOne)
     {
-        ActivatedOne.Value = GetGoodNumber(newOne);
-    }
+        ActivatedOne.Value = thisOne;
+    }*/
 }

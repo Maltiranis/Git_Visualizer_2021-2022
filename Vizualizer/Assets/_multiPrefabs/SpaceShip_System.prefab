@@ -5551,8 +5551,6 @@ GameObject:
   - component: {fileID: 1902062675}
   - component: {fileID: 1902062672}
   - component: {fileID: 1902062673}
-  - component: {fileID: 1902062678}
-  - component: {fileID: 1141165364075494762}
   m_Layer: 5
   m_Name: SpaceShip_02
   m_TagString: Untagged
@@ -5601,7 +5599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5662,7 +5660,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1902062678}
+      - m_Target: {fileID: 4834578047829517658}
         m_TargetAssemblyTypeName: GD_Test_UI_MultiEnabler, Assembly-CSharp
         m_MethodName: ActiveThisOne
         m_Mode: 3
@@ -5674,50 +5672,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1902062678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902062676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201d030ecc8cfaa43841c1ba6a9bb75c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsList:
-  - {fileID: 6817529332927095359}
-  - {fileID: 2016521645101193743}
-  ActivatedOne:
-    m_InternalValue: 0
---- !u!114 &1141165364075494762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902062676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  InLocalSpace: 0
-  Interpolate: 1
-  CanCommitToTransform: 0
 --- !u!1 &65863719042973787
 GameObject:
   m_ObjectHideFlags: 0
@@ -6459,6 +6413,7 @@ GameObject:
   - component: {fileID: 1876439500008908330}
   - component: {fileID: 1876439500008908329}
   - component: {fileID: 1876439500008908328}
+  - component: {fileID: 4834578047829517658}
   m_Layer: 5
   m_Name: SpaceShipCanvas
   m_TagString: Untagged
@@ -6547,6 +6502,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4834578047829517658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876439500008908342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201d030ecc8cfaa43841c1ba6a9bb75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1876439500533415565
 GameObject:
   m_ObjectHideFlags: 0
@@ -6559,8 +6526,6 @@ GameObject:
   - component: {fileID: 1876439500533415553}
   - component: {fileID: 1876439500533415552}
   - component: {fileID: 1876439500533415567}
-  - component: {fileID: 1876439500533415564}
-  - component: {fileID: 7045606919094562637}
   m_Layer: 5
   m_Name: SpaceShip_01
   m_TagString: Untagged
@@ -6609,7 +6574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6670,7 +6635,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1876439500533415564}
+      - m_Target: {fileID: 4834578047829517658}
         m_TargetAssemblyTypeName: GD_Test_UI_MultiEnabler, Assembly-CSharp
         m_MethodName: ActiveThisOne
         m_Mode: 3
@@ -6682,50 +6647,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1876439500533415564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876439500533415565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201d030ecc8cfaa43841c1ba6a9bb75c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsList:
-  - {fileID: 6817529332927095359}
-  - {fileID: 2016521645101193743}
-  ActivatedOne:
-    m_InternalValue: 0
---- !u!114 &7045606919094562637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876439500533415565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  InLocalSpace: 0
-  Interpolate: 1
-  CanCommitToTransform: 0
 --- !u!1 &2016521645101193743
 GameObject:
   m_ObjectHideFlags: 0
@@ -7158,8 +7079,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2610530768215932439}
-  - component: {fileID: 5405354116121905628}
-  - component: {fileID: 5009369674754273244}
   m_Layer: 0
   m_Name: SpaceShip_System
   m_TagString: Untagged
@@ -7185,34 +7104,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5405354116121905628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2610530768215932438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 951099334
-  AlwaysReplicateAsRoot: 0
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
---- !u!114 &5009369674754273244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2610530768215932438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64b84ca4aac5cd24ca6f87a7cb16793c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2610530768474742664
 GameObject:
   m_ObjectHideFlags: 0
@@ -7223,7 +7114,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2610530768474742665}
   - component: {fileID: 2610530768474742666}
-  - component: {fileID: 2610530769437529430}
   m_Layer: 0
   m_Name: Follower
   m_TagString: Untagged
@@ -7257,38 +7147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9988a5f1e9b04449a114ae3903806b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetZ: 10
-  speed: 1
-  instantaneous: 0
-  Position:
-    m_InternalValue: {x: 0, y: 0, z: 0}
---- !u!114 &2610530769437529430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2610530768474742664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  InLocalSpace: 0
-  Interpolate: 1
-  CanCommitToTransform: 0
 --- !u!1 &2610530770046965649
 GameObject:
   m_ObjectHideFlags: 0
@@ -7300,7 +7158,6 @@ GameObject:
   - component: {fileID: 2610530770046965650}
   - component: {fileID: 2610530770046965651}
   - component: {fileID: 2610530770046965644}
-  - component: {fileID: 2610530769080638798}
   m_Layer: 0
   m_Name: LookAt
   m_TagString: Untagged
@@ -7355,33 +7212,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toFollow: {fileID: 2610530768474742665}
   speed: 5
---- !u!114 &2610530769080638798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2610530770046965649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  InLocalSpace: 0
-  Interpolate: 1
-  CanCommitToTransform: 0
 --- !u!1 &2709288995631444160
 GameObject:
   m_ObjectHideFlags: 0
