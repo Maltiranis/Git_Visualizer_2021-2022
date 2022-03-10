@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MatchMacking.unity
+    guid: 1ac26ca043e883547b947f99eb4534cc
+  - enabled: 1
     path: Assets/Scenes/multiplayer.unity
     guid: 3a19ff20750c8b44da5cd3ce3d4531e8
   m_configObjects: {}

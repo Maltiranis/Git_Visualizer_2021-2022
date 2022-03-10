@@ -8,7 +8,7 @@ using Photon.Realtime;
 public class sc_SkinSelection : MonoBehaviourPunCallbacks
 {
     public int _selected;
-    public GameObject[] _skins;
+    //public GameObject[] _skins;
 
     private void Awake()
     {
@@ -29,7 +29,7 @@ public class sc_SkinSelection : MonoBehaviourPunCallbacks
         _selected = s;
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (_skins.Length > 0)
         {
@@ -58,7 +58,7 @@ public class sc_SkinSelection : MonoBehaviourPunCallbacks
                     _skins[_selected].SetActive(true);
             }
         }
-    }
+    }*/
 
     public void OnDisconnectedFromPhoton()
     {
