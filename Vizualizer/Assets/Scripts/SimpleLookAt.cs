@@ -14,6 +14,17 @@ public class SimpleLookAt : MonoBehaviour
 
     float brassage = 0.0f;
 
+    GameObject shipList;
+    GameObject playerList;
+
+    private void Awake()
+    {
+        shipList = GameObject.Find("ShipList");
+        playerList = GameObject.Find("PlayerList");
+
+        //On est dans la ShipList avec cet objet
+    }
+
     private void Start()
     {
         StartCoroutine(rotationPilot());
@@ -21,6 +32,14 @@ public class SimpleLookAt : MonoBehaviour
 
     void Update()
     {
+
+        for (int i = 0; i < shipList.transform.childCount; i++)
+        {
+            //shipList.transform.GetChild(i).GetComponentInChildren<SimpleLookAt>() = on fait follow le bon item, pareil pour l'autre script
+        }
+
+        looked = playerList.transform;
+
         if (!rotateInertia)
         {
             Quaternion toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);

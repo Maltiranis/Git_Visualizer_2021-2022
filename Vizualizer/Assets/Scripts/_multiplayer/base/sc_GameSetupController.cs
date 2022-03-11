@@ -7,7 +7,8 @@ public class sc_GameSetupController : MonoBehaviour
 {
     int s = 0;
     sc_GameSetup scgs;
-    public int _selectedSkin = 0;
+    [Header("Player list")]
+    public Transform ParentObjet;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class sc_GameSetupController : MonoBehaviour
                 s = i;
             }
         }
-        _selectedSkin = GameObject.Find("SkinSelector").GetComponent<sc_SkinSelection>()._selected;
-        GameObject pod = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer_" + _selectedSkin), scgs.spawnPoints[s].position, scgs.spawnPoints[s].rotation);
+        GameObject pod = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), scgs.spawnPoints[s].position, scgs.spawnPoints[s].rotation);
+        pod.transform.parent = ParentObjet;
     }
 }

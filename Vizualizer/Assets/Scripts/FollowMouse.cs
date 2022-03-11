@@ -1,53 +1,51 @@
 using UnityEngine;
+using Photon.Pun;
 
 public class FollowMouse : MonoBehaviour
-{/*
+{
     //public GameObject myCam;
     public float offsetZ = 10.0f;
     public float speed = 2.0f;
     public bool instantaneous = false;
+    public PhotonView PV;
 
-    public NetworkVariable<Vector3> Position = new NetworkVariable<Vector3>();
-
-    private void Move()
+    void Start()
     {
-        if (NetworkManager.Singleton.IsServer)
-        {
-            Vector3 temp = GetFollowMousePos();
-            temp.z = offsetZ;
-            Position.Value = temp;
-        }
-        else
-        {
-            SubmitPositionRequestServerRpc();
-        }
+        PV = GetComponent<PhotonView>();
+        gameObject.name = PV.Owner.NickName;
     }
 
-    [ServerRpc]
-    void SubmitPositionRequestServerRpc(ServerRpcParams rpcParams = default)
-    {
-        Vector3 temp = GetFollowMousePos();
-        temp.z = offsetZ;
-        Position.Value = temp;
-    }
-
-    static Vector3 GetFollowMousePos ()
+    public Vector3 GetFollowMousePos ()
     {
         Vector3 temp = Input.mousePosition;
-
+        temp.z = offsetZ;
         return temp;
     }
 
     void Update()
     {
-        if (IsOwner)
+        if (!PV.IsMine)
         {
-            Move();
+            return;
         }
-
-        if (instantaneous == false)
-            this.transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(Position.Value), speed * Time.deltaTime);
         else
-            this.transform.position = Camera.main.ScreenToWorldPoint(Position.Value);
-    }*/
+        {
+            if (instantaneous == false)
+                this.transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(GetFollowMousePos()), speed * Time.deltaTime);
+            else
+                this.transform.position = Camera.main.ScreenToWorldPoint(GetFollowMousePos());
+        }
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(transform.position);
+        }
+        else
+        {
+            transform.position = (Vector3)stream.ReceiveNext();
+        }
+    }
 }

@@ -1,74 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class GD_Test_UI_MultiEnabler : MonoBehaviour
-{/*
+{
     [SerializeField]
     public GameObject[] objectsList;
-    [SerializeField]
-    private NetworkVariable<int> ActivatedOne = new NetworkVariable<int>();
+    public PhotonView PV;
 
     int countIt = 0;
 
     private void Start()
     {
-        if (!IsOwner)
+        PV = GetComponent<PhotonView>();
+
+        if (!PV.IsMine)
+        {
             gameObject.SetActive(false);
+        }
+
     }
 
     private void Update()
     {
-        if (countIt <= 0)
+        /*if (countIt > 0)
         {
-            for (int i = 0; i < objectsList.Length; i++)
-            {
-                if (objectsList[i].activeInHierarchy == true)
-                {
-                    countIt++;
-                }
-            }
-            objectsList[ActivatedOne.Value].SetActive(true);
-        }
+            objectsList[countIt - 1].SetActive(true);
+        }*/
     }
 
     public void ActiveThisOne(int thisOne)
     {
-        if (IsServer)
+        if (PV.IsMine)
         {
-            UpdateActivateOnServer();
+            if (countIt <= 0)
+            {
+                for (int i = 0; i < objectsList.Length; i++)
+                {
+                    if (objectsList[i].activeInHierarchy == true)
+                    {
+                        countIt++;
+                    }
+                }
+            }
+            else
+            {
+                objectsList[countIt - 1].SetActive(true);
+            }
+            PV.RPC("SyncActivated", RpcTarget.AllBuffered, countIt);
         }
-        if (IsClient && IsOwner)
-        {
-            UpdateActivateOnClient(thisOne);
-        }
+
     }
 
-    public void UpdateActivateOnServer()
+    [PunRPC]
+    void SyncActivated(int ci)
     {
-        for (int i = 0; i < objectsList.Length; i++)
-        {
-            objectsList[i].SetActive(false);
-        }
-        if (ActivatedOne.Value != -1)
-            objectsList[ActivatedOne.Value].SetActive(true);
+        countIt = ci;
+        objectsList[countIt - 1].SetActive(true);
     }
-
-    public void UpdateActivateOnClient(int thisOne)
-    {
-        for (int i = 0; i < objectsList.Length; i++)
-        {
-            objectsList[i].SetActive(false);
-        }
-        if (thisOne != -1)
-            objectsList[thisOne].SetActive(true);
-
-        UpdateClientActivatedServerRpc(thisOne);
-    }
-
-    [ServerRpc]
-    void UpdateClientActivatedServerRpc(int thisOne)
-    {
-        ActivatedOne.Value = thisOne;
-    }*/
 }
