@@ -2,13 +2,14 @@
 using System.IO;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using System.Collections;
 
 public class sc_GameSetupController : MonoBehaviour
 {
     int s = 0;
     sc_GameSetup scgs;
-    [Header("Player list")]
-    public Transform ParentObjet;
+    public GameObject PlayerList;
 
     private void Start()
     {
@@ -25,7 +26,13 @@ public class sc_GameSetupController : MonoBehaviour
                 s = i;
             }
         }
-        GameObject pod = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), scgs.spawnPoints[s].position, scgs.spawnPoints[s].rotation);
-        pod.transform.parent = ParentObjet;
+        if (scgs.spawnPoints.Length <= 1)
+        {
+            s = 0;
+        }
+
+        GameObject Player = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), scgs.spawnPoints[s].position, scgs.spawnPoints[s].rotation);
+
+        Player.transform.parent = PlayerList.transform;
     }
 }

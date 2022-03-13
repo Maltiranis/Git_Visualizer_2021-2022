@@ -43,6 +43,8 @@ public class sc_CustomMatchMaking : MonoBehaviourPunCallbacks
             PhotonNetwork.NickName = "Player " + Random.Range(0, 1000);
         }
         _playerNameInput.text = PhotonNetwork.NickName;
+        roomName = "Prefered Server id : " + Random.Range(0, 1000);
+        roomSize = 10;
     }
 
     public void PlayerNameUpdate(string nameInput)

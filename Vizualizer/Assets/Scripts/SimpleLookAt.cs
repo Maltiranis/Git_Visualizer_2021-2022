@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,14 +33,10 @@ public class SimpleLookAt : MonoBehaviour
 
     void Update()
     {
-
-        for (int i = 0; i < shipList.transform.childCount; i++)
+        if (looked == null)
         {
-            //shipList.transform.GetChild(i).GetComponentInChildren<SimpleLookAt>() = on fait follow le bon item, pareil pour l'autre script
+            return;
         }
-
-        looked = playerList.transform;
-
         if (!rotateInertia)
         {
             Quaternion toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
@@ -69,5 +66,17 @@ public class SimpleLookAt : MonoBehaviour
 
         yield return new WaitForSeconds(rotNow);
         StartCoroutine(rotationPilot());
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(looked);
+        }
+        else
+        {
+            looked = (Transform)stream.ReceiveNext();
+        }
     }
 }

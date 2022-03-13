@@ -11,7 +11,7 @@ public class FollowMouse : MonoBehaviour
 
     void Start()
     {
-        PV = GetComponent<PhotonView>();
+        //PV = GetComponent<PhotonView>();
         gameObject.name = PV.Owner.NickName;
     }
 
@@ -37,7 +37,8 @@ public class FollowMouse : MonoBehaviour
         }
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream)
+    // coller ce truc partout : coller le bool du vaisseau actif + le nom du joueur
+    public void OnPhotonSerializeView(PhotonStream stream) 
     {
         if (stream.IsWriting)
         {
