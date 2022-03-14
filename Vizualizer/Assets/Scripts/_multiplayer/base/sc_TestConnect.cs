@@ -8,7 +8,8 @@ public class sc_TestConnect : MonoBehaviourPunCallbacks
     [SerializeField] private bool _coToMaster = false;
     void Start()
     {
-        Screen.fullScreen = true;
+        //Screen.fullScreen = false;
+
         if (PhotonNetwork.InRoom)
         {
             PhotonNetwork.LeaveRoom();
@@ -27,7 +28,7 @@ public class sc_TestConnect : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.ConnectUsingSettings();
         }
-    }
+    }/*
 
     private void Update()
     {
@@ -35,5 +36,5 @@ public class sc_TestConnect : MonoBehaviourPunCallbacks
         {
             Screen.fullScreen = !Screen.fullScreen;
         }
-    }
+    }*/
 }
