@@ -73,7 +73,7 @@ public class sc_CustomMatchMakingController : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.CurrentRoom.IsOpen = false;
+            //PhotonNetwork.CurrentRoom.IsOpen = false;
             PhotonNetwork.LoadLevel(_nextGameIndex);
         }
     }

@@ -514,6 +514,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InvisibleWindowsCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 5554028545736921887, guid: 37f5c4c529f408d459ea7267fabb7624,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37f5c4c529f408d459ea7267fabb7624, type: 3}
 --- !u!4 &6483610281901587904

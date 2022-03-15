@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using TMPro;
+using Photon.Realtime;
 
-public class GD_Test_UI_MultiEnabler : MonoBehaviour
+public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     public GameObject[] objectsList;
     public PhotonView PV;
     public GameObject nameHolder;
+
+    public int ship = 0;
 
     private void Start()
     {
@@ -53,5 +56,15 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviour
             objectsList[i].SetActive(false);
         }
         objectsList[tO].SetActive(true);
+
+        ship = tO;
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            ActiveThisOne(ship);
+        }
     }
 }
