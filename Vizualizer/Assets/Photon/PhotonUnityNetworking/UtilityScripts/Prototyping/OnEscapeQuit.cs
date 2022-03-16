@@ -28,5 +28,10 @@ namespace Photon.Pun.UtilityScripts
                 Application.Quit();
             }
         }
+
+        public void ExitButton()
+        {
+            Application.Quit();
+        }
     }
 }
