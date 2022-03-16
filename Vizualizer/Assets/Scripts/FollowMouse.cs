@@ -15,7 +15,7 @@ public class FollowMouse : MonoBehaviour
         gameObject.name = PV.Owner.NickName;
     }
 
-    public Vector3 GetFollowMousePos ()
+    public Vector3 GetFollowMousePos()
     {
         Vector3 temp = Input.mousePosition;
         temp.z = offsetZ;
@@ -38,7 +38,7 @@ public class FollowMouse : MonoBehaviour
     }
 
     // coller ce truc partout : coller le bool du vaisseau actif + le nom du joueur
-    public void OnPhotonSerializeView(PhotonStream stream) 
+    public void OnPhotonSerializeView(PhotonStream stream)
     {
         if (stream.IsWriting)
         {

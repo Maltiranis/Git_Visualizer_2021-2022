@@ -5,19 +5,19 @@ using UnityEngine.EventSystems;
 
 public class UI_movingElsewhere : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public bool activator = true;
-    public GameObject toActivate;
-    public float yStart = -11.625f;
-    public float yEnd = -9.5f;
-    Vector3 position1;
-    Vector3 position2;
+    //public bool activator = true;
+    //public GameObject toActivate;
+    public float posOffset = -9.5f;
+    Vector2 position1;
+    Vector2 position2;
     bool isIn = false;
-    [Header("require meshrenderer in Child(0)")]
+    /*[Header("require meshrenderer in Child(0)")]
     public Material mat1;
-    public Material mat2;
+    public Material mat2;*/
 
     public float transitionTime = 0.2f;
     float timeElapsed = 0.0f;
+    RectTransform rect;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -26,43 +26,53 @@ public class UI_movingElsewhere : MonoBehaviour, IPointerEnterHandler, IPointerE
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        isIn = false;
-        timeElapsed = 0.0f;
+
+    }
+
+    private void Start()
+    {
+        rect = GetComponent<RectTransform>();
+        position1 = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y);
+        position2 = new Vector2(rect.anchoredPosition.x, posOffset);
     }
 
     void Update()
     {
         Deploy();
-        ClickAction();
-        ChangeMatIfActif();
+        //ClickAction();
+        //ChangeMatIfActif();
     }
 
     #region Deployment
     void Deploy()
     {
-        if (isIn)
+        if (isIn && rect.anchoredPosition != position2)
         {
-            position2 = new Vector3(transform.position.x, yEnd, transform.position.z);
-            MoveFunction(position2);
+            MoveFunction(position1, position2);
         }
-        if (!isIn)
+        if (!isIn && rect.anchoredPosition != position1)
         {
-            position1 = new Vector3(transform.position.x, yStart, transform.position.z);
-            MoveFunction(position1);
+            MoveFunction(position2, position1);
+        }
+
+        if (timeElapsed > 5.0f)
+        {
+            isIn = false;
+            timeElapsed = 0.0f;
         }
     }
 
-    private void MoveFunction(Vector3 destination)
+    private void MoveFunction(Vector2 from, Vector2 to)
     {
         if (timeElapsed < transitionTime)
         {
-            transform.position = Vector3.Lerp(transform.position, destination, timeElapsed / transitionTime);
-            timeElapsed += Time.deltaTime;
+            transform.position = Vector2.Lerp(from, to, timeElapsed / transitionTime);
         }
+        timeElapsed += Time.deltaTime;
     }
     #endregion Deployment
 
-    #region Clic
+    /*#region Clic
     private void ClickAction()
     {
         if (Input.GetMouseButtonDown(0) && isIn)
@@ -91,5 +101,5 @@ public class UI_movingElsewhere : MonoBehaviour, IPointerEnterHandler, IPointerE
             }
         }
     }
-    #endregion ChangeMat
+    #endregion ChangeMat*/
 }
