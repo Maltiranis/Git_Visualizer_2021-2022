@@ -3,6 +3,7 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Tt]ools/
 Assets/AssetStoreTools*
 Assets/Tools/AmplifyShaderEditor/
 Assets/Tools/
@@ -37,3 +38,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Vizualizer/Assets/Tools/AmplifyShaderEditor/Examples/Built-In Samples.unitypackage.meta

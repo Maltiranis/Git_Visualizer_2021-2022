@@ -1,14 +1,19 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
-public class OnClickAction : MonoBehaviour
+public class OnClickAction : Selectable
 {
     public bool activator = true;
     public GameObject toActivate;
-    public float xStart = -11.625f;
-    public float xEnd = -9.5f;
+    public float yStart = -11.625f;
+    public float yEnd = -9.5f;
     Vector3 position1;
     Vector3 position2;
     bool isIn = false;
@@ -18,9 +23,17 @@ public class OnClickAction : MonoBehaviour
     public float transitionTime = 0.2f;
     float timeElapsed = 0.0f;
 
-    void Start()
+    [Serializable]
+    public class ButtonClickedEvent : UnityEvent { }
+
+    [FormerlySerializedAs("onClick")]
+    [SerializeField]
+    private ButtonClickedEvent m_OnClick = new ButtonClickedEvent();
+
+    public ButtonClickedEvent onClick
     {
-        
+        get { return m_OnClick; }
+        set { m_OnClick = value; }
     }
 
     void Update()
@@ -35,12 +48,12 @@ public class OnClickAction : MonoBehaviour
     {
         if (isIn)
         {
-            position2 = new Vector3(xEnd, transform.position.y, transform.position.z);
+            position2 = new Vector3(transform.position.x, yEnd, transform.position.z);
             MoveFunction(position2);
         }
         if (!isIn)
         {
-            position1 = new Vector3(xStart, transform.position.y, transform.position.z);
+            position1 = new Vector3(transform.position.x, yStart, transform.position.z);
             MoveFunction(position1);
         }
     }
@@ -63,8 +76,11 @@ public class OnClickAction : MonoBehaviour
             if(activator)
             {
                 if (toActivate != null)
+                {
                     toActivate.SetActive(!toActivate.activeInHierarchy);
+                }
             }
+            m_OnClick.Invoke();
         }
     }
     #endregion Clic
@@ -74,7 +90,7 @@ public class OnClickAction : MonoBehaviour
     {
         if (mat1 != null && mat2 != null)
         {
-            if(toActivate.activeInHierarchy)
+            if (transform.GetChild(0).GetComponent<Renderer>().material == mat1)
             {
                 transform.GetChild(0).GetComponent<Renderer>().material = mat2;
             }
