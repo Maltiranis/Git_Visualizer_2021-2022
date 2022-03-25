@@ -80,6 +80,10 @@ public class OnClickAction : Selectable
                     toActivate.SetActive(!toActivate.activeInHierarchy);
                 }
             }
+            if (!IsActive() || !IsInteractable())
+                return;
+
+            UISystemProfilerApi.AddMarker("Button.onClick", this);
             m_OnClick.Invoke();
         }
     }
@@ -90,13 +94,13 @@ public class OnClickAction : Selectable
     {
         if (mat1 != null && mat2 != null)
         {
-            if (transform.GetChild(0).GetComponent<Renderer>().material == mat1)
+            if (transform.GetChild(0).GetComponent<Renderer>().sharedMaterial == mat1)
             {
-                transform.GetChild(0).GetComponent<Renderer>().material = mat2;
+                transform.GetChild(0).GetComponent<Renderer>().sharedMaterial = mat2;
             }
             else
             {
-                transform.GetChild(0).GetComponent<Renderer>().material = mat1;
+                transform.GetChild(0).GetComponent<Renderer>().sharedMaterial = mat1;
             }
         }
     }
