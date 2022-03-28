@@ -18,6 +18,9 @@ public class SimpleLookAt : MonoBehaviour
     GameObject shipList;
     GameObject playerList;
 
+    public string getTag;
+    public string[] tagsList = {"car", "spaceship", "plane", "boat"};
+
     private void Awake()
     {
         shipList = GameObject.Find("ShipList");
@@ -28,7 +31,29 @@ public class SimpleLookAt : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(rotationPilot());
+        //StartCoroutine(rotationPilot());
+    }
+
+    void DefineProfile(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                rotSpeed = 1f;
+                break;
+            case 1:
+                rotSpeed = 100f;
+                break;
+            case 2:
+                rotSpeed = 50f;
+                break;
+            case 3:
+                rotSpeed = 20f;
+                break;
+
+            default:
+                break;
+        }
     }
 
     void Update()
@@ -37,12 +62,25 @@ public class SimpleLookAt : MonoBehaviour
         {
             return;
         }
+
+        GameObject objectParent = GetComponentInParent<GD_Test_UI_MultiEnabler>().gameObject;
+        for (int i = 0; i < objectParent.transform.childCount; i++)
+        {
+            if (objectParent.transform.GetChild(i).gameObject.activeSelf == true)
+            {
+                getTag = objectParent.transform.GetChild(i).gameObject.tag;
+                DefineProfile(i);
+            }
+        }
+
+
         if (!rotateInertia)
         {
             Quaternion toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
 
             transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
-            transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * brassage * Time.deltaTime, Space.World);
+            transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * Time.deltaTime, Space.World);
+            //transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * brassage * Time.deltaTime, Space.World);
         }
         else
         {
