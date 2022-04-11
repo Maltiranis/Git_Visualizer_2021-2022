@@ -55,7 +55,9 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
         {
             objectsList[i].SetActive(false);
         }
-        objectsList[tO].SetActive(true);
+
+        if (tO != -1)
+            objectsList[tO].SetActive(true);
 
         ship = tO;
     }

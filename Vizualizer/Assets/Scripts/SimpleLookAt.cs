@@ -18,8 +18,10 @@ public class SimpleLookAt : MonoBehaviour
     GameObject shipList;
     GameObject playerList;
 
+    public GameObject modelsContainer;
     public string getTag;
     public string[] tagsList = {"car", "spaceship", "plane", "boat"};
+    bool noRotXY = false;
 
     private void Awake()
     {
@@ -40,15 +42,23 @@ public class SimpleLookAt : MonoBehaviour
         {
             case 0:
                 rotSpeed = 1f;
+                lookatSpeed = 4.0f;
+                noRotXY = true;
                 break;
             case 1:
                 rotSpeed = 100f;
+                lookatSpeed = 6.0f;
+                noRotXY = false;
                 break;
             case 2:
                 rotSpeed = 50f;
+                lookatSpeed = 5.0f;
+                noRotXY = false;
                 break;
             case 3:
                 rotSpeed = 20f;
+                lookatSpeed = 1.5f;
+                noRotXY = false;
                 break;
 
             default:
@@ -63,22 +73,34 @@ public class SimpleLookAt : MonoBehaviour
             return;
         }
 
-        GameObject objectParent = GetComponentInParent<GD_Test_UI_MultiEnabler>().gameObject;
-        for (int i = 0; i < objectParent.transform.childCount; i++)
+        for (int i = 0; i < modelsContainer.transform.childCount; i++)
         {
-            if (objectParent.transform.GetChild(i).gameObject.activeSelf == true)
+            if (modelsContainer.transform.GetChild(i).gameObject.activeSelf == true)
             {
-                getTag = objectParent.transform.GetChild(i).gameObject.tag;
-                DefineProfile(i);
+                getTag = modelsContainer.transform.GetChild(i).gameObject.tag;
+
+                for (int j = 0; j < tagsList.Length; j++)
+                {
+                    if (getTag == tagsList[j])
+                    {
+                        DefineProfile(j);
+                    }
+                }
             }
         }
-
 
         if (!rotateInertia)
         {
             Quaternion toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
 
-            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
+            if (noRotXY)
+            {
+                toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
+                Quaternion toRotationBis = new Quaternion(0, toRotation.y, 0, 0);
+                transform.rotation = Quaternion.Lerp(transform.rotation, toRotationBis, Time.deltaTime * lookatSpeed);
+            }
+            else
+                transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
             transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * Time.deltaTime, Space.World);
             //transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * brassage * Time.deltaTime, Space.World);
         }
@@ -91,7 +113,15 @@ public class SimpleLookAt : MonoBehaviour
             Vector3 addVectors = (relativePos - transform.forward) + Vector3.forward/4;
 
             Quaternion toRotation = Quaternion.LookRotation(-relativePos, -addVectors);
-            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
+
+            if (noRotXY)
+            {
+                toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
+                Quaternion toRotationBis = new Quaternion(0, toRotation.y, 0, 0);
+                transform.rotation = Quaternion.Lerp(transform.rotation, toRotationBis, Time.deltaTime * lookatSpeed);
+            }
+            else
+                transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
             //transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * brassage * Time.deltaTime, Space.World);
         }
     }
