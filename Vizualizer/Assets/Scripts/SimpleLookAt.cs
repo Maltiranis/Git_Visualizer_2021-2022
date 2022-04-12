@@ -5,15 +5,8 @@ using UnityEngine;
 
 public class SimpleLookAt : MonoBehaviour
 {
-    //public bool _fromVelocity = true;
-    public bool rotateInertia = true;
     public Transform looked;
     public float lookatSpeed = 2.0f;
-    public float rotSpeed = 10.0f;
-    public Vector2 rotTimeRange;
-    public Vector2 rotSpeedRange;
-
-    float brassage = 0.0f;
 
     GameObject shipList;
     GameObject playerList;
@@ -38,25 +31,27 @@ public class SimpleLookAt : MonoBehaviour
 
     void DefineProfile(int i)
     {
+        SimpleFollow sF = GetComponent<SimpleFollow>();
+
         switch (i)
         {
             case 0:
-                rotSpeed = 1f;
-                lookatSpeed = 4.0f;
+                sF.speed = 2.0f;
+                lookatSpeed = 30.0f;
                 noRotXY = true;
                 break;
             case 1:
-                rotSpeed = 100f;
-                lookatSpeed = 6.0f;
+                sF.speed = 7.0f;
+                lookatSpeed = 10.0f;
                 noRotXY = false;
                 break;
             case 2:
-                rotSpeed = 50f;
-                lookatSpeed = 5.0f;
+                sF.speed = 1.0f;
+                lookatSpeed = 2.0f;
                 noRotXY = false;
                 break;
             case 3:
-                rotSpeed = 20f;
+                sF.speed = 2.0f;
                 lookatSpeed = 1.5f;
                 noRotXY = false;
                 break;
@@ -89,48 +84,24 @@ public class SimpleLookAt : MonoBehaviour
             }
         }
 
-        if (!rotateInertia)
+        Vector3 myPos = transform.position;
+        Vector3 curPos = looked.position;
+
+        Vector3 relativePos = curPos - myPos;
+        Vector3 addVectors = (relativePos - transform.forward) + Vector3.forward/4;
+
+        Quaternion toRotation = Quaternion.LookRotation(-relativePos, -addVectors);
+
+        transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
+        if (noRotXY)
         {
-            Quaternion toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
-
-            if (noRotXY)
-            {
-                toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
-                Quaternion toRotationBis = new Quaternion(0, toRotation.y, 0, 0);
-                transform.rotation = Quaternion.Lerp(transform.rotation, toRotationBis, Time.deltaTime * lookatSpeed);
-            }
-            else
-                transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
-            transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * Time.deltaTime, Space.World);
-            //transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * brassage * Time.deltaTime, Space.World);
-        }
-        else
-        {
-            Vector3 myPos = transform.position;
-            Vector3 curPos = looked.position;
-
-            Vector3 relativePos = curPos - myPos;
-            Vector3 addVectors = (relativePos - transform.forward) + Vector3.forward/4;
-
-            Quaternion toRotation = Quaternion.LookRotation(-relativePos, -addVectors);
-
-            if (noRotXY)
-            {
-                toRotation = Quaternion.LookRotation(transform.position - looked.position, transform.up);
-                Quaternion toRotationBis = new Quaternion(0, toRotation.y, 0, 0);
-                transform.rotation = Quaternion.Lerp(transform.rotation, toRotationBis, Time.deltaTime * lookatSpeed);
-            }
-            else
-                transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
-            //transform.GetChild(0).Rotate(transform.GetChild(0).forward, rotSpeed * brassage * Time.deltaTime, Space.World);
+            //transform.rotation = new Quaternion(-90, transform.rotation.y, transform.rotation.z, transform.rotation.w);
         }
     }
 
     IEnumerator rotationPilot()
     {
         float rotNow = Random.Range(.5f, 2.0f);
-
-        brassage = Random.Range(-2.0f, 2.0f);
 
         yield return new WaitForSeconds(rotNow);
         StartCoroutine(rotationPilot());
