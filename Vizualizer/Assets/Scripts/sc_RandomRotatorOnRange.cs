@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class sc_RandomRotatorOnRange : MonoBehaviour
 {
-    public Transform anglesContainer;
-
     public float lookatSpeed = 2.0f;
-    public float changeRotMin = 1.0f;
-    public float changeRotMax = 2.0f;
+
+    [Header("Limits")]
+    public float xLeft = 45.0f;
+    public float xRight = -45.0f;
+    public float yUp = 0.0f;
+    public float yDown = -45.0f;
+
+    float rotationX;
+    float rotationY;
+
 
     Quaternion toRotation;
 
@@ -19,19 +25,25 @@ public class sc_RandomRotatorOnRange : MonoBehaviour
 
     void Update()
     {
-        transform.GetChild(0).transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
+        transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * lookatSpeed);
     }
 
-    float randomizeChanger()
+    float randomizeChanger(float changeRotMin, float changeRotMax)
     {
         return Random.Range(changeRotMin, changeRotMax);
     }
 
     IEnumerator ChangeRotation()
     {
-        yield return new WaitForSeconds(randomizeChanger());
+        yield return new WaitForSeconds(Random.Range(1,3));
 
-        toRotation = anglesContainer.GetChild((int)Random.Range((int)0, (int)3)).rotation;
+        rotationX = randomizeChanger(xLeft, xRight);
+        rotationY = randomizeChanger(yUp, yDown);
+
+        rotationX = Mathf.Clamp(transform.rotation.x, xLeft, xRight);
+        rotationY = Mathf.Clamp(transform.rotation.y, yUp, yDown);
+
+        toRotation = Quaternion.Euler(rotationX, rotationY, 0);
         StartCoroutine(ChangeRotation());
     }
 }
