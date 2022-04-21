@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class sc_RandomRotatorOnRange : MonoBehaviour
 {
+    [Header("Aiming")]
     public float lookatSpeed = 2.0f;
-
+    public float minTime = 2.0f;
+    public float maxTime = 4.0f;
+    [Header("Parent")]
+    public Transform _parent;
     [Header("Limits")]
     public float yLeft = 45.0f;
     public float yRight = -45.0f;
@@ -21,15 +25,15 @@ public class sc_RandomRotatorOnRange : MonoBehaviour
 
     void Start()
     {
-        transform.rotation = new Quaternion(transform.rotation.x + 360f, transform.rotation.y + 360f, transform.rotation.z + 360f, transform.rotation.w);
-        startRotation = transform.rotation;
+        //transform.rotation = new Quaternion(_parent.transform.localRotation.x + xUp, _parent.transform.localRotation.y + yLeft, _parent.transform.localRotation.z, _parent.transform.localRotation.w);
+        startRotation = _parent.transform.localRotation;
 
         StartCoroutine(ChangeRotation());
     }
 
     void Update()
     {
-        transform.rotation = Quaternion.Lerp((Quaternion)transform.rotation, (Quaternion)toRotation, (float)Time.deltaTime * (float)lookatSpeed + 0.001f);
+        transform.localRotation = Quaternion.Lerp(transform.localRotation, toRotation, Mathf.Clamp(Time.deltaTime * lookatSpeed, 0f, 0.99f));
     }
 
     float randomizeChanger(float changeRotMin, float changeRotMax)
@@ -39,7 +43,7 @@ public class sc_RandomRotatorOnRange : MonoBehaviour
 
     IEnumerator ChangeRotation()
     {
-        yield return new WaitForSeconds(Random.Range(1,3));
+        yield return new WaitForSeconds(Random.Range(minTime, maxTime));
 
         rotationY = randomizeChanger(startRotation.y + yLeft, startRotation.y + yRight);
         rotationX = randomizeChanger(startRotation.x + xUp, startRotation.x + xDown);
