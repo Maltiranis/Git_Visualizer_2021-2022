@@ -65630,13 +65630,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7140691845565970250}
   - component: {fileID: 1315547003614662973}
+  - component: {fileID: 1050989657113479717}
   m_Layer: 0
   m_Name: Monolith14042022
-  m_TagString: boat
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7140691845565970250
 Transform:
   m_ObjectHideFlags: 0
@@ -65646,7 +65647,7 @@ Transform:
   m_GameObject: {fileID: 7517358568485203440}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -13.1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 7.5, y: 7.5, z: 7.5}
   m_Children:
   - {fileID: 3740737938447288629}
   - {fileID: 5145298054342961677}
@@ -65712,6 +65713,19 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 0
   m_CustomBakedTexture: {fileID: 0}
+--- !u!114 &1050989657113479717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7517358568485203440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2a53835f49c45b8b49d4ab17b146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myScriptable: {fileID: 11400000, guid: 0453aa4ff1b0a434581eaf637a51ef99, type: 2}
 --- !u!1 &8007926532050236635
 GameObject:
   m_ObjectHideFlags: 0

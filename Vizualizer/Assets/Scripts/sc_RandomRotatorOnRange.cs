@@ -23,12 +23,28 @@ public class sc_RandomRotatorOnRange : MonoBehaviour
     Quaternion startRotation;
     Quaternion toRotation;
 
+    bool coroutRunning = false;
+
     void Start()
     {
         //transform.rotation = new Quaternion(_parent.transform.localRotation.x + xUp, _parent.transform.localRotation.y + yLeft, _parent.transform.localRotation.z, _parent.transform.localRotation.w);
         startRotation = _parent.transform.localRotation;
 
         StartCoroutine(ChangeRotation());
+    }
+
+    private void OnEnable()
+    {
+        if (coroutRunning == false)
+        {
+            StartCoroutine(ChangeRotation());
+        }
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(ChangeRotation());
+        coroutRunning = false;
     }
 
     void Update()
@@ -43,12 +59,14 @@ public class sc_RandomRotatorOnRange : MonoBehaviour
 
     IEnumerator ChangeRotation()
     {
+        coroutRunning = true;
         yield return new WaitForSeconds(Random.Range(minTime, maxTime));
 
         rotationY = randomizeChanger(startRotation.y + yLeft, startRotation.y + yRight);
         rotationX = randomizeChanger(startRotation.x + xUp, startRotation.x + xDown);
 
         toRotation = Quaternion.Euler(rotationX, rotationY, 0);
+        coroutRunning = false;
         StartCoroutine(ChangeRotation());
     }
 }
