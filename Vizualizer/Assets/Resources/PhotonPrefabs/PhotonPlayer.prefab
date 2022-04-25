@@ -2828,6 +2828,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5314512744936638247}
     m_Modifications:
+    - target: {fileID: 1919037730, guid: 6cbce850cd906174592ce7ad7aa1660e, type: 3}
+      propertyPath: m_Range
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919037730, guid: 6cbce850cd906174592ce7ad7aa1660e, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 117614807846717102, guid: 6cbce850cd906174592ce7ad7aa1660e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7140691845565970250, guid: 6cbce850cd906174592ce7ad7aa1660e,
         type: 3}
       propertyPath: m_RootOrder
@@ -2887,6 +2900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Monolith14042022
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517358568485203440, guid: 6cbce850cd906174592ce7ad7aa1660e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbce850cd906174592ce7ad7aa1660e, type: 3}

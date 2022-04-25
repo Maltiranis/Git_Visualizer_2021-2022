@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fd166743238b04ebc15607a430a8c4, type: 3}
   m_Name: Monolith
   m_EditorClassIdentifier: 
-  translateSpeed: 0.1
-  lookSpeed: 5
-  forwardPow: 10
+  translateSpeed: 0.05
+  lookSpeed: 2
+  forwardPow: 2
