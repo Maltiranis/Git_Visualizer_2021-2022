@@ -31,11 +31,11 @@ Material:
     - _Deformation: 1
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _Opacity: 0.14
-    - _Scale: 50
-    - _Speed: 50
+    - _Opacity: 0.25
+    - _Scale: 1
+    - _Speed: 1
     - __dirty: 0
     m_Colors:
     - _Color: {r: 0, g: 205.51157, b: 0, a: 1}
-    - _Deformation: {r: 0, g: 2, b: -0.15, a: 0}
+    - _Deformation: {r: 0, g: 1, b: 2, a: 0}
   m_BuildTextureStacks: []
