@@ -11,6 +11,7 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
     public GameObject[] objectsList;
     public PhotonView PV;
     public GameObject nameHolder;
+    public GameObject Aiming;
 
     public int ship = 0;
 
@@ -56,8 +57,13 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
             objectsList[i].SetActive(false);
         }
 
+        Aiming.SetActive(false);
+
         if (tO != -1)
+        {
             objectsList[tO].SetActive(true);
+            Aiming.SetActive(true);
+        }
 
         ship = tO;
     }
