@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translateSpeed: 0.05
   lookSpeed: 2
-  forwardPow: 2
+  forwardPow: 0.5
