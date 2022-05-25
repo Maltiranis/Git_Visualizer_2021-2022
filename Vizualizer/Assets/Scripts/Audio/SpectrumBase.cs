@@ -18,7 +18,7 @@ namespace Assets.Scripts.Audio
         private int _fftSize;
         private bool _isXLogScale;
         private int _maxFftIndex;
-        private int _maximumFrequency = 20000;
+        private int _maximumFrequency = 20000; //20000
         private int _maximumFrequencyIndex;
         private int _minimumFrequency = 20; //Default spectrum from 20Hz to 20kHz
         private int _minimumFrequencyIndex;

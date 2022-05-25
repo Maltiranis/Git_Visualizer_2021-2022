@@ -41,12 +41,13 @@ namespace Assets.Scripts.ReactiveEffects
         {
             float audioData = GetAudioData();
             float scaledAmount = Mathf.Clamp(MinIntensity + (audioData * IntensityScale), 0.0f, 10.0f);
-            float scaledEmissionAmount = Mathf.Clamp(MinEmissionIntensity + (audioData * EmissionIntensityScale), 0.0f, 10.0f);
+            float scaledEmissionAmount = Mathf.Clamp(MinEmissionIntensity + (audioData * EmissionIntensityScale), 0.0f, 100.0f);
             Color scaledColor = _initialColor * scaledAmount;
             Color scaledEmissionColor = _initialEmissionColor * scaledEmissionAmount;
+            scaledColor.a = scaledColor.r;
 
             _renderer.material.SetColor("_Color", scaledColor);
-            _renderer.material.SetColor("_EmissionColor", scaledEmissionColor);
+            _renderer.material.SetColor("_EmissionColor", scaledColor * scaledEmissionColor);
         }
 
         #endregion
