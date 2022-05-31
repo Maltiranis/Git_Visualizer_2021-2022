@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Interceptor
   m_EditorClassIdentifier: 
   translateSpeed: 10
-  lookSpeed: 25
+  lookSpeed: 15
   forwardPow: 0.05

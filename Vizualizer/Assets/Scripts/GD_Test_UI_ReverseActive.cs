@@ -6,21 +6,32 @@ public class GD_Test_UI_ReverseActive : MonoBehaviour
 {
     public GameObject[] toReverseList;
     //public string _name = "ShipsButtons";
-    GameObject namedGo;
+    GameObject newGo;
+    public string objName;
+
+    private void OnEnable()
+    {
+        newGo = GameObject.Find(objName);
+
+        if (newGo != null)
+            newGo.SetActive(false);
+    }
 
     public void ReverseActive()
     {
         foreach (GameObject go in toReverseList)
         {
-            go.SetActive(!go.activeSelf);
+            if (go != null)
+                go.SetActive(!go.activeSelf);
         }
     }
 
-    public void DisableByName(string _name)
+    public void DisableByName()
     {
-        if (namedGo == null)
-            namedGo = GameObject.Find(_name);
-        if (namedGo != null)
-            namedGo.SetActive(!namedGo.activeSelf);
+        if (newGo == null)
+        {
+            newGo = GameObject.Find(objName);
+        }
+        newGo.SetActive(!newGo.activeSelf);
     }
 }

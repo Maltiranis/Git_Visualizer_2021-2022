@@ -24,13 +24,18 @@ namespace Assets.Scripts.ReactiveEffects
 
         #region Startup / Shutdown
 
+        private void Awake()
+        {
+            this.gameObject.GetComponent<Renderer>().material = Instantiate(Resources.Load("NeonMat") as Material);
+        }
+
         public override void Start()
         {
             base.Start();
 
-            _renderer = GetComponent<Renderer>();
-            _initialColor = _renderer.material.GetColor("_Color");
-            _initialEmissionColor = _renderer.material.GetColor("_EmissionColor");
+            _renderer = this.gameObject.GetComponent<Renderer>();
+            _initialColor = this.gameObject.GetComponent<Renderer>().material.GetColor("_Color");
+            _initialEmissionColor = this.gameObject.GetComponent<Renderer>().material.GetColor("_EmissionColor");
         }
 
         #endregion
@@ -44,10 +49,10 @@ namespace Assets.Scripts.ReactiveEffects
             float scaledEmissionAmount = Mathf.Clamp(MinEmissionIntensity + (audioData * EmissionIntensityScale), 0.0f, 100.0f);
             Color scaledColor = _initialColor * scaledAmount;
             Color scaledEmissionColor = _initialEmissionColor * scaledEmissionAmount;
-            scaledColor.a = scaledColor.r;
+            //scaledColor.a = scaledColor.r;
 
-            _renderer.material.SetColor("_Color", scaledColor);
-            _renderer.material.SetColor("_EmissionColor", scaledColor * scaledEmissionColor);
+            this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", scaledColor);
+            this.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", scaledColor * scaledEmissionColor);
         }
 
         #endregion

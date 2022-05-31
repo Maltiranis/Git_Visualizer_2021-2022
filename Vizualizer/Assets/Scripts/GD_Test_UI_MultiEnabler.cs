@@ -18,6 +18,9 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
     private void Start()
     {
         //PV = GetComponent<PhotonView>();
+        if (PV == null)
+            return;
+
         PV.RPC("SayMyName", RpcTarget.AllViaServer, PV.Owner.NickName);
 
         if (!PV.IsMine)
@@ -46,6 +49,26 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
 
     public void ActiveThisOne(int thisOne)
     {
+        if (PV == null)
+        {
+            for (int i = 0; i < objectsList.Length; i++)
+            {
+                objectsList[i].SetActive(false);
+            }
+
+            Aiming.SetActive(false);
+
+            if (thisOne != -1)
+            {
+                objectsList[thisOne].SetActive(true);
+                Aiming.SetActive(true);
+            }
+
+            ship = thisOne;
+
+            return;
+        }
+
         PV.RPC("SyncActivated", RpcTarget.AllViaServer, thisOne);
     }
 

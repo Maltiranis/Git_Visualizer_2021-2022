@@ -11,7 +11,9 @@ public class FollowCoordinates : MonoBehaviour
 
     void Update()
     {
-        transform.position = target.position;
+        if (PV == null)
+            return;
+
         if (PhotonNetwork.IsMasterClient)
         {
             //PV.RPC("SayMyName", RpcTarget.AllBuffered, PV.Owner.NickName);
@@ -22,6 +24,9 @@ public class FollowCoordinates : MonoBehaviour
     // coller ce truc partout : coller le bool du vaisseau actif + le nom du joueur
     public void OnPhotonSerializeView(PhotonStream stream)
     {
+        if (PV == null)
+            return;
+
         if (stream.IsWriting)
         {
             stream.SendNext(gameObject.GetComponentInChildren<TextMeshProUGUI>().text);

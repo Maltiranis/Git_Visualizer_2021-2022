@@ -8,17 +8,27 @@ public class multi_Fire : MonoBehaviourPunCallbacks
     public GameObject[] objectsList;
     public PhotonView PV;
     public float fireTimeLength = 1.0f;
+    bool firing = false;
+
+    private void Start()
+    {
+        StartCoroutine(FireTime());
+    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             /*if(StartCoroutine(MaintainFire()) != null)
             {
                 StopCoroutine(MaintainFire());
             }*/
 
-            StartCoroutine(MaintainFire());
+            MaintainFire();
+        }
+        else
+        {
+            StartCoroutine(StopFireTime());
         }
     }
 
@@ -56,14 +66,36 @@ public class multi_Fire : MonoBehaviourPunCallbacks
         }
     }
 
-    IEnumerator MaintainFire()
+    void MaintainFire()
     {
-        PV.RPC("SetFire", RpcTarget.AllViaServer, objectsList);
-        LocalFire();
+        if (firing == true)
+        {
+            if (PV != null)
+                PV.RPC("SetFire", RpcTarget.AllViaServer, objectsList);
+            LocalFire();
+        }
+    }
 
+    void DisableFire()
+    {
+        if (firing != true)
+        {
+            if (PV != null)
+                PV.RPC("StopFire", RpcTarget.AllViaServer, objectsList);
+            LocalUnFire();
+        }
+    }
+
+    IEnumerator FireTime()
+    {
+        yield return new WaitForSeconds(fireTimeLength);
+        firing = !firing;
+    }
+
+    IEnumerator StopFireTime()
+    {
         yield return new WaitForSeconds(fireTimeLength);
 
-        PV.RPC("StopFire", RpcTarget.AllViaServer, objectsList);
-        LocalUnFire();
+        DisableFire();
     }
 }

@@ -20,6 +20,8 @@ public class SimpleFollow : MonoBehaviour
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
+        if (PV == null)
+            return;
         if (stream.IsWriting)
         {
             stream.SendNext(transform.position);

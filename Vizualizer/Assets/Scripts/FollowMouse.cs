@@ -12,6 +12,10 @@ public class FollowMouse : MonoBehaviour
     void Start()
     {
         //PV = GetComponent<PhotonView>();
+
+        if (PV == null)
+            return;
+
         gameObject.name = PV.Owner.NickName;
     }
 
@@ -24,22 +28,38 @@ public class FollowMouse : MonoBehaviour
 
     void Update()
     {
-        if (!PV.IsMine)
+        if (PV == null)
         {
-            return;
+            followIt();
         }
-        else
+
+        if (PV != null)
         {
-            if (instantaneous == false)
-                this.transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(GetFollowMousePos()), speed * Time.deltaTime);
+            if (!PV.IsMine)
+            {
+                return;
+            }
             else
-                this.transform.position = Camera.main.ScreenToWorldPoint(GetFollowMousePos());
+            {
+                followIt();
+            }
         }
+    }
+
+    void followIt()
+    {
+        if (instantaneous == false)
+            this.transform.position = Vector3.Lerp(transform.position, Camera.main.ScreenToWorldPoint(GetFollowMousePos()), speed * Time.deltaTime);
+        else
+            this.transform.position = Camera.main.ScreenToWorldPoint(GetFollowMousePos());
     }
 
     // coller ce truc partout : coller le bool du vaisseau actif + le nom du joueur
     public void OnPhotonSerializeView(PhotonStream stream)
     {
+        if (PV == null)
+            return;
+
         if (stream.IsWriting)
         {
             stream.SendNext(transform.position);

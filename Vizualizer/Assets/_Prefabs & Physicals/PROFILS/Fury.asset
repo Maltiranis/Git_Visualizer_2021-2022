@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Fury
   m_EditorClassIdentifier: 
   translateSpeed: 5
-  lookSpeed: 15
+  lookSpeed: 10
   forwardPow: 0.05
