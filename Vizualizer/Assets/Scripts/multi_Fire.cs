@@ -12,24 +12,24 @@ public class multi_Fire : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        StartCoroutine(FireTime());
+        //StartCoroutine(FireTime());
     }
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        /*if (Input.GetMouseButton(0))
         {
-            /*if(StartCoroutine(MaintainFire()) != null)
+            if(StartCoroutine(MaintainFire()) != null)
             {
                 StopCoroutine(MaintainFire());
-            }*/
+            }
 
             MaintainFire();
         }
         else
         {
             StartCoroutine(StopFireTime());
-        }
+        }*/
     }
 
     void LocalFire()

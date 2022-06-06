@@ -35,7 +35,7 @@ MonoBehaviour:
     value: 5
   threshold:
     overrideState: 1
-    value: 0.8
+    value: 0.85
   softKnee:
     overrideState: 0
     value: 0
@@ -47,13 +47,13 @@ MonoBehaviour:
     value: 1
   anamorphicRatio:
     overrideState: 0
-    value: 0
+    value: -1
   color:
     overrideState: 0
     value: {r: 1, g: 0, b: 0, a: 1}
   fastMode:
     overrideState: 0
-    value: 0
+    value: 1
   dirtTexture:
     overrideState: 0
     value: {fileID: 0}

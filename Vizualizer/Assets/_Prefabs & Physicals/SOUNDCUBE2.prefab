@@ -159,7 +159,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 21
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &563875506487120349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,13 +172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &563875506487120348
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 20
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &563875507767592788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,13 +345,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &563875507767592791
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -371,7 +371,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 24
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &563875507903899624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,13 +463,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &563875507903899627
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -489,7 +489,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -568,7 +568,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 22
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &563875507938581422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,13 +581,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &563875507938581409
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -607,7 +607,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -686,7 +686,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 23
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &563875508085577485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,13 +699,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &563875508085577484
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -725,7 +725,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -779,7 +779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749742981437289718}
   m_LocalRotation: {x: 0.2851418, y: -0.36399943, z: 0.11810798, w: -0.878777}
-  m_LocalPosition: {x: -1.414206, y: -0.8303387, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 563875507509780534}
@@ -837,7 +837,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 23
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030499845990936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,13 +850,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030499845990937
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -876,7 +876,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -955,7 +955,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 18
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030499866604024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,13 +968,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030499866604025
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -994,7 +994,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 16
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030499905171490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,13 +1086,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030499905171491
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1112,7 +1112,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1191,7 +1191,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 17
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030499962471027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,13 +1204,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030499962471024
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1230,7 +1230,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 24
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030499969754468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,13 +1322,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030499969754469
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1348,7 +1348,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1427,7 +1427,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 1
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500014584548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,13 +1440,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500014584549
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1466,7 +1466,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1545,7 +1545,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 9
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500033143178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,13 +1558,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500033143179
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1584,7 +1584,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1663,7 +1663,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 13
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500037796006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1676,13 +1676,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500037796007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1702,7 +1702,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1781,7 +1781,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 14
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500073734785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,13 +1794,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500073734790
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1820,7 +1820,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1899,7 +1899,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 17
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500077064219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1912,13 +1912,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500077064216
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1938,7 +1938,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2017,7 +2017,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 1
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500081752644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,13 +2030,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500081752645
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2056,7 +2056,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2135,7 +2135,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 2
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500087537188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2148,13 +2148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500087537189
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2174,7 +2174,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2253,7 +2253,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 7
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500161203357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2266,13 +2266,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500161203346
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2292,7 +2292,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2371,7 +2371,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 24
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500175189140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2384,13 +2384,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500175189141
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2410,7 +2410,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2489,7 +2489,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 11
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500177192562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2502,13 +2502,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500177192563
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2528,7 +2528,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2607,7 +2607,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 10
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500228397159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,13 +2620,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500228397156
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2646,7 +2646,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 10
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500273157749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2738,13 +2738,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500273157706
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2764,7 +2764,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2843,7 +2843,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 16
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500290635889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2856,13 +2856,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500290635894
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2882,7 +2882,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2961,7 +2961,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 13
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500305892702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2974,13 +2974,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500305892703
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3000,7 +3000,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3079,7 +3079,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 4
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500351840780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3092,13 +3092,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500351840781
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3118,7 +3118,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3197,7 +3197,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 21
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500356931924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3210,13 +3210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500356931925
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3236,7 +3236,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3315,7 +3315,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 12
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500398649148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3328,13 +3328,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500398649149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3354,7 +3354,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3433,7 +3433,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 2
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500408234393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3446,13 +3446,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500408234398
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3472,7 +3472,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3551,7 +3551,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 8
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500476923751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3564,13 +3564,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500476923748
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3590,7 +3590,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3669,7 +3669,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 3
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500583349840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3682,13 +3682,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500583349841
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3708,7 +3708,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3787,7 +3787,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 22
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500609532199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3800,13 +3800,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500609532196
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3826,7 +3826,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3905,7 +3905,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 19
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500727464477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3918,13 +3918,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500727464466
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3944,7 +3944,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4023,7 +4023,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 22
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500749681866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4036,13 +4036,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500749681867
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4062,7 +4062,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4141,7 +4141,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 14
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500839723682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4154,13 +4154,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500839723683
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4180,7 +4180,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4259,7 +4259,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 21
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500949499137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4272,13 +4272,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500949499142
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4298,7 +4298,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4377,7 +4377,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 11
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030500984166094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4390,13 +4390,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030500984166095
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4416,7 +4416,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4495,7 +4495,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 8
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501053169908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4508,13 +4508,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501053169909
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4534,7 +4534,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4613,7 +4613,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 15
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501152058334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4626,13 +4626,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501152058335
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4652,7 +4652,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4731,7 +4731,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 15
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501238333931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4744,13 +4744,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501238333928
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4770,7 +4770,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4849,7 +4849,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 9
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501254858139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4862,13 +4862,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501254858136
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4888,7 +4888,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4967,7 +4967,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 18
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501320133902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4980,13 +4980,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501320133903
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5006,7 +5006,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5085,7 +5085,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 4
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501391431597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5098,13 +5098,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501391431586
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5124,7 +5124,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5203,7 +5203,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 7
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501494201125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5216,13 +5216,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501494201146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5242,7 +5242,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5321,7 +5321,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 0
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501507925365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5334,13 +5334,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501507925322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5360,7 +5360,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5439,7 +5439,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 12
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501520051064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5452,13 +5452,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501520051065
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5478,7 +5478,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5557,7 +5557,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 5
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501522475664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5570,13 +5570,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501522475665
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5596,7 +5596,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5675,7 +5675,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 6
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501536177031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5688,13 +5688,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501536177028
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5714,7 +5714,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5793,7 +5793,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 23
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501563197730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5806,13 +5806,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501563197731
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5832,7 +5832,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5911,7 +5911,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 6
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501636870495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5924,13 +5924,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501636870492
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5950,7 +5950,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6029,7 +6029,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 20
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501695403957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6042,13 +6042,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501695403914
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6068,7 +6068,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6147,7 +6147,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 5
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501711103674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6160,13 +6160,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501711103675
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6186,7 +6186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6265,7 +6265,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 20
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501778635067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6278,13 +6278,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501778635064
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6304,7 +6304,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6383,7 +6383,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 19
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501782624001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6396,13 +6396,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501782624006
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6422,7 +6422,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6501,7 +6501,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 0
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501810847851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6514,13 +6514,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501810847848
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6540,7 +6540,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6619,7 +6619,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 3
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &1258030501909673080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6632,13 +6632,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1258030501909673081
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6658,7 +6658,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6737,7 +6737,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 15
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606979699546727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6750,13 +6750,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &6526665257654517229
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6776,7 +6776,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6855,7 +6855,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 12
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606979796147478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6868,13 +6868,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &3841125784154520679
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6894,7 +6894,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6973,7 +6973,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 14
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606979987587997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6986,13 +6986,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &5220938974951676924
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7012,7 +7012,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7091,7 +7091,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 18
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606979990088684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7104,13 +7104,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &9147571264096214230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7130,7 +7130,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7209,7 +7209,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 7
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606980026222946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7222,13 +7222,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &8469243202519875077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7248,7 +7248,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7327,7 +7327,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 5
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606980268628893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7340,13 +7340,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &5725123432563180218
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7366,7 +7366,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7445,7 +7445,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 17
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606980330973237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7458,13 +7458,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &5633245376414828561
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7484,7 +7484,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7563,7 +7563,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 6
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606980493731863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7576,13 +7576,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &875770564243118748
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7602,7 +7602,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7681,7 +7681,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 3
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606980552589603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7694,13 +7694,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &8467106470069927415
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7720,7 +7720,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7799,7 +7799,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 19
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606980720423820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7812,13 +7812,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &3567021516684538017
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7838,7 +7838,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7917,7 +7917,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 4
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606980931119354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7930,13 +7930,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &2798046069701777979
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7956,7 +7956,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8035,7 +8035,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 16
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606980969686307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8048,13 +8048,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &3816704702458774674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8074,7 +8074,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8153,7 +8153,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 8
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606981032832164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8166,13 +8166,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &615810047602346811
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8192,7 +8192,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8271,7 +8271,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 9
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606981138417977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8284,13 +8284,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &8846197900225401518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8310,7 +8310,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8389,7 +8389,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 10
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606981211950383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8402,13 +8402,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &7317055179424305430
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8428,7 +8428,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8507,7 +8507,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 13
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606981220964395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8520,13 +8520,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &7694203693530237317
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8546,7 +8546,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8625,7 +8625,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 1
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606981331316099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8638,13 +8638,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &6961429017694226249
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8664,7 +8664,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8743,7 +8743,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 2
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606981359804665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8756,13 +8756,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &1324582779291814351
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8782,7 +8782,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8861,7 +8861,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 11
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606981441627655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8874,13 +8874,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &4255822688834220857
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8900,7 +8900,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8979,7 +8979,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 0
   AudioSampleIndex: 0
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0, y: 0, z: 2}
+  ScaleIntensity: {x: 0, y: 0, z: 5}
 --- !u!114 &2590606981638176068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8992,13 +8992,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 4
+  AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   MinIntensity: 0
   IntensityScale: 1
-  MinEmissionIntensity: -1
-  EmissionIntensityScale: 1
+  MinEmissionIntensity: 0
+  EmissionIntensityScale: 0.5
 --- !u!23 &5699345480228324496
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9018,7 +9018,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
+  - {fileID: 2100000, guid: 9c1efa041428c024384f3098083dbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9060,6 +9060,9 @@ GameObject:
   - component: {fileID: 7519669888807392001}
   - component: {fileID: 7519669888807392000}
   - component: {fileID: 7519669888807392003}
+  - component: {fileID: 8036799039910250446}
+  - component: {fileID: 8036799039910250447}
+  - component: {fileID: 8036799039910250449}
   m_Layer: 0
   m_Name: SOUNDCUBE2
   m_TagString: Untagged
@@ -9076,7 +9079,7 @@ Transform:
   m_GameObject: {fileID: 3588123806154016167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 257567072816418468}
   - {fileID: 1239176218243315727}
@@ -9143,6 +9146,120 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 0}
+--- !u!114 &8036799039910250446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3588123806154016167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ee7775af23c6349b07ede5e737a44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisualizerScriptContainer:
+  - {fileID: 1258030501810847855}
+  - {fileID: 1258030500014584568}
+  - {fileID: 1258030500087537208}
+  - {fileID: 1258030501909673084}
+  - {fileID: 1258030501391431585}
+  - {fileID: 1258030501522475668}
+  - {fileID: 1258030501536177051}
+  - {fileID: 1258030501494201145}
+  - {fileID: 1258030501053169864}
+  - {fileID: 1258030501254858143}
+  - {fileID: 1258030500228397179}
+  - {fileID: 1258030500984166082}
+  - {fileID: 1258030500398649136}
+  - {fileID: 1258030500305892690}
+  - {fileID: 1258030500073734789}
+  - {fileID: 1258030501238333935}
+  - {fileID: 1258030500290635893}
+  - {fileID: 1258030500077064223}
+  - {fileID: 1258030501320133890}
+  - {fileID: 1258030501782624005}
+  - {fileID: 1258030501778635071}
+  - {fileID: 1258030500356931880}
+  - {fileID: 1258030500749681870}
+  - {fileID: 1258030499845990940}
+  - {fileID: 1258030500175189096}
+--- !u!114 &8036799039910250447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3588123806154016167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ee7775af23c6349b07ede5e737a44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisualizerScriptContainer:
+  - {fileID: 1258030501507925321}
+  - {fileID: 1258030500081752664}
+  - {fileID: 1258030500408234397}
+  - {fileID: 1258030500583349844}
+  - {fileID: 1258030500351840768}
+  - {fileID: 1258030501711103678}
+  - {fileID: 1258030501636870483}
+  - {fileID: 1258030500161203345}
+  - {fileID: 1258030500476923771}
+  - {fileID: 1258030500033143182}
+  - {fileID: 1258030500273157705}
+  - {fileID: 1258030500177192566}
+  - {fileID: 1258030501520051068}
+  - {fileID: 1258030500037796026}
+  - {fileID: 1258030500839723686}
+  - {fileID: 1258030501152058322}
+  - {fileID: 1258030499905171494}
+  - {fileID: 1258030499962471031}
+  - {fileID: 1258030499866604028}
+  - {fileID: 1258030500727464465}
+  - {fileID: 1258030501695403913}
+  - {fileID: 1258030500949499141}
+  - {fileID: 1258030500609532219}
+  - {fileID: 1258030501563197734}
+  - {fileID: 1258030499969754488}
+--- !u!114 &8036799039910250449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3588123806154016167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ee7775af23c6349b07ede5e737a44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisualizerScriptContainer:
+  - {fileID: 2477554893278355458}
+  - {fileID: 2477554892965015749}
+  - {fileID: 2477554892999933375}
+  - {fileID: 2477554892184460389}
+  - {fileID: 2477554892573013436}
+  - {fileID: 2477554891910579931}
+  - {fileID: 2477554892125402449}
+  - {fileID: 2477554891666478116}
+  - {fileID: 2477554892672627170}
+  - {fileID: 2477554892771988607}
+  - {fileID: 2477554892845781097}
+  - {fileID: 2477554893073300289}
+  - {fileID: 2477554891429904464}
+  - {fileID: 2477554892852495725}
+  - {fileID: 2477554891621228251}
+  - {fileID: 2477554891341432609}
+  - {fileID: 2477554892601555045}
+  - {fileID: 2477554891964675443}
+  - {fileID: 2477554891621889706}
+  - {fileID: 2477554892352220874}
+  - {fileID: 563875507767592104}
+  - {fileID: 563875506487120337}
+  - {fileID: 563875507938581410}
+  - {fileID: 563875508085577473}
+  - {fileID: 563875507903899628}
 --- !u!1 &8716420730952796449
 GameObject:
   m_ObjectHideFlags: 0
@@ -9153,9 +9270,6 @@ GameObject:
   m_Component:
   - component: {fileID: 257567072816418468}
   - component: {fileID: 6422099320463493562}
-  - component: {fileID: 3480162480552621730}
-  - component: {fileID: 3815184720312692864}
-  - component: {fileID: 662128360093385385}
   m_Layer: 0
   m_Name: Loopback Audio Source
   m_TagString: Untagged
@@ -9201,79 +9315,3 @@ MonoBehaviour:
   MinAmount: 0
   ThresholdToMax: 0
   MaxAmount: 1
---- !u!114 &3480162480552621730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8716420730952796449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f13a833d6049fab4d88af257d9e74d75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 1
-  AudioSampleIndex: 0
-  PrimaryScaleFactor: 0
-  ScaleIntensity: {x: 0, y: 5, z: 0}
---- !u!114 &3815184720312692864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8716420730952796449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e23875de3f875c47b6b582670277d87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioVisualizationStrategy: 1
-  AudioSampleIndex: 0
-  PrimaryScaleFactor: 1
-  MinIntensity: 0
-  IntensityScale: 0.05
-  MinEmissionIntensity: 0
-  EmissionIntensityScale: 1
---- !u!23 &662128360093385385
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8716420730952796449}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: de4e2bbadf0f2ad46b48d986890c6522, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}

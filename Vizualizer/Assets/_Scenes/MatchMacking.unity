@@ -198,18 +198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11519269}
   m_CullTransparentMesh: 1
---- !u!1 &29471899 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501391431585, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &47135547 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500356931880, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &48024326
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +239,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &48024328
 MonoBehaviour:
@@ -381,12 +369,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &85667425 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 563875506487120337, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &96093524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,12 +384,6 @@ MonoBehaviour:
   offsetZ: 0
   speed: 2
   instantaneous: 1
---- !u!1 &110257287 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554891964675443, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &143741203
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +559,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &151263854
 MonoBehaviour:
@@ -750,7 +726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -70}
+  m_AnchoredPosition: {x: -150, y: -110.91774}
   m_SizeDelta: {x: 150, y: 35}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &158552198
@@ -786,10 +762,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -859,12 +835,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158552196}
   m_CullTransparentMesh: 1
---- !u!1 &169529730 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501711103678, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &191031510
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,24 +969,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191031510}
   m_CullTransparentMesh: 0
---- !u!1 &203089241 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892125402449, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &204939250 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501695403913, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &215608380 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500077064223, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &229597983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1238,6 +1190,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7451507384060837382, guid: dba69d5c5eab41749a008553163ec735,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8371415315176741574, guid: dba69d5c5eab41749a008553163ec735,
         type: 3}
       propertyPath: m_IsActive
@@ -1245,24 +1202,155 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dba69d5c5eab41749a008553163ec735, type: 3}
---- !u!1 &270172474 stripped
+--- !u!1 &237898454
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500175189096, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &284766948 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892771988607, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 237898458}
+  - component: {fileID: 237898457}
+  - component: {fileID: 237898456}
+  - component: {fileID: 237898455}
+  - component: {fileID: 237898459}
+  m_Layer: 5
+  m_Name: SpaceShip_04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &237898455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &303867917 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500037796026, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
+  m_GameObject: {fileID: 237898454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 237898456}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 237898459}
+        m_TargetAssemblyTypeName: GD_Test_UI_ReverseActive, Assembly-CSharp
+        m_MethodName: ReverseActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &237898456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237898454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 95a35440f7326d644b977001593276f0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &237898457
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237898454}
+  m_CullTransparentMesh: 0
+--- !u!224 &237898458
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237898454}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children:
+  - {fileID: 1161981514}
+  m_Father: {fileID: 1657532954}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 15.999994, y: -405.99997}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &237898459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237898454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5580ba7e648d77549893f0736a683fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toReverseList:
+  - {fileID: 8036799039910250445}
+  objName: 
 --- !u!1 &332038715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,7 +1527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &365005503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1457,10 +1545,10 @@ RectTransform:
   m_Father: {fileID: 967201690}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 17.5, y: 524.5}
+  m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &365005504
 MonoBehaviour:
@@ -1516,7 +1604,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 365005506}
   m_OnClick:
     m_PersistentCalls:
@@ -1776,19 +1864,13 @@ RectTransform:
   - {fileID: 1205778554}
   - {fileID: 158552197}
   m_Father: {fileID: 1657532954}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1010.4153, y: -0}
+  m_AnchoredPosition: {x: 1028, y: -0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
---- !u!1 &380961744 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500228397179, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &395133732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,8 +1937,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1923,12 +2005,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395133732}
   m_CullTransparentMesh: 1
---- !u!1 &413842935 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501320133890, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &419502305
 Camera:
   m_ObjectHideFlags: 0
@@ -2008,7 +2084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -150, y: -40.917744}
   m_SizeDelta: {x: 150, y: 35}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &420576192
@@ -2032,10 +2108,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2363,12 +2439,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -45}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
---- !u!1 &503826016 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 563875507938581410, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &537427929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,18 +2475,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &565637060 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554891341432609, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &574696555 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501810847855, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &610946002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,12 +2550,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610946002}
   m_CullTransparentMesh: 0
---- !u!1 &621408597 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500305892690, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &642363405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,12 +2684,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642363405}
   m_CullTransparentMesh: 0
---- !u!1 &653481387 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500727464465, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &672038454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,18 +2839,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672038454}
   m_CullTransparentMesh: 0
---- !u!1 &685942132 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500290635893, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &709493897 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554893073300289, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &712351108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,12 +3215,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748052744}
   m_CullTransparentMesh: 1
---- !u!1 &764402158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501053169864, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &776660171
 GameObject:
   m_ObjectHideFlags: 0
@@ -3312,7 +3340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3537736, g: 0.5849441, b: 1, a: 1}
+  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3337,18 +3365,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782562467}
   m_CullTransparentMesh: 1
---- !u!1 &790821253 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501636870483, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &792163999 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501536177051, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &794723848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,24 +3711,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804230319}
   m_CullTransparentMesh: 0
---- !u!1 &840416445 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501254858143, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &870777648 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500408234397, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &872837306 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554891666478116, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &883390823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3792,12 +3790,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37f5c4c529f408d459ea7267fabb7624, type: 3}
---- !u!1 &887067762 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501238333935, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &907604386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3932,12 +3924,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907604386}
   m_CullTransparentMesh: 0
---- !u!1 &954499101 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501494201145, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &967201689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3971,13 +3957,13 @@ RectTransform:
   - {fileID: 48024327}
   - {fileID: 365005503}
   m_Father: {fileID: 1657532954}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &967201691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3987,29 +3973,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 967201689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
+    m_Left: 1920
     m_Right: 0
-    m_Top: 20
+    m_Top: -1024
     m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 20
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
---- !u!1 &976529317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500583349844, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 25, y: 25}
+  m_Spacing: {x: 5, y: 0}
+  m_Constraint: 2
+  m_ConstraintCount: 1
 --- !u!1 &987123979
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,18 +4103,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999162877}
   m_CullTransparentMesh: 1
---- !u!1 &1002097755 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500073734789, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1002564649 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500839723686, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1004829225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4227,29 +4193,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004829225}
   m_CullTransparentMesh: 0
---- !u!1 &1012305585 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030499969754488, guid: 2dc2c800173227540a9b0c2242b2a88e,
+--- !u!224 &1026750926 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1626909403116386080, guid: dba69d5c5eab41749a008553163ec735,
     type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1013713061 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500161203345, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1031748662 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500081752664, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1040409126 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500398649136, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
+  m_PrefabInstance: {fileID: 229597983}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1041404385
 GameObject:
@@ -4387,24 +4335,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041404385}
   m_CullTransparentMesh: 0
---- !u!1 &1054853198 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030499962471031, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1067878525 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500609532219, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1074652147 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500476923771, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1087333645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4788,12 +4718,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1152352845 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892184460389, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1156428990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4869,6 +4793,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156428990}
   m_CullTransparentMesh: 0
+--- !u!1 &1161981513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1161981514}
+  - component: {fileID: 1161981516}
+  - component: {fileID: 1161981515}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1161981514
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161981513}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 237898458}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1161981515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161981513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 4
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1161981516
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161981513}
+  m_CullTransparentMesh: 1
 --- !u!1 &1174366032
 GameObject:
   m_ObjectHideFlags: 0
@@ -5086,12 +5144,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 12.548, y: -23.893, z: 1.191}
---- !u!1 &1181800244 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501152058322, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1195298417
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,12 +5353,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199537700}
   m_CullTransparentMesh: 0
---- !u!1 &1200947660 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892999933375, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1205778553
 GameObject:
   m_ObjectHideFlags: 0
@@ -5343,7 +5389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -35}
+  m_AnchoredPosition: {x: -150, y: -75.91774}
   m_SizeDelta: {x: 150, y: 35}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1205778555
@@ -5367,10 +5413,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5480,12 +5526,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -45}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
---- !u!1 &1256583230 stripped
+--- !u!1 &1260772988
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 563875507767592104, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260772989}
+  - component: {fileID: 1260772991}
+  - component: {fileID: 1260772990}
+  m_Layer: 5
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1260772989
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260772988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026750926}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 30, y: 19.648}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1260772990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260772988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.24313727, g: 0.24313727, b: 0.24313727, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 50021a7d3cc9d394cb14df55296e574b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1260772991
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260772988}
+  m_CullTransparentMesh: 1
 --- !u!1 &1264128007
 GameObject:
   m_ObjectHideFlags: 0
@@ -5576,18 +5691,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264128007}
   m_CullTransparentMesh: 0
---- !u!1 &1286783896 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554891429904464, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1294492857 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501522475668, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1294738559
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,8 +5757,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5722,18 +5825,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294738559}
   m_CullTransparentMesh: 1
---- !u!1 &1320128052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500351840768, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1322133130 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500273157705, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1322232575
 GameObject:
   m_ObjectHideFlags: 0
@@ -6458,18 +6549,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -45}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
---- !u!1 &1433540025 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500984166082, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1471001228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501520051068, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1482245180
 GameObject:
   m_ObjectHideFlags: 0
@@ -6803,30 +6882,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482591806}
   m_CullTransparentMesh: 0
---- !u!1 &1496675995 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554893278355458, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1498618616 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501909673084, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1506654224 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030499866604028, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1510553824 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500177192566, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1518978208
 GameObject:
   m_ObjectHideFlags: 0
@@ -7147,12 +7202,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559267413}
   m_CullTransparentMesh: 1
---- !u!1 &1560495901 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030499845990940, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1565143713
 GameObject:
   m_ObjectHideFlags: 0
@@ -7286,12 +7335,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565143713}
   m_CullTransparentMesh: 0
---- !u!1 &1574418150 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500949499141, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1578493563
 GameObject:
   m_ObjectHideFlags: 0
@@ -7426,18 +7469,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578493563}
   m_CullTransparentMesh: 0
---- !u!1 &1592348481 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501563197734, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1601586341 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501782624005, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1606262186
 GameObject:
   m_ObjectHideFlags: 0
@@ -7517,12 +7548,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606262186}
   m_CullTransparentMesh: 1
---- !u!1 &1652344318 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892573013436, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1657532953
 GameObject:
   m_ObjectHideFlags: 0
@@ -7553,6 +7578,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 237898458}
   - {fileID: 967201690}
   - {fileID: 379474686}
   m_Father: {fileID: 722730961}
@@ -7690,8 +7716,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7758,12 +7784,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662367427}
   m_CullTransparentMesh: 1
---- !u!1 &1664285736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 563875507903899628, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1667299771
 GameObject:
   m_ObjectHideFlags: 0
@@ -7816,12 +7836,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
---- !u!1 &1678486992 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554891621228251, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1702051254
 GameObject:
   m_ObjectHideFlags: 0
@@ -7955,24 +7969,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702051254}
   m_CullTransparentMesh: 0
---- !u!1 &1703252000 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500033143182, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1722329155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892965015749, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1725605484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500014584568, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733165726
 GameObject:
   m_ObjectHideFlags: 0
@@ -8298,24 +8294,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738664929}
   m_CullTransparentMesh: 0
---- !u!1 &1747152095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030499905171494, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1749143020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892601555045, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1749512828 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501507925321, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1787049185
 GameObject:
   m_ObjectHideFlags: 0
@@ -8527,17 +8505,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798483240}
   m_CullTransparentMesh: 0
---- !u!1 &1849744175 stripped
+--- !u!1 &1848614545 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892852495725, guid: 2dc2c800173227540a9b0c2242b2a88e,
+  m_CorrespondingSourceObject: {fileID: 2179591537280232954, guid: dba69d5c5eab41749a008553163ec735,
     type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1858418131 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554891910579931, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
+  m_PrefabInstance: {fileID: 229597983}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1866240970
 GameObject:
@@ -8672,12 +8644,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866240970}
   m_CullTransparentMesh: 0
---- !u!1 &1874196365 stripped
+--- !u!1 &1870014515
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892672627170, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870014516}
+  - component: {fileID: 1870014518}
+  - component: {fileID: 1870014517}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1870014516
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870014515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1026750926}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1870014517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870014515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.13333334, g: 0.30588236, b: 0.6156863, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d297304856388fb49b309bdfc83e6b23, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1870014518
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870014515}
+  m_CullTransparentMesh: 1
 --- !u!1 &1894737369
 GameObject:
   m_ObjectHideFlags: 0
@@ -8719,7 +8760,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1894737371
 MonoBehaviour:
@@ -8733,8 +8774,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5580ba7e648d77549893f0736a683fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toReverseList: []
-  objName: ShipsButtons
+  toReverseList:
+  - {fileID: 1848614545}
+  objName: 
 --- !u!114 &1894737372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8781,7 +8823,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1894737371}
         m_TargetAssemblyTypeName: GD_Test_UI_ReverseActive, Assembly-CSharp
-        m_MethodName: DisableByName
+        m_MethodName: ReverseActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8848,12 +8890,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1912548407 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892845781097, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1921699718
 GameObject:
   m_ObjectHideFlags: 0
@@ -8962,30 +8998,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921699718}
   m_CullTransparentMesh: 0
---- !u!1 &1972744961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500087537208, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2003719601 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 563875508085577473, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2021244493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030500749681870, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2022291027 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554891621889706, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2077477043
 GameObject:
   m_ObjectHideFlags: 0
@@ -9185,18 +9197,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077477043}
   m_CullTransparentMesh: 0
---- !u!1 &2093612807 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1258030501778635071, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2137390793 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477554892352220874, guid: 2dc2c800173227540a9b0c2242b2a88e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1258030501630337813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &543450651902342202
 Transform:
   m_ObjectHideFlags: 0
@@ -9562,2256 +9562,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 722730961}
     m_Modifications:
-    - target: {fileID: 563875506487120346, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875506487120349, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875506487120349, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875506487120349, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875506487120349, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875506487120349, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507767592788, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507767592788, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507767592788, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507767592788, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507767592788, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507767592789, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507903899624, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507903899624, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507903899624, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507903899624, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507903899624, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507903899625, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507938581422, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507938581422, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507938581422, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507938581422, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507938581422, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875507938581423, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875508085577482, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875508085577485, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875508085577485, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875508085577485, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875508085577485, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 563875508085577485, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499845990936, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499845990936, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499845990936, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499845990936, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499845990936, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499845990939, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499866604024, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499866604024, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499866604024, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499866604024, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499866604024, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499866604027, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499905171490, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499905171490, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499905171490, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499905171490, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499905171490, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499905171501, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499962471026, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499962471027, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499962471027, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499962471027, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499962471027, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499962471027, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499969754468, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499969754468, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499969754468, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499969754468, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499969754468, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030499969754471, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500014584548, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500014584548, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500014584548, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500014584548, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500014584548, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500014584551, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500033143178, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500033143178, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500033143178, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500033143178, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500033143178, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500033143221, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500037796001, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500037796006, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500037796006, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500037796006, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500037796006, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500037796006, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500073734784, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500073734785, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500073734785, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500073734785, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500073734785, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500073734785, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500077064218, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500077064219, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500077064219, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500077064219, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500077064219, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500077064219, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500081752644, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500081752644, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500081752644, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500081752644, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500081752644, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500081752647, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500087537188, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500087537188, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500087537188, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500087537188, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500087537188, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500087537191, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500161203356, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500161203357, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500161203357, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500161203357, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500161203357, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500161203357, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500175189140, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500175189140, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500175189140, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500175189140, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500175189140, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500175189143, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500177192562, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500177192562, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500177192562, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500177192562, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500177192562, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500177192573, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500228397158, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500228397159, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500228397159, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500228397159, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500228397159, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500228397159, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500273157748, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500273157749, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500273157749, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500273157749, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500273157749, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500273157749, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500290635888, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500290635889, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500290635889, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500290635889, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500290635889, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500290635889, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500305892697, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500305892702, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500305892702, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500305892702, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500305892702, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500305892702, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500351840780, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500351840780, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500351840780, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500351840780, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500351840780, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500351840783, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500356931924, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500356931924, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500356931924, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500356931924, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500356931924, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500356931927, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500398649148, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500398649148, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500398649148, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500398649148, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500398649148, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500398649151, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500408234392, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500408234393, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500408234393, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500408234393, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500408234393, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500408234393, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500476923750, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500476923751, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500476923751, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500476923751, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500476923751, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500476923751, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500583349840, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500583349840, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500583349840, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500583349840, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500583349840, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500583349843, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500609532198, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500609532199, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500609532199, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500609532199, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500609532199, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500609532199, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500727464476, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500727464477, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500727464477, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500727464477, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500727464477, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500727464477, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500749681866, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500749681866, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500749681866, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500749681866, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500749681866, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500749681909, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500839723682, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500839723682, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500839723682, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500839723682, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500839723682, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500839723693, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500949499136, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500949499137, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500949499137, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500949499137, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500949499137, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500949499137, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500984166089, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500984166094, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500984166094, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500984166094, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500984166094, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030500984166094, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501053169908, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501053169908, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501053169908, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501053169908, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501053169908, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501053169911, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501152058329, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501152058334, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501152058334, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501152058334, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501152058334, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501152058334, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501238333930, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501238333931, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501238333931, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501238333931, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501238333931, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501238333931, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501254858138, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501254858139, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501254858139, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501254858139, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501254858139, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501254858139, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501320133897, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501320133902, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501320133902, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501320133902, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501320133902, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501320133902, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501391431596, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501391431597, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501391431597, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501391431597, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501391431597, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501391431597, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501494201124, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501494201125, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501494201125, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501494201125, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501494201125, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501494201125, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501507925364, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501507925365, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501507925365, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501507925365, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501507925365, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501507925365, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501520051064, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501520051064, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501520051064, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501520051064, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501520051064, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501520051067, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501522475664, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501522475664, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501522475664, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501522475664, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501522475664, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501522475667, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501536177030, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501536177031, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501536177031, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501536177031, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501536177031, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501536177031, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501563197730, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501563197730, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501563197730, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501563197730, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501563197730, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501563197741, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501636870494, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501636870495, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501636870495, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501636870495, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501636870495, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501636870495, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501695403956, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501695403957, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501695403957, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501695403957, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501695403957, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501695403957, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501711103653, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501711103674, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501711103674, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501711103674, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501711103674, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501711103674, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501778635066, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501778635067, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501778635067, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501778635067, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501778635067, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501778635067, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501782624000, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501782624001, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501782624001, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501782624001, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501782624001, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501782624001, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501810847850, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501810847851, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501810847851, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501810847851, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501810847851, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501810847851, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501909673080, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501909673080, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501909673080, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501909673080, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501909673080, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1258030501909673083, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979699546727, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979699546727, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979699546727, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979699546727, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979699546727, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979796147478, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979796147478, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979796147478, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979796147478, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979796147478, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979987587997, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979987587997, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979987587997, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979987587997, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979987587997, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979990088684, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979990088684, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979990088684, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979990088684, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606979990088684, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980026222946, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980026222946, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980026222946, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980026222946, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980026222946, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980268628893, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980268628893, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980268628893, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980268628893, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980268628893, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980330973237, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980330973237, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980330973237, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980330973237, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980330973237, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980493731863, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980493731863, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980493731863, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980493731863, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980493731863, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980552589603, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980552589603, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980552589603, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980552589603, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980552589603, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980720423820, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980720423820, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980720423820, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980720423820, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980720423820, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980931119354, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980931119354, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980931119354, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980931119354, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980931119354, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980969686307, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980969686307, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980969686307, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980969686307, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606980969686307, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981032832164, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981032832164, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981032832164, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981032832164, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981032832164, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981138417977, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981138417977, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981138417977, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981138417977, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981138417977, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981211950383, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981211950383, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981211950383, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981211950383, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981211950383, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981220964395, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981220964395, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981220964395, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981220964395, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981220964395, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981331316099, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981331316099, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981331316099, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981331316099, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981331316099, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981359804665, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981359804665, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981359804665, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981359804665, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981359804665, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981441627655, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981441627655, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981441627655, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981441627655, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981441627655, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981638176068, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981638176068, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: IntensityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981638176068, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: MinEmissionIntensity
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981638176068, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: EmissionIntensityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590606981638176068, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: AudioVisualizationStrategy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857290455189, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857361163222, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857505744569, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857599824829, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857653296747, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857751909137, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857758071729, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857863878248, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857928161195, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650857963491894, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650858078637342, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650858447798193, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650858523563653, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650858731280039, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650858811581711, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650858969970672, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650859092491535, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650859093136766, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650859270431620, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2593650859316700405, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.z
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3269221639747994388, guid: 2dc2c800173227540a9b0c2242b2a88e,
         type: 3}
       propertyPath: m_RootOrder
@@ -11819,23 +9569,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3269221639747994388, guid: 2dc2c800173227540a9b0c2242b2a88e,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3269221639747994388, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3269221639747994388, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3269221639747994388, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.5724874
       objectReference: {fileID: 0}
     - target: {fileID: 3269221639747994388, guid: 2dc2c800173227540a9b0c2242b2a88e,
         type: 3}
@@ -11882,11 +9617,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3480162480552621730, guid: 2dc2c800173227540a9b0c2242b2a88e,
-        type: 3}
-      propertyPath: ScaleIntensity.y
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3588123806154016167, guid: 2dc2c800173227540a9b0c2242b2a88e,
         type: 3}
       propertyPath: m_Name
@@ -11897,15 +9627,27 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6422099320463493562, guid: 2dc2c800173227540a9b0c2242b2a88e,
+    - target: {fileID: 7519669888807392001, guid: 2dc2c800173227540a9b0c2242b2a88e,
         type: 3}
-      propertyPath: SpectrumSize
-      value: 25
+      propertyPath: m_Size.x
+      value: 7.166768
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3480162480552621730, guid: 2dc2c800173227540a9b0c2242b2a88e, type: 3}
-    - {fileID: 3815184720312692864, guid: 2dc2c800173227540a9b0c2242b2a88e, type: 3}
-    - {fileID: 662128360093385385, guid: 2dc2c800173227540a9b0c2242b2a88e, type: 3}
+    - target: {fileID: 7519669888807392001, guid: 2dc2c800173227540a9b0c2242b2a88e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 8.267455
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519669888807392001, guid: 2dc2c800173227540a9b0c2242b2a88e,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 1.416616
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519669888807392001, guid: 2dc2c800173227540a9b0c2242b2a88e,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.81655204
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dc2c800173227540a9b0c2242b2a88e, type: 3}
 --- !u!61 &5476735591933328952
 BoxCollider2D:
@@ -11971,120 +9713,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1258030501630337813}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8036799039910250446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8036799039910250445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ee7775af23c6349b07ede5e737a44d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VisualizerScriptContainer:
-  - {fileID: 574696555}
-  - {fileID: 1725605484}
-  - {fileID: 1972744961}
-  - {fileID: 1498618616}
-  - {fileID: 29471899}
-  - {fileID: 1294492857}
-  - {fileID: 792163999}
-  - {fileID: 954499101}
-  - {fileID: 764402158}
-  - {fileID: 840416445}
-  - {fileID: 380961744}
-  - {fileID: 1433540025}
-  - {fileID: 1040409126}
-  - {fileID: 621408597}
-  - {fileID: 1002097755}
-  - {fileID: 887067762}
-  - {fileID: 685942132}
-  - {fileID: 215608380}
-  - {fileID: 413842935}
-  - {fileID: 1601586341}
-  - {fileID: 2093612807}
-  - {fileID: 47135547}
-  - {fileID: 2021244493}
-  - {fileID: 1560495901}
-  - {fileID: 270172474}
---- !u!114 &8036799039910250447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8036799039910250445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ee7775af23c6349b07ede5e737a44d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VisualizerScriptContainer:
-  - {fileID: 1749512828}
-  - {fileID: 1031748662}
-  - {fileID: 870777648}
-  - {fileID: 976529317}
-  - {fileID: 1320128052}
-  - {fileID: 169529730}
-  - {fileID: 790821253}
-  - {fileID: 1013713061}
-  - {fileID: 1074652147}
-  - {fileID: 1703252000}
-  - {fileID: 1322133130}
-  - {fileID: 1510553824}
-  - {fileID: 1471001228}
-  - {fileID: 303867917}
-  - {fileID: 1002564649}
-  - {fileID: 1181800244}
-  - {fileID: 1747152095}
-  - {fileID: 1054853198}
-  - {fileID: 1506654224}
-  - {fileID: 653481387}
-  - {fileID: 204939250}
-  - {fileID: 1574418150}
-  - {fileID: 1067878525}
-  - {fileID: 1592348481}
-  - {fileID: 1012305585}
---- !u!114 &8036799039910250449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8036799039910250445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5ee7775af23c6349b07ede5e737a44d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VisualizerScriptContainer:
-  - {fileID: 1496675995}
-  - {fileID: 1722329155}
-  - {fileID: 1200947660}
-  - {fileID: 1152352845}
-  - {fileID: 1652344318}
-  - {fileID: 1858418131}
-  - {fileID: 203089241}
-  - {fileID: 872837306}
-  - {fileID: 1874196365}
-  - {fileID: 284766948}
-  - {fileID: 1912548407}
-  - {fileID: 709493897}
-  - {fileID: 1286783896}
-  - {fileID: 1849744175}
-  - {fileID: 1678486992}
-  - {fileID: 565637060}
-  - {fileID: 1749143020}
-  - {fileID: 110257287}
-  - {fileID: 2022291027}
-  - {fileID: 2137390793}
-  - {fileID: 1256583230}
-  - {fileID: 85667425}
-  - {fileID: 503826016}
-  - {fileID: 2003719601}
-  - {fileID: 1664285736}
 --- !u!4 &8294920712486961534 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3269221639747994388, guid: 2dc2c800173227540a9b0c2242b2a88e,
