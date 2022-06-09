@@ -19,6 +19,8 @@ public class ShapeOnSlider : MonoBehaviour
         {
             startScales[i] = Objects[i].transform.localScale;
         }
+
+        MyOnValueChanged();
     }
 
     public void MyOnValueChanged ()

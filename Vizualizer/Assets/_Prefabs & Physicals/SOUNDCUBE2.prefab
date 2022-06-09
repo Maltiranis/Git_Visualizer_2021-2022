@@ -175,6 +175,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -348,6 +349,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -466,6 +468,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -584,6 +587,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -702,6 +706,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -853,6 +858,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -971,6 +977,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -1089,6 +1096,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -1207,6 +1215,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -1325,6 +1334,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -1443,6 +1453,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -1561,6 +1572,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -1679,6 +1691,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -1797,6 +1810,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -1915,6 +1929,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -2033,6 +2048,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -2151,6 +2167,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -2269,6 +2286,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -2387,6 +2405,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -2505,6 +2524,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -2623,6 +2643,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -2741,6 +2762,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -2859,6 +2881,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -2977,6 +3000,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -3095,6 +3119,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -3213,6 +3238,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -3331,6 +3357,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -3449,6 +3476,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -3567,6 +3595,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -3685,6 +3714,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -3803,6 +3833,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -3921,6 +3952,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -4039,6 +4071,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -4157,6 +4190,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -4275,6 +4309,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -4393,6 +4428,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -4511,6 +4547,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -4629,6 +4666,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -4747,6 +4785,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -4865,6 +4904,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -4983,6 +5023,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -5101,6 +5142,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -5219,6 +5261,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -5337,6 +5380,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -5455,6 +5499,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -5573,6 +5618,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -5691,6 +5737,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -5809,6 +5856,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -5927,6 +5975,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -6045,6 +6094,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -6163,6 +6213,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -6281,6 +6332,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -6399,6 +6451,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -6517,6 +6570,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -6635,6 +6689,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -6753,6 +6808,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -6871,6 +6927,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -6989,6 +7046,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -7107,6 +7165,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -7225,6 +7284,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -7343,6 +7403,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -7461,6 +7522,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -7579,6 +7641,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -7697,6 +7760,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -7815,6 +7879,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -7933,6 +7998,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -8051,6 +8117,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -8169,6 +8236,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -8287,6 +8355,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -8405,6 +8474,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -8523,6 +8593,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -8641,6 +8712,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -8759,6 +8831,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -8877,6 +8950,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -8995,6 +9069,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 2
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
+  _initialEmissionColor: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0
   IntensityScale: 1
   MinEmissionIntensity: 0
@@ -9063,13 +9138,14 @@ GameObject:
   - component: {fileID: 8036799039910250446}
   - component: {fileID: 8036799039910250447}
   - component: {fileID: 8036799039910250449}
+  - component: {fileID: 7633910157284988738}
   m_Layer: 0
   m_Name: SOUNDCUBE2
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3269221639747994388
 Transform:
   m_ObjectHideFlags: 0
@@ -9079,7 +9155,7 @@ Transform:
   m_GameObject: {fileID: 3588123806154016167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 257567072816418468}
   - {fileID: 1239176218243315727}
@@ -9099,7 +9175,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.416616, y: 0.81655204}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9110,7 +9186,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7, y: 7}
+  m_Size: {x: 7.166768, y: 8.267455}
   m_EdgeRadius: 0
 --- !u!50 &7519669888807392000
 Rigidbody2D:
@@ -9260,6 +9336,98 @@ MonoBehaviour:
   - {fileID: 563875507938581410}
   - {fileID: 563875508085577473}
   - {fileID: 563875507903899628}
+--- !u!114 &7633910157284988738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3588123806154016167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a248407f6df4aaa4987ce4226c9f4650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slidR: {fileID: 0}
+  slidG: {fileID: 0}
+  slidB: {fileID: 0}
+  slidX: {fileID: 0}
+  _bars:
+  - {fileID: 2477554893278355458}
+  - {fileID: 2477554892965015749}
+  - {fileID: 2477554892999933375}
+  - {fileID: 2477554892184460389}
+  - {fileID: 2477554892573013436}
+  - {fileID: 2477554891910579931}
+  - {fileID: 2477554892125402449}
+  - {fileID: 2477554891666478116}
+  - {fileID: 2477554892672627170}
+  - {fileID: 2477554892771988607}
+  - {fileID: 2477554892845781097}
+  - {fileID: 2477554893073300289}
+  - {fileID: 2477554891429904464}
+  - {fileID: 2477554892852495725}
+  - {fileID: 2477554891621228251}
+  - {fileID: 2477554891341432609}
+  - {fileID: 2477554892601555045}
+  - {fileID: 2477554891964675443}
+  - {fileID: 2477554891621889706}
+  - {fileID: 2477554892352220874}
+  - {fileID: 563875507767592104}
+  - {fileID: 563875506487120337}
+  - {fileID: 563875507938581410}
+  - {fileID: 563875508085577473}
+  - {fileID: 563875507903899628}
+  - {fileID: 1258030501507925321}
+  - {fileID: 1258030500081752664}
+  - {fileID: 1258030500408234397}
+  - {fileID: 1258030500583349844}
+  - {fileID: 1258030500351840768}
+  - {fileID: 1258030501711103678}
+  - {fileID: 1258030501636870483}
+  - {fileID: 1258030500161203345}
+  - {fileID: 1258030500476923771}
+  - {fileID: 1258030500033143182}
+  - {fileID: 1258030500273157705}
+  - {fileID: 1258030500177192566}
+  - {fileID: 1258030501520051068}
+  - {fileID: 1258030500037796026}
+  - {fileID: 1258030500839723686}
+  - {fileID: 1258030501152058322}
+  - {fileID: 1258030499905171494}
+  - {fileID: 1258030499962471031}
+  - {fileID: 1258030499866604028}
+  - {fileID: 1258030500727464465}
+  - {fileID: 1258030501695403913}
+  - {fileID: 1258030500949499141}
+  - {fileID: 1258030500609532219}
+  - {fileID: 1258030501563197734}
+  - {fileID: 1258030499969754488}
+  - {fileID: 1258030501810847855}
+  - {fileID: 1258030500014584568}
+  - {fileID: 1258030500087537208}
+  - {fileID: 1258030501909673084}
+  - {fileID: 1258030501391431585}
+  - {fileID: 1258030501522475668}
+  - {fileID: 1258030501536177051}
+  - {fileID: 1258030501494201145}
+  - {fileID: 1258030501053169864}
+  - {fileID: 1258030501254858143}
+  - {fileID: 1258030500228397179}
+  - {fileID: 1258030500984166082}
+  - {fileID: 1258030500398649136}
+  - {fileID: 1258030500305892690}
+  - {fileID: 1258030500073734789}
+  - {fileID: 1258030501238333935}
+  - {fileID: 1258030500290635893}
+  - {fileID: 1258030500077064223}
+  - {fileID: 1258030501320133890}
+  - {fileID: 1258030501782624005}
+  - {fileID: 1258030501778635071}
+  - {fileID: 1258030500356931880}
+  - {fileID: 1258030500749681870}
+  - {fileID: 1258030499845990940}
+  - {fileID: 1258030500175189096}
 --- !u!1 &8716420730952796449
 GameObject:
   m_ObjectHideFlags: 0
