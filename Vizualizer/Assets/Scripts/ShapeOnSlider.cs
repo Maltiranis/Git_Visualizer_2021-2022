@@ -20,6 +20,13 @@ public class ShapeOnSlider : MonoBehaviour
             startScales[i] = Objects[i].transform.localScale;
         }
 
+        StartCoroutine(delayMe());
+    }
+
+    IEnumerator delayMe ()
+    {
+        yield return new WaitForSeconds(.1f);
+
         MyOnValueChanged();
     }
 

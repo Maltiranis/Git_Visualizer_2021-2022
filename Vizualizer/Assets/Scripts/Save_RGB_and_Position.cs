@@ -12,18 +12,22 @@ public class Save_RGB_and_Position : MonoBehaviour
 
     public Slider slidScale;
 
+    public Slider slidForce;
+
     public float myPosX;
     public float myPosY;
     public float myPosZ;
 
     Vector3 loadedPos;
     float loadedScale;
+    float loadedForce;
     Vector4 MyColor;
 
     void Start()
     {
         LoadPosition();
         LoadScale();
+        LoadForce();
         LoadColors();
 
         StartCoroutine(selfsaving());
@@ -98,9 +102,23 @@ public class Save_RGB_and_Position : MonoBehaviour
         {
             if (!AreEqual(transform.localScale.x, PlayerPrefs.GetFloat("myScale")))
             {
-                loadedScale = PlayerPrefs.GetFloat("slidR");
+                loadedScale = PlayerPrefs.GetFloat("myScale");
             }
-            slidScale.SetValueWithoutNotify(loadedScale);
+            //slidScale.SetValueWithoutNotify(loadedScale);
+            slidScale.value = loadedScale;
+        }
+    }
+
+    void LoadForce()
+    {
+        if (PlayerPrefs.HasKey("myForce"))
+        {
+            if (!AreEqual(slidForce.value, PlayerPrefs.GetFloat("myForce")))
+            {
+                loadedForce = PlayerPrefs.GetFloat("myForce");
+            }
+
+            slidForce.value = loadedForce;
         }
     }
 
