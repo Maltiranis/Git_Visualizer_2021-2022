@@ -26,7 +26,7 @@ public class Save_RGB_and_Position : MonoBehaviour
     void Start()
     {
         LoadPosition();
-        LoadScale();
+        //LoadScale();
         LoadForce();
         LoadColors();
 

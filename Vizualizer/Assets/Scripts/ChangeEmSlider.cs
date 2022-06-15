@@ -12,11 +12,17 @@ public class ChangeEmSlider : MonoBehaviour
     public Slider slidB;
     public Slider slidX;
 
+    [HideInInspector]
     public GameObject[] _bars;
 
-    void Start()
+    private void Start()
     {
-        
+        SetBars();
+    }
+
+    public void SetBars()
+    {
+        _bars = GetComponent<_audio_SetMyIdentityOnList>()._bars;
     }
 
     void Update()

@@ -37,7 +37,7 @@ namespace Assets.Scripts.ReactiveEffects.Base
 
         #region Protected Methods
 
-        protected float GetAudioData()
+        public float GetAudioData()
         {
             // Get audio data
             return _loopbackAudio.GetSpectrumData(AudioVisualizationStrategy, AudioSampleIndex);

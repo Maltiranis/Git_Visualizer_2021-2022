@@ -7,7 +7,7 @@ using TMPro;
 public class ShapeOnSlider : MonoBehaviour
 {
     public GameObject[] Objects;
-    Slider slid;
+    public Slider slid;
     Vector3[] startScales;
 
     void Start()

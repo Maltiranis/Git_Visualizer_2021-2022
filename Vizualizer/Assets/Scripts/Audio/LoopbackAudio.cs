@@ -21,7 +21,10 @@ public class LoopbackAudio : MonoBehaviour
 
     #region Public Properties
 
+    [HideInInspector]
     public int SpectrumSize;
+
+    public GameObject barsContainer;
     public ScalingStrategy ScalingStrategy;
     public float[] SpectrumData;
     public float[] PostScaledSpectrumData;
@@ -42,6 +45,8 @@ public class LoopbackAudio : MonoBehaviour
 
     public void Awake()
     {
+        SpectrumSize = barsContainer.transform.childCount;
+
         SpectrumData = new float[SpectrumSize];
         PostScaledSpectrumData = new float[SpectrumSize];
         PostScaledMinMaxSpectrumData = new float[SpectrumSize];
