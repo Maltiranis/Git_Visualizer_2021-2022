@@ -45,6 +45,11 @@ public class LoopbackAudio : MonoBehaviour
 
     public void Awake()
     {
+        Launchloopback();
+    }
+
+    public void Launchloopback()
+    {
         SpectrumSize = barsContainer.transform.childCount;
 
         SpectrumData = new float[SpectrumSize];

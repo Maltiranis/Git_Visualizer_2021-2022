@@ -25,12 +25,16 @@ public class _audio_SetMyIdentityOnList : MonoBehaviour
     private void Awake()
     {
         SetID();
+        GetComponent<ChangeEmSlider>().SetBars();
+        GetComponent<CustomScaleStatOnSlider>().SetBars();
     }
 
     public void ReverseID ()
     {
         reverseID = !reverseID;
         SetID();
+        GetComponent<ChangeEmSlider>().SetBars();
+        GetComponent<CustomScaleStatOnSlider>().SetBars();
     }
 
     public void SetID ()
@@ -39,46 +43,40 @@ public class _audio_SetMyIdentityOnList : MonoBehaviour
 
         containers = new GameObject[barsContainer.transform.childCount];
 
-        if (!reverseID)
+        if (reverseID == false)
         {
             for (int i = 0; i < containers.Length; i++)
             {
                 containers[i] = barsContainer.transform.GetChild(i).gameObject;
-            }
 
-            for (int i = 0; i < containers.Length; i++)
-            {
                 for (int j = 0; j < containers[i].transform.childCount; j++)
                 {
                     barList.Add(containers[i].transform.GetChild(j).gameObject);
 
-                    GameObject actualBar = containers[i].transform.GetChild(j).gameObject;
-
-                    actualBar.GetComponent<ObjectScaleReactiveEffect>().AudioSampleIndex = i;
-                    actualBar.GetComponent<MaterialColorIntensityReactiveEffect>().AudioSampleIndex = i;
+                    containers[i].transform.GetChild(j).gameObject.GetComponent<VisualizationEffectBase>().AudioSampleIndex = i;
+                    containers[i].transform.GetChild(j).gameObject.GetComponent<ObjectScaleReactiveEffect>().AudioSampleIndex = i;
+                    containers[i].transform.GetChild(j).gameObject.GetComponent<MaterialColorIntensityReactiveEffect>().AudioSampleIndex = i;
                 }
             }
         }
-        else
+
+        if (reverseID == true)
         {
             for (int i = containers.Length - 1; i >= 0; i--)
             {
-                containers[i] = barsContainer.transform.GetChild(i).gameObject;
-            }
+                containers[i] = barsContainer.transform.GetChild(containers.Length -1 - i).gameObject;
 
-            for (int i = containers.Length - 1; i >= 0; i--)
-            {
                 for (int j = 0; j < containers[i].transform.childCount; j++)
                 {
                     barList.Add(containers[i].transform.GetChild(j).gameObject);
 
-                    GameObject actualBar = containers[i].transform.GetChild(j).gameObject;
-
-                    actualBar.GetComponent<ObjectScaleReactiveEffect>().AudioSampleIndex = i;
-                    actualBar.GetComponent<MaterialColorIntensityReactiveEffect>().AudioSampleIndex = i;
+                    containers[i].transform.GetChild(j).gameObject.GetComponent<VisualizationEffectBase>().AudioSampleIndex = i;
+                    containers[i].transform.GetChild(j).gameObject.GetComponent<ObjectScaleReactiveEffect>().AudioSampleIndex = i;
+                    containers[i].transform.GetChild(j).gameObject.GetComponent<MaterialColorIntensityReactiveEffect>().AudioSampleIndex = i;
                 }
             }
         }
+
         _bars = barList.ToArray();
     }
 }

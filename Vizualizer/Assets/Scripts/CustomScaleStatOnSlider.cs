@@ -7,7 +7,6 @@ public class CustomScaleStatOnSlider : MonoBehaviour
 {
     public Slider slidF;
 
-    [HideInInspector]
     public GameObject[] _bars;
 
     private void Start ()
@@ -15,8 +14,10 @@ public class CustomScaleStatOnSlider : MonoBehaviour
         SetBars();
     }
 
-    public void SetBars ()
+    public void SetBars()
     {
+        _bars = new GameObject[0];
+        _bars = new GameObject[GetComponent<_audio_SetMyIdentityOnList>()._bars.Length];
         _bars = GetComponent<_audio_SetMyIdentityOnList>()._bars;
     }
 
