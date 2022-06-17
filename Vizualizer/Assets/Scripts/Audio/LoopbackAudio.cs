@@ -142,6 +142,117 @@ public class LoopbackAudio : MonoBehaviour
         _realtimeAudio.StartListen();
     }
 
+    public void MyChangeAudioMode(int strategyInt)
+    {
+        _realtimeAudio.StopListen();
+
+        SpectrumSize = barsContainer.transform.childCount;
+
+        SpectrumData = new float[SpectrumSize];
+        PostScaledSpectrumData = new float[SpectrumSize];
+        PostScaledMinMaxSpectrumData = new float[SpectrumSize];
+
+        // Used for post scaling
+        float postScaleStep = 1.0f / SpectrumSize;
+
+        switch (strategyInt)
+        {
+            case 0:
+                ScalingStrategy = ScalingStrategy.Decibel;
+                break;
+            case 1:
+                ScalingStrategy = ScalingStrategy.Linear;
+                break;
+            case 2:
+                ScalingStrategy = ScalingStrategy.Sqrt;
+                break;
+            default:
+                throw new InvalidOperationException(string.Format("Invalid for GetAllSpectrumData: {0}", ScalingStrategy));
+        }
+
+        // Setup loopback audio and start listening
+        _realtimeAudio = new RealtimeAudio(SpectrumSize, ScalingStrategy, (spectrumData) =>
+        {
+            // Raw
+            SpectrumData = spectrumData;
+
+            // Post scaled for visualization
+            float postScaledPoint = postScaleStep;
+            float postScaledMax = 0.0f;
+
+            float postScaleAverage = 0.0f;
+            float totalPostScaledValue = 0.0f;
+
+            bool isIdle = true;
+
+            // Pass 1: Scaled. Scales progressively as moving up the spectrum
+            for (int i = 0; i < SpectrumSize; i++)
+            {
+                // Don't scale low band, it's too useful
+                if (i == 0)
+                {
+                    PostScaledSpectrumData[i] = SpectrumData[i];
+                }
+                else
+                {
+                    float postScaleValue = postScaledPoint * SpectrumData[i] * (RealtimeAudio.MaxAudioValue - (1.0f - postScaledPoint));
+                    PostScaledSpectrumData[i] = Mathf.Clamp(postScaleValue, 0, RealtimeAudio.MaxAudioValue); // TODO: Can this be done better than a clamp?
+                }
+
+                if (PostScaledSpectrumData[i] > postScaledMax)
+                {
+                    postScaledMax = PostScaledSpectrumData[i];
+                }
+
+                postScaledPoint += postScaleStep;
+                totalPostScaledValue += PostScaledSpectrumData[i];
+
+                if (spectrumData[i] > 0)
+                {
+                    isIdle = false;
+                }
+            }
+
+            PostScaledMax = postScaledMax;
+
+            // Calculate "energy" using the post scale average
+            postScaleAverage = totalPostScaledValue / SpectrumSize;
+            _postScaleAverages.Add(postScaleAverage);
+
+            // We only want to track EnergyAverageCount averages.
+            // With a value of 1000, this will happen every couple seconds
+            if (_postScaleAverages.Count == EnergyAverageCount)
+            {
+                _postScaleAverages.RemoveAt(0);
+            }
+
+            // Average the averages to get the energy.
+            PostScaledEnergy = _postScaleAverages.Average();
+
+            // Pass 2: MinMax spectrum. Here we use the average.
+            // If a given band falls below the average, reduce it 50%
+            // otherwise boost it 50%
+            for (int i = 0; i < SpectrumSize; i++)
+            {
+                float minMaxed = PostScaledSpectrumData[i];
+
+                if (minMaxed <= postScaleAverage * ThresholdToMin)
+                {
+                    minMaxed *= MinAmount;
+                }
+                else if (minMaxed >= postScaleAverage * ThresholdToMax)
+                {
+                    minMaxed *= MaxAmount;
+                }
+
+                PostScaledMinMaxSpectrumData[i] = minMaxed;
+            }
+
+            IsIdle = isIdle;
+        });
+        _realtimeAudio.StartListen();
+    }
+
     public void Update()
     {
         
