@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CustomScaleStatOnSlider : MonoBehaviour
 {
     public Slider slidF;
+    public float slidForce = 1.0f;
 
     public GameObject[] _bars;
 
@@ -28,11 +29,11 @@ public class CustomScaleStatOnSlider : MonoBehaviour
             Vector3 force = _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>().ScaleIntensity;
 
             if (force.x != 0)
-                _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>().ScaleIntensity.x = slidF.value;
+                _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>().ScaleIntensity.x = slidF.value * slidForce;
             if (force.y != 0)
-                _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>().ScaleIntensity.y = slidF.value;
+                _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>().ScaleIntensity.y = slidF.value * slidForce;
             if (force.z != 0)
-                _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>().ScaleIntensity.z = slidF.value;
+                _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>().ScaleIntensity.z = slidF.value * slidForce;
         }
     }
 }

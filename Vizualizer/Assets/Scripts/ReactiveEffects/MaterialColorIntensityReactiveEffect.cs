@@ -26,16 +26,28 @@ namespace Assets.Scripts.ReactiveEffects
 
         private void Awake()
         {
-            this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = Instantiate(Resources.Load("NeonMat") as Material);
+            if (this.transform.childCount > 0)
+                this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = Instantiate(Resources.Load("NeonMat") as Material);
+            else
+                this.gameObject.GetComponent<Renderer>().material = Instantiate(Resources.Load("SphereMat") as Material);
         }
 
         public override void Start()
         {
             base.Start();
 
-            _renderer = this.transform.GetChild(0).gameObject.GetComponent<Renderer>();
-            _initialColor = this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.GetColor("_Color");
-            _initialEmissionColor = this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.GetColor("_EmissionColor");
+            if (this.transform.childCount > 0)
+            {
+                _renderer = this.transform.GetChild(0).gameObject.GetComponent<Renderer>();
+                _initialColor = this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.GetColor("_Color");
+                _initialEmissionColor = this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.GetColor("_EmissionColor");
+            }
+            else
+            {
+                _renderer = this.gameObject.GetComponent<Renderer>();
+                _initialColor = this.gameObject.GetComponent<Renderer>().material.GetColor("_Color");
+                _initialEmissionColor = this.gameObject.GetComponent<Renderer>().material.GetColor("_EmissionColor");
+            }
         }
 
         #endregion
@@ -52,7 +64,10 @@ namespace Assets.Scripts.ReactiveEffects
             //scaledColor.a = scaledColor.r;
 
             //this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", scaledColor);
-            this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", scaledEmissionColor * scaledEmissionColor);
+            if (this.transform.childCount > 0)
+                this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", scaledEmissionColor * scaledEmissionColor);
+            else
+                this.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", scaledEmissionColor * scaledEmissionColor);
         }
 
         #endregion
