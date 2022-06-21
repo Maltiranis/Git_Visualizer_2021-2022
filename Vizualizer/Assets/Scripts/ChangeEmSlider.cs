@@ -11,6 +11,7 @@ public class ChangeEmSlider : MonoBehaviour
     public Slider slidG;
     public Slider slidB;
     public Slider slidX;
+    public float slidForce = 0.1f;
 
     public GameObject[] _bars;
 
@@ -36,7 +37,7 @@ public class ChangeEmSlider : MonoBehaviour
             Color baseColor = new Color(slidR.value, slidG.value, slidB.value);
 
             //mat.SetColor("_EmissionColor", baseColor * slidX.value);
-            _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.MaterialColorIntensityReactiveEffect>()._initialEmissionColor = baseColor * slidX.value;
+            _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.MaterialColorIntensityReactiveEffect>()._initialEmissionColor = baseColor * slidX.value * slidForce;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Assets.Scripts.ReactiveEffects
         #region Private Member Variables
 
         private Renderer _renderer;
-        private Color _initialColor;
+        public Color _initialColor;
         public Color _initialEmissionColor;
 
         #endregion
@@ -57,17 +57,23 @@ namespace Assets.Scripts.ReactiveEffects
         public void Update()
         {
             float audioData = GetAudioData();
-            float scaledAmount = Mathf.Clamp(MinIntensity + (audioData * IntensityScale), 0.0f, 10.0f);
+            //float scaledAmount = Mathf.Clamp(MinIntensity + (audioData * IntensityScale), 0.0f, 10.0f);
             float scaledEmissionAmount = Mathf.Clamp(MinEmissionIntensity + (audioData * EmissionIntensityScale), 0.0f, 100.0f);
-            //Color scaledColor = _initialColor * scaledAmount;
+            Color scaledColor = _initialColor * scaledEmissionAmount;
             Color scaledEmissionColor = _initialEmissionColor * scaledEmissionAmount;
             //scaledColor.a = scaledColor.r;
 
             //this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", scaledColor);
             if (this.transform.childCount > 0)
+            {
+                this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.SetColor("_Color", scaledColor * scaledColor);
                 this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", scaledEmissionColor * scaledEmissionColor);
+            }
             else
+            {
+                this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", scaledColor * scaledColor);
                 this.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", scaledEmissionColor * scaledEmissionColor);
+            }
         }
 
         #endregion
