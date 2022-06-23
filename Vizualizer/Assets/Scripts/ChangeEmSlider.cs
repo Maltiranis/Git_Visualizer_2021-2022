@@ -37,7 +37,7 @@ public class ChangeEmSlider : MonoBehaviour
             Color baseColor = new Color(slidR.value, slidG.value, slidB.value);
 
             //mat.SetColor("_EmissionColor", baseColor * slidX.value);
-            _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.MaterialColorIntensityReactiveEffect>()._initialEmissionColor = baseColor * slidX.value * slidForce;
+            _bars[i].GetComponent<Assets.Scripts.ReactiveEffects.MaterialColorIntensityReactiveEffect>()._initialEmissionColor = (baseColor * slidX.value) / 100;
         }
     }
 }

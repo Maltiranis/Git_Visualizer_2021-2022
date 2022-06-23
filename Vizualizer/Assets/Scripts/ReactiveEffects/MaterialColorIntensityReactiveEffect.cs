@@ -10,6 +10,8 @@ namespace Assets.Scripts.ReactiveEffects
         private Renderer _renderer;
         public Color _initialColor;
         public Color _initialEmissionColor;
+        public int matIndex = 0;
+        public bool fromScale = false;
 
         #endregion
 
@@ -57,8 +59,14 @@ namespace Assets.Scripts.ReactiveEffects
         public void Update()
         {
             float audioData = GetAudioData();
+            float scaledEmissionAmount;
             //float scaledAmount = Mathf.Clamp(MinIntensity + (audioData * IntensityScale), 0.0f, 10.0f);
-            float scaledEmissionAmount = Mathf.Clamp(MinEmissionIntensity + (audioData * EmissionIntensityScale), 0.0f, 100.0f);
+
+            if (!fromScale)
+                scaledEmissionAmount = Mathf.Clamp(MinEmissionIntensity + (audioData * EmissionIntensityScale), 0.0f, 100.0f);
+            else
+                scaledEmissionAmount = (transform.localScale.x + transform.localScale.y + transform.localScale.z) * (transform.localScale.x + transform.localScale.y + transform.localScale.z) / 5;
+
             Color scaledColor = _initialColor * scaledEmissionAmount;
             Color scaledEmissionColor = _initialEmissionColor * scaledEmissionAmount;
             //scaledColor.a = scaledColor.r;
@@ -66,13 +74,13 @@ namespace Assets.Scripts.ReactiveEffects
             //this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", scaledColor);
             if (this.transform.childCount > 0)
             {
-                this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.SetColor("_Color", scaledColor * scaledColor);
-                this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", scaledEmissionColor * scaledEmissionColor);
+                this.transform.GetChild(0).gameObject.GetComponent<Renderer>().materials[matIndex].SetColor("_Color", scaledColor);//  * scaledColor);
+                this.transform.GetChild(0).gameObject.GetComponent<Renderer>().materials[matIndex].SetColor("_EmissionColor", scaledEmissionColor);//  * scaledEmissionColor);
             }
             else
             {
-                this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", scaledColor * scaledColor);
-                this.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", scaledEmissionColor * scaledEmissionColor);
+                this.gameObject.GetComponent<Renderer>().materials[matIndex].SetColor("_Color", scaledColor);//  * scaledColor);
+                this.gameObject.GetComponent<Renderer>().materials[matIndex].SetColor("_EmissionColor", scaledEmissionColor);// * scaledEmissionColor);
             }
         }
 

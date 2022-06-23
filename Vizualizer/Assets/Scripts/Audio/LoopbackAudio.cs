@@ -84,7 +84,7 @@ public class LoopbackAudio : MonoBehaviour
                 }
                 else
                 {
-                    float postScaleValue = postScaledPoint * SpectrumData[i] * (RealtimeAudio.MaxAudioValue - (1.0f - postScaledPoint));
+                    float postScaleValue = postScaledPoint * SpectrumData[i] * (RealtimeAudio.MaxAudioValue);// - (1.0f - postScaledPoint));
                     PostScaledSpectrumData[i] = Mathf.Clamp(postScaleValue, 0, RealtimeAudio.MaxAudioValue); // TODO: Can this be done better than a clamp?
                 }
 
