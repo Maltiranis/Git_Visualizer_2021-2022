@@ -65,7 +65,7 @@ namespace Assets.Scripts.ReactiveEffects
             if (!fromScale)
                 scaledEmissionAmount = Mathf.Clamp(MinEmissionIntensity + (audioData * EmissionIntensityScale), 0.0f, 100.0f);
             else
-                scaledEmissionAmount = (transform.localScale.x + transform.localScale.y + transform.localScale.z) * (transform.localScale.x + transform.localScale.y + transform.localScale.z) / 5;
+                scaledEmissionAmount = ((transform.localScale.x + transform.localScale.y + transform.localScale.z) * audioData * EmissionIntensityScale) / 5;
 
             Color scaledColor = _initialColor * scaledEmissionAmount;
             Color scaledEmissionColor = _initialEmissionColor * scaledEmissionAmount;
