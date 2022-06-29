@@ -19,6 +19,8 @@ public class sc_GetMeteo : MonoBehaviour
     [SerializeField] private bool useCase = false;
     private HashSet<string> wordHashes = new HashSet<string>();
 
+    public string dayTemperatureFilter = "";
+
     [TextArea(10, 10)]
     public string[] wordTab;
 
@@ -38,7 +40,7 @@ public class sc_GetMeteo : MonoBehaviour
     {
         if (wordTab[goThere] != null)
         {
-            temperature = wordTab[goThere];
+            temperature = wordTab[14];
             goThere++;
         }
         else
@@ -48,7 +50,7 @@ public class sc_GetMeteo : MonoBehaviour
     void SplitWords(string wwwText)
     {
         // Creates the hashset data set at the start of the game.
-        var words = wwwText.Split(new[] { "<span>" }, StringSplitOptions.RemoveEmptyEntries);
+        var words = wwwText.Split(new[] { dayTemperatureFilter, "</span>" }, StringSplitOptions.RemoveEmptyEntries);
         for (int i = 0, count = words.Length; i < count; i++)
         {
             //Debug.Log($"Read {words[i]} from the words list.");
@@ -79,11 +81,11 @@ public class sc_GetMeteo : MonoBehaviour
             textFromWWW = www.text;
 
             SplitWords(textFromWWW);
-            StreamWriter writer = new StreamWriter("Assets/Resources/MeteoParser.txt", true);
+            /*StreamWriter writer = new StreamWriter("Assets/Resources/MeteoParser.txt", true);
             writer.Flush();
             writer.Write(temperature);
             
-            writer.Close();
+            writer.Close();*/
         }
     }
 }

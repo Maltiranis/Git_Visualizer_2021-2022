@@ -6412,6 +6412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   temperature: 
   useCase: 0
+  dayTemperatureFilter: <span data-testid="TemperatureValue" class="CurrentConditions--tempValue--3a50n">
   wordTab: []
 --- !u!1 &794723848
 GameObject:
