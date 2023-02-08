@@ -15,6 +15,8 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
 
     public int ship = 0;
 
+    public GameObject UIcontainer;
+
     private void Start()
     {
         //PV = GetComponent<PhotonView>();
@@ -26,9 +28,10 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
         if (!PV.IsMine)
         {
             transform.GetChild(0).gameObject.SetActive(false);
+            UIcontainer.gameObject.SetActive(false);
         }
         else
-        PV.RPC("SyncShips", RpcTarget.AllViaServer);
+            PV.RPC("SyncShips", RpcTarget.AllViaServer);
     }
 
     [PunRPC]

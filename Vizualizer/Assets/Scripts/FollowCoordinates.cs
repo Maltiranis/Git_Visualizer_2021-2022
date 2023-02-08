@@ -18,6 +18,11 @@ public class FollowCoordinates : MonoBehaviour
         {
             //PV.RPC("SayMyName", RpcTarget.AllBuffered, PV.Owner.NickName);
             gameObject.GetComponentInChildren<TextMeshProUGUI>().text = PV.Owner.NickName;
+            gameObject.transform.position = target.position;
+        }
+        else
+        {
+            gameObject.transform.position = target.position;
         }
     }
 
@@ -30,10 +35,12 @@ public class FollowCoordinates : MonoBehaviour
         if (stream.IsWriting)
         {
             stream.SendNext(gameObject.GetComponentInChildren<TextMeshProUGUI>().text);
+            stream.SendNext(gameObject.transform.position);
         }
         else
         {
             gameObject.GetComponentInChildren<TextMeshProUGUI>().text = (string)stream.ReceiveNext();
+            gameObject.transform.position = (Vector3)stream.ReceiveNext();
         }
     }
 }

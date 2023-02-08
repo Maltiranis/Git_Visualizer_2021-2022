@@ -7,7 +7,7 @@ public class SimpleLookAt : MonoBehaviour
 {
     public Transform looked;
     public float lookatSpeed = 2.0f;
-    public float forwardPower = 0.05f;
+    public float forwardPower = 0.1f; //défault 0.05f
 
     GameObject shipList;
     GameObject playerList;
@@ -29,7 +29,8 @@ public class SimpleLookAt : MonoBehaviour
     {
         SimpleFollow sF = GetComponent<SimpleFollow>();
 
-        sF.speed = getSVP.translateSpeed;
+        sF.linearSpeed = getSVP.translateSpeed;
+        sF.angularSpeed = getSVP.rotateSpeed;
         lookatSpeed = getSVP.lookSpeed;
         forwardPower = getSVP.forwardPow;
     }
