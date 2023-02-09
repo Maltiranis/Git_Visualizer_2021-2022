@@ -440,3 +440,4 @@ Received Import Request.
 Start importing Assets/Sprites/SERVNAME_INPUT.png using Guid(0444937cc51489b4d8a2888050f2b7c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e473088225913caebac8af4a37f0ab52') in 0.016941 seconds 
   Import took 0.038973 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
