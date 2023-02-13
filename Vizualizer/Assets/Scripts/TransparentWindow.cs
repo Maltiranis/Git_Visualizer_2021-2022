@@ -9,6 +9,8 @@ using System.Collections;
 /// </summary>
 public class TransparentWindow : MonoBehaviour
 {
+    public bool ShipCanFire = false;
+
 #if !UNITY_EDITOR && UNITY_STANDALONE_WIN
 
     #region WINDOWS API

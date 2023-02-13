@@ -91,6 +91,16 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
             Aiming.SetActive(true);
         }
 
+        if (objectsList[tO].activeInHierarchy)
+        {
+            if (objectsList[tO].GetComponent<multi_Fire>() != null)
+            {
+                Camera.main.GetComponent<TransparentWindow>().ShipCanFire = true;
+            }
+            else
+                Camera.main.GetComponent<TransparentWindow>().ShipCanFire = false;
+        }
+
         ship = tO;
     }
 

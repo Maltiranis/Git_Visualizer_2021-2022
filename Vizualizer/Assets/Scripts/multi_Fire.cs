@@ -17,26 +17,22 @@ public class multi_Fire : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        /*if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
-            if(StartCoroutine(MaintainFire()) != null)
-            {
-                StopCoroutine(MaintainFire());
-            }
-
             MaintainFire();
         }
         else
         {
             StartCoroutine(StopFireTime());
-        }*/
+        }
     }
 
     void LocalFire()
     {
         foreach (GameObject o in objectsList)
         {
-            o.SetActive(true);
+            o.GetComponent<ParticleSystem>().Play();
+            o.GetComponent<ParticleSystem>().loop = true;
         }
     }
 
@@ -44,7 +40,8 @@ public class multi_Fire : MonoBehaviourPunCallbacks
     {
         foreach (GameObject o in objectsList)
         {
-            o.SetActive(false);
+            //o.GetComponent<ParticleSystem>().Stop();
+            o.GetComponent<ParticleSystem>().loop = false;
         }
     }
 
@@ -53,7 +50,8 @@ public class multi_Fire : MonoBehaviourPunCallbacks
     {
         foreach (GameObject o in objectsList)
         {
-            o.SetActive(true);
+            o.GetComponent<ParticleSystem>().Play();
+            o.GetComponent<ParticleSystem>().loop = true;
         }
     }
 
@@ -62,7 +60,8 @@ public class multi_Fire : MonoBehaviourPunCallbacks
     {
         foreach (GameObject o in objectsList)
         {
-            o.SetActive(false);
+            //o.GetComponent<ParticleSystem>().Stop();
+            o.GetComponent<ParticleSystem>().loop = false;
         }
     }
 
@@ -70,8 +69,8 @@ public class multi_Fire : MonoBehaviourPunCallbacks
     {
         if (firing == true)
         {
-            if (PV != null)
-                PV.RPC("SetFire", RpcTarget.AllViaServer, objectsList);
+            /*if (PV != null)
+                PV.RPC("SetFire", RpcTarget.AllViaServer, objectsList);*/
             LocalFire();
         }
     }
@@ -80,8 +79,8 @@ public class multi_Fire : MonoBehaviourPunCallbacks
     {
         if (firing != true)
         {
-            if (PV != null)
-                PV.RPC("StopFire", RpcTarget.AllViaServer, objectsList);
+            /*if (PV != null)
+                PV.RPC("StopFire", RpcTarget.AllViaServer, objectsList);*/
             LocalUnFire();
         }
     }
