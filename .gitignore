@@ -39,3 +39,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Vizualizer/Assets/Tools/AmplifyShaderEditor/Examples/Built-In Samples.unitypackage.meta
+Vizualizer/Logs/
