@@ -5,10 +5,12 @@ using System.Collections;
 
 public class multi_Fire : MonoBehaviourPunCallbacks
 {
-    public GameObject[] objectsList;
+    public GameObject[] missileSpawners;
+    public GameObject missilePrefab;
+    public float missileSpeed = 10.0f;
+    public float missileoffset = 1.0f;
+
     public PhotonView PV;
-    public float fireTimeLength = 1.0f;
-    bool firing = false;
 
     private void Start()
     {
@@ -17,84 +19,21 @@ public class multi_Fire : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            MaintainFire();
-        }
-        else
-        {
-            StartCoroutine(StopFireTime());
-        }
+        if (PV.IsMine)
+            if (Input.GetMouseButtonDown(0))
+            {
+                photonView.RPC("LocalFire", RpcTarget.All);
+            }
     }
 
+    [PunRPC]
     void LocalFire()
     {
-        foreach (GameObject o in objectsList)
+        foreach (GameObject o in missileSpawners)
         {
-            o.GetComponent<ParticleSystem>().Play();
-            o.GetComponent<ParticleSystem>().loop = true;
+            Vector3 spawnPos = o.transform.position + o.transform.forward * missileoffset;
+            GameObject missile = PhotonNetwork.Instantiate(missilePrefab.name, spawnPos, transform.rotation);
+            missile.GetComponent<Rigidbody>().AddForce(transform.forward * missileSpeed);
         }
-    }
-
-    void LocalUnFire()
-    {
-        foreach (GameObject o in objectsList)
-        {
-            //o.GetComponent<ParticleSystem>().Stop();
-            o.GetComponent<ParticleSystem>().loop = false;
-        }
-    }
-
-    [PunRPC]
-    void SetFire(GameObject objs, PhotonMessageInfo info)
-    {
-        foreach (GameObject o in objectsList)
-        {
-            o.GetComponent<ParticleSystem>().Play();
-            o.GetComponent<ParticleSystem>().loop = true;
-        }
-    }
-
-    [PunRPC]
-    void StopFire(GameObject objs, PhotonMessageInfo info)
-    {
-        foreach (GameObject o in objectsList)
-        {
-            //o.GetComponent<ParticleSystem>().Stop();
-            o.GetComponent<ParticleSystem>().loop = false;
-        }
-    }
-
-    void MaintainFire()
-    {
-        if (firing == true)
-        {
-            /*if (PV != null)
-                PV.RPC("SetFire", RpcTarget.AllViaServer, objectsList);*/
-            LocalFire();
-        }
-    }
-
-    void DisableFire()
-    {
-        if (firing != true)
-        {
-            /*if (PV != null)
-                PV.RPC("StopFire", RpcTarget.AllViaServer, objectsList);*/
-            LocalUnFire();
-        }
-    }
-
-    IEnumerator FireTime()
-    {
-        yield return new WaitForSeconds(fireTimeLength);
-        firing = !firing;
-    }
-
-    IEnumerator StopFireTime()
-    {
-        yield return new WaitForSeconds(fireTimeLength);
-
-        DisableFire();
     }
 }
