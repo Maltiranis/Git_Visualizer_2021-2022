@@ -148,7 +148,14 @@ public class DisplayChanger : MonoBehaviour
     {
         if (disp < myDisplays.Count)
         {
-            StartCoroutine(MyMoveWindow(myMonitors[disp].height, myMonitors[disp].width, myMonitors[disp].targetX, myMonitors[disp].targetY));
+            if (Surround == true)
+            {
+                monitorNumber = 0;
+                StartCoroutine(MyMoveWindow(myMonitors[monitorNumber].height, myMonitors[monitorNumber].width, myMonitors[monitorNumber].targetX, myMonitors[monitorNumber].targetY));
+                Surround = false;
+            }
+            else
+                StartCoroutine(MyMoveWindow(myMonitors[disp].height, myMonitors[disp].width, myMonitors[disp].targetX, myMonitors[disp].targetY));
         }
 
         //Display.displays[1].SetRenderingResolution(256, 256);
@@ -158,7 +165,7 @@ public class DisplayChanger : MonoBehaviour
     {
         int totalWidth = myDisplays.Count * myMonitors[monitorNumber].width;
 
-        if (!Surround)
+        if (Surround == false)
         {
             if (monitorNumber < myDisplays.Count)
             {
@@ -170,6 +177,12 @@ public class DisplayChanger : MonoBehaviour
         {
             if (monitorNumber < myDisplays.Count)
             {
+                StartCoroutine(MyMoveWindow(myMonitors[monitorNumber].height, myMonitors[monitorNumber].width, myMonitors[monitorNumber].targetX, myMonitors[monitorNumber].targetY));
+                Surround = false;
+            }
+            else if (monitorNumber >= myDisplays.Count)
+            {
+                monitorNumber = 0;
                 StartCoroutine(MyMoveWindow(myMonitors[monitorNumber].height, myMonitors[monitorNumber].width, myMonitors[monitorNumber].targetX, myMonitors[monitorNumber].targetY));
                 Surround = false;
             }
