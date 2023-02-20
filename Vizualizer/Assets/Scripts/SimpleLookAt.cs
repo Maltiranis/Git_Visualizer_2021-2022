@@ -33,6 +33,14 @@ public class SimpleLookAt : MonoBehaviour
         sF.angularSpeed = getSVP.rotateSpeed;
         lookatSpeed = getSVP.lookSpeed;
         forwardPower = getSVP.forwardPow;
+
+        if (getSVP.isSidescroller == true)
+        {
+            sF.angularSpeed = 0;
+            lookatSpeed = 0;
+            Quaternion zeroQuat = new Quaternion(0, 0, 0, 0);
+            transform.rotation = zeroQuat;
+        }
     }
 
     void Update()

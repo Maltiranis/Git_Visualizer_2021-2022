@@ -6,14 +6,23 @@ using TMPro;
 
 public class ShapeOnSlider : MonoBehaviour
 {
+    [Header("Empty who is not used")]
     public GameObject[] Objects;
+    public GameObject Object;
+
+    [Space(5)]
     public Slider slid;
+
+    [Space(5)]
     Vector3[] startScales;
+    Vector3 startScale;
 
     void Start()
     {
         slid = GetComponent<Slider>();
         startScales = new Vector3[Objects.Length];
+        startScale = new Vector3(slid.minValue, slid.minValue, slid.minValue);
+
 
         for (int i = 0; i < Objects.Length; i++)
         {
@@ -30,7 +39,7 @@ public class ShapeOnSlider : MonoBehaviour
         MyOnValueChanged();
     }
 
-    public void MyOnValueChanged ()
+    public void MyOnMultipleValuesChanged ()
     {
         for (int i = 0; i < Objects.Length; i++)
         {
@@ -39,5 +48,10 @@ public class ShapeOnSlider : MonoBehaviour
                 Objects[i].transform.localScale = startScales[i] + (slid.value * startScales[i]);
             }
         }
+    }
+
+    public void MyOnValueChanged()
+    {
+        Object.transform.localScale = startScale + (slid.value * startScale);
     }
 }

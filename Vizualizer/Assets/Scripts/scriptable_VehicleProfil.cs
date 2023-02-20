@@ -7,4 +7,5 @@ public class scriptable_VehicleProfil : ScriptableObject
     public float rotateSpeed = 1.5f;
     public float lookSpeed = 30.0f;
     public float forwardPow = 0.05f;
+    public bool isSidescroller = false;
 }

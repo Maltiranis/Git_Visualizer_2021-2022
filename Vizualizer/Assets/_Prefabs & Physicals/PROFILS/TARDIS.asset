@@ -16,3 +16,4 @@ MonoBehaviour:
   rotateSpeed: 1
   lookSpeed: 5
   forwardPow: 0.03
+  isSidescroller: 1
