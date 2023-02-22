@@ -14,6 +14,8 @@ public class SimpleLookAt : MonoBehaviour
 
     public GameObject modelsContainer;
 
+    SimpleFollow sF;
+
     private void Awake()
     {
         shipList = GameObject.Find("ShipList");
@@ -22,12 +24,11 @@ public class SimpleLookAt : MonoBehaviour
 
     private void Start()
     {
-        
+        sF = GetComponent<SimpleFollow>();
     }
 
     void DefineProfile(scriptable_VehicleProfil getSVP)
     {
-        SimpleFollow sF = GetComponent<SimpleFollow>();
 
         sF.linearSpeed = getSVP.translateSpeed;
         sF.angularSpeed = getSVP.rotateSpeed;
@@ -59,7 +60,14 @@ public class SimpleLookAt : MonoBehaviour
         }
 
         Vector3 myPos = transform.position;
-        Vector3 curPos = looked.position;
+        Vector3 curPos = Vector3.zero;
+
+        if (sF != null)
+        {
+            curPos = sF._netPosition;
+        }
+        else
+            curPos = looked.position;
 
         Vector3 relativePos = curPos - myPos;
         Vector3 addVectors = (relativePos - transform.forward) + Vector3.forward * forwardPower;

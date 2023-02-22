@@ -8,7 +8,9 @@ public class SimpleFollow : MonoBehaviour
     public Transform toFollow;
     public float linearSpeed = 2.0f;
     public float angularSpeed = 1.5f;
-    //public float stopRange = 1.0f;
+
+    public Vector2 offset;
+    public float offsetPower = 5.0f;
 
     public Vector3 _netPosition;
     public Quaternion _netRotation;
@@ -16,6 +18,8 @@ public class SimpleFollow : MonoBehaviour
     public Rigidbody rb;
 
     public PhotonView PV;
+
+    public bool centeredOnTarget = false;
 
     private void Awake()
     {
@@ -25,21 +29,37 @@ public class SimpleFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        _netPosition = toFollow.position;
-        _netRotation = toFollow.rotation;
+        if (offsetPower <= 0)
+            offsetPower = 0.1f;
 
-        //float dist = Vector3.Distance(transform.position, toFollow.position);
-        //if (stopRange < dist)
-        /*if (PV.IsMine)
-            return;*/
+        if (!centeredOnTarget)
+        {
+            _netPosition = toFollow.position + new Vector3
+            (
+                offset.x * transform.GetChild(0).transform.localScale.x / offsetPower + .5f,
+                offset.y * transform.GetChild(0).transform.localScale.y / offsetPower + .5f,
+                toFollow.position.z
+            );
+        }
+        else
+        {
+            _netPosition = toFollow.position;
+        }
+            _netRotation = toFollow.rotation;
 
         rb.position = Vector3.Lerp(rb.position, _netPosition, Time.fixedDeltaTime * linearSpeed);
+
         //rb.rotation = Quaternion.Lerp(rb.rotation, _netRotation, Time.fixedDeltaTime * angularSpeed);
 
         /*if (Vector3.Distance(rb.position, _netPosition) > 5.0f)//tp float
         {
             rb.position = _netPosition;
         }*/
+    }
+
+    public void SetCenteredOrNot ()
+    {
+        centeredOnTarget = !centeredOnTarget;
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
