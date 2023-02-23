@@ -35,11 +35,12 @@ public class GD_Test_UI_ReverseActive : MonoBehaviour
 
     public void ReverseActive()
     {
+        isActive = !isActive;
+
         foreach (GameObject go in toReverseList)
         {
             if (go != null)
             {
-                isActive = !isActive;
                 go.SetActive(isActive);
             }
         }
