@@ -30,6 +30,14 @@ public class ShapeOnSlider : MonoBehaviour
         }
 
         StartCoroutine(delayMe());
+
+        for (int i = 0; i < Objects.Length; i++)
+        {
+            if (Objects.Length > 0)
+            {
+                Objects[i].transform.localScale = startScales[i] + (slid.value * startScales[i]);
+            }
+        }
     }
 
     IEnumerator delayMe ()
