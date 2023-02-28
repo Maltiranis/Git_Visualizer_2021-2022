@@ -9,8 +9,11 @@ public class PhotonTchat : MonoBehaviour
 {
     public PhotonView PV;
     public GameObject content;
+    public GameObject TchatPrefab;
     //public GameObject photonText;
     public TMP_InputField inputField;
+
+    public GameObject[] ContentsArray; // TAG TOUT LES CONTENT du UI et COLLE LES TOUS Là AVEC UN GAMEOBJECT.FIND + TU INSTANCIE LES PHRASE DANS TOUS !!!
 
 
     void Start()
@@ -18,7 +21,12 @@ public class PhotonTchat : MonoBehaviour
         if (PV == null)
             return;
 
-        gameObject.name = PV.Owner.NickName;
+        if (!PV.IsMine)
+        {
+            gameObject.SetActive(false);
+        }
+
+        gameObject.name = PV.Owner.NickName + "Tchat";
     }
 
     void Update()
@@ -31,40 +39,7 @@ public class PhotonTchat : MonoBehaviour
         if (PV == null)
             return;
 
-        if (PV.IsMine)
-            PV.RPC("SayIt", RpcTarget.AllViaServer);
-        else
-        {
-            transform.GetChild(0).gameObject.SetActive(false);
-            PV.RPC("EarIt", RpcTarget.AllViaServer);
-
-        }
-
-        /*if (!PV.IsMine)
-        {
-            
-        }
-        else
-            PV.RPC("SincSpeechs", RpcTarget.AllViaServer);*/
-
-
-    }
-
-    [PunRPC]
-    void EarIt(PhotonMessageInfo info)
-    {
-        string inputText = PV.Owner.NickName + " : " + inputField.text;
-
-        GameObject newText = PhotonNetwork.Instantiate
-        (
-            Path.Combine("PhotonPrefabs", "dialPrefab"),
-            content.transform.position,
-            content.transform.rotation
-        );
-
-        newText.GetComponentInChildren<TMP_Text>().text = inputText;
-
-        newText.transform.parent = content.transform;
+        PV.RPC("SayIt", RpcTarget.AllViaServer);
     }
 
     [PunRPC]
@@ -72,9 +47,9 @@ public class PhotonTchat : MonoBehaviour
     {
         string inputText = PV.Owner.NickName + " : " + inputField.text;
 
-        GameObject newText = PhotonNetwork.Instantiate
+        GameObject newText = (GameObject)Instantiate
         (
-            Path.Combine("PhotonPrefabs", "dialPrefab"),
+            TchatPrefab,
             content.transform.position,
             content.transform.rotation
         );
@@ -82,6 +57,7 @@ public class PhotonTchat : MonoBehaviour
         newText.GetComponentInChildren<TMP_Text>().text = inputText;
 
         newText.transform.parent = content.transform;
+        newText.transform.localScale = Vector3.one;
     }
 
     [PunRPC]
