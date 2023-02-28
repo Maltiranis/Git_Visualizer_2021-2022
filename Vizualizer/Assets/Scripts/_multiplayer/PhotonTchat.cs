@@ -27,6 +27,8 @@ public class PhotonTchat : MonoBehaviour
         }
 
         gameObject.name = PV.Owner.NickName + "Tchat";
+        ContentsArray = GameObject.FindGameObjectsWithTag("CONTENT");
+
     }
 
     void Update()
@@ -39,6 +41,8 @@ public class PhotonTchat : MonoBehaviour
         if (PV == null)
             return;
 
+        ContentsArray = GameObject.FindGameObjectsWithTag("CONTENT");
+
         PV.RPC("SayIt", RpcTarget.AllViaServer);
     }
 
@@ -47,17 +51,20 @@ public class PhotonTchat : MonoBehaviour
     {
         string inputText = PV.Owner.NickName + " : " + inputField.text;
 
-        GameObject newText = (GameObject)Instantiate
-        (
-            TchatPrefab,
-            content.transform.position,
-            content.transform.rotation
-        );
+        foreach (GameObject go in ContentsArray)
+        {
+            GameObject newText = (GameObject)Instantiate
+            (
+                TchatPrefab,
+                go.transform.position,
+                go.transform.rotation
+            );
 
-        newText.GetComponentInChildren<TMP_Text>().text = inputText;
+            newText.GetComponentInChildren<TMP_Text>().text = inputText;
 
-        newText.transform.parent = content.transform;
-        newText.transform.localScale = Vector3.one;
+            newText.transform.parent = go.transform;
+            newText.transform.localScale = Vector3.one;
+        }
     }
 
     [PunRPC]

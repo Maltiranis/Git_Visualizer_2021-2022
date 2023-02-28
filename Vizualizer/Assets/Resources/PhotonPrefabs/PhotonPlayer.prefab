@@ -16137,7 +16137,7 @@ GameObject:
   - component: {fileID: 8024206985767782933}
   m_Layer: 5
   m_Name: Content
-  m_TagString: Untagged
+  m_TagString: CONTENT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16158,7 +16158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000888891}
+  m_AnchoredPosition: {x: 0, y: 0.00087711506}
   m_SizeDelta: {x: 580, y: 25}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8024206985767782933
@@ -20816,6 +20816,7 @@ MonoBehaviour:
   TchatPrefab: {fileID: 7083841615084864747, guid: b67d86a82d748b043aefe73a960bd66f,
     type: 3}
   inputField: {fileID: 6299708391750950781}
+  ContentsArray: []
 --- !u!114 &3171476880948454478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22583,7 +22584,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 835513158890190329}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999624
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

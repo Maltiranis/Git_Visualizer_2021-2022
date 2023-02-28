@@ -13,7 +13,7 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
     public GameObject nameHolder;
     public GameObject Aiming;
 
-    public int ship = 0;
+    public int ship = -1;
 
     public GameObject UIcontainer;
 
@@ -40,7 +40,7 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
         for (int i = 0; i < objectsList.Length; i++)
         {
             if (objectsList[i] != null)
-            objectsList[i].SetActive(objectsList[i].activeSelf);
+                objectsList[i].SetActive(objectsList[i].activeSelf);
         }
     }
 
