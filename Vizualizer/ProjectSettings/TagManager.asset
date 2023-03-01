@@ -9,6 +9,7 @@ TagManager:
   - plane
   - boat
   - CONTENT
+  - TCHAT
   layers:
   - Default
   - TransparentFX
