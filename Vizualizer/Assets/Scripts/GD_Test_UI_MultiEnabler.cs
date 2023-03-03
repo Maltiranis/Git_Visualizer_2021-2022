@@ -16,6 +16,9 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
     public int ship = -1;
 
     public GameObject UIcontainer;
+    public GameObject InputFieldPrefab;
+    Transform TchatTransform;
+
 
     private void Start()
     {
@@ -31,7 +34,9 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
             UIcontainer.gameObject.SetActive(false);
         }
         else
+        {
             PV.RPC("SyncShips", RpcTarget.AllViaServer);
+        }
     }
 
     [PunRPC]
@@ -48,6 +53,44 @@ public class GD_Test_UI_MultiEnabler : MonoBehaviourPunCallbacks
     void SayMyName(string myName, PhotonMessageInfo info)
     {
         nameHolder.GetComponent<TextMeshProUGUI>().text = myName;
+    }
+
+    public void CheckForTchatTransform ()
+    {
+        if (GameObject.FindWithTag("TCHAT") != null)
+        {
+            if (TchatTransform == null)
+            {
+                TchatTransform = GameObject.FindWithTag("TCHAT").transform;
+
+                PV.RPC("CallDialogInput", RpcTarget.AllViaServer);
+            }
+        }
+    }
+
+    [PunRPC]
+    void CallDialogInput(PhotonMessageInfo info)
+    {
+        if (GameObject.FindWithTag("TCHAT") != null)
+        {
+            TchatTransform = GameObject.FindWithTag("TCHAT").transform;
+            GameObject newInputField = (GameObject)Instantiate
+            (
+                InputFieldPrefab,
+                TchatTransform.position,
+                TchatTransform.rotation
+            );
+
+            newInputField.transform.parent = TchatTransform;
+            newInputField.transform.localScale = Vector3.one;
+
+            RectTransform rt = newInputField.GetComponent<RectTransform>();
+            rt.anchoredPosition = new Vector2(0, 0);
+            rt.sizeDelta = new Vector2(-257.78f, 17.111f);
+            rt.localScale = new Vector3(1.7448f, 1.7448f, 1.7448f);
+
+            newInputField.GetComponent<PhotonTchat>().PV = PV;
+        }
     }
 
     public void ActiveThisOne(int thisOne)

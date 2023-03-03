@@ -8,84 +8,64 @@ using TMPro;
 public class PhotonTchat : MonoBehaviour
 {
     public PhotonView PV;
-    public GameObject TchatPrefab;
-    tChatProfile tCP;
+    public GameObject dialPrefab;
+    public TMP_InputField inputField;
+
+    public GameObject content;
 
     void Start()
     {
         if (!PV.IsMine)
         {
-            GameObject.Find("TCHAT").SetActive(false);
+            //GameObject.Find("TCHAT").SetActive(false);
         }
     }
 
     void Update()
     {
-        if (tCP.isSetted == true)
-        {
-            MyOnValidateText();
-            tCP.isSetted = false;
-        }
+        
     }
 
     public void MyOnValidateText()
     {
-        if (tCP == null)
-            tCP = GameObject.FindGameObjectWithTag("TCHAT").GetComponent<tChatProfile>();
-        if (tCP == null)
-            tCP = GameObject.Find("TCHAT").GetComponent<tChatProfile>();
-
         if (PV == null)
             return;
 
-        if (PV.IsMine)
-        {
-            if (tCP == null)
-            {
-                return;
-            }
+        if (GameObject.FindGameObjectWithTag("CONTENT") != null)
+            content = GameObject.FindGameObjectWithTag("CONTENT");
 
-            string inputText = PV.Owner.NickName + " : " + tCP.inputField.text;
+        //PV.RPC("SayIt", RpcTarget.All);
 
-            GameObject newText = (GameObject)Instantiate
-            (
-                TchatPrefab,
-                tCP.content.transform.position,
-                tCP.content.transform.rotation
-            );
-
-            newText.GetComponentInChildren<TMP_Text>().text = inputText;
-
-            newText.transform.parent = tCP.content.transform;
-            newText.transform.localScale = Vector3.one;
-        }
-        else
-            PV.RPC("SayIt", RpcTarget.AllViaServer);
-    }
-
-    [PunRPC]
-    void SayIt(PhotonMessageInfo info)
-    {
-        tCP.content = GameObject.FindGameObjectWithTag("TCHAT");
-
-        if (tCP == null)
-        {
-            return;
-        }
-
-        string inputText = PV.Owner.NickName + " : " + tCP.inputField.text;
+        string inputText = PV.Owner.NickName + " : " + inputField.text;
 
         GameObject newText = (GameObject)Instantiate
         (
-            TchatPrefab,
-            tCP.content.transform.position,
-            tCP.content.transform.rotation
+            dialPrefab,
+            content.transform.position,
+            content.transform.rotation
         );
 
         newText.GetComponentInChildren<TMP_Text>().text = inputText;
 
-        newText.transform.parent = tCP.content.transform;
+        newText.transform.parent = content.transform;
         newText.transform.localScale = Vector3.one;
+
+        PV.RPC("SayIt", RpcTarget.AllViaServer, newText, inputText);
+        //PV.RPC("SayIt", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void SayIt(PhotonMessageInfo info, GameObject newText, string inputText)
+    {
+        GameObject cloneText = Instantiate
+        (
+            newText,
+            newText.transform.position,
+            newText.transform.rotation
+        );
+
+        cloneText.transform.parent = content.transform;
+        cloneText.GetComponentInChildren<TMP_Text>().text = inputText;
     }
 
     [PunRPC]
