@@ -8,27 +8,17 @@ using TMPro;
 public class PhotonTchat : MonoBehaviour
 {
     public PhotonView PV;
-    public GameObject content;
-    public GameObject TchatPrefab;
-    //public GameObject photonText;
+    public GameObject dialPrefab;
     public TMP_InputField inputField;
 
-    public GameObject[] ContentsArray; // TAG TOUT LES CONTENT du UI et COLLE LES TOUS Là AVEC UN GAMEOBJECT.FIND + TU INSTANCIE LES PHRASE DANS TOUS !!!
-
+    public GameObject content;
 
     void Start()
     {
-        if (PV == null)
-            return;
-
         if (!PV.IsMine)
         {
-            gameObject.SetActive(false);
+            //GameObject.Find("TCHAT").SetActive(false);
         }
-
-        gameObject.name = PV.Owner.NickName + "Tchat";
-        ContentsArray = GameObject.FindGameObjectsWithTag("CONTENT");
-
     }
 
     void Update()
@@ -41,30 +31,41 @@ public class PhotonTchat : MonoBehaviour
         if (PV == null)
             return;
 
-        ContentsArray = GameObject.FindGameObjectsWithTag("CONTENT");
+        if (GameObject.FindGameObjectWithTag("CONTENT") != null)
+            content = GameObject.FindGameObjectWithTag("CONTENT");
 
-        PV.RPC("SayIt", RpcTarget.AllViaServer);
+        //PV.RPC("SayIt", RpcTarget.All);
+
+        string inputText = PV.Owner.NickName + " : " + inputField.text;
+
+        GameObject newText = (GameObject)Instantiate
+        (
+            dialPrefab,
+            content.transform.position,
+            content.transform.rotation
+        );
+
+        newText.GetComponentInChildren<TMP_Text>().text = inputText;
+
+        newText.transform.parent = content.transform;
+        newText.transform.localScale = Vector3.one;
+
+        PV.RPC("SayIt", RpcTarget.AllViaServer, newText, inputText);
+        //PV.RPC("SayIt", RpcTarget.All);
     }
 
     [PunRPC]
-    void SayIt(PhotonMessageInfo info)
+    void SayIt(PhotonMessageInfo info, GameObject newText, string inputText)
     {
-        string inputText = PV.Owner.NickName + " : " + inputField.text;
+        GameObject cloneText = Instantiate
+        (
+            newText,
+            newText.transform.position,
+            newText.transform.rotation
+        );
 
-        foreach (GameObject go in ContentsArray)
-        {
-            GameObject newText = (GameObject)Instantiate
-            (
-                TchatPrefab,
-                go.transform.position,
-                go.transform.rotation
-            );
-
-            newText.GetComponentInChildren<TMP_Text>().text = inputText;
-
-            newText.transform.parent = go.transform;
-            newText.transform.localScale = Vector3.one;
-        }
+        cloneText.transform.parent = content.transform;
+        cloneText.GetComponentInChildren<TMP_Text>().text = inputText;
     }
 
     [PunRPC]

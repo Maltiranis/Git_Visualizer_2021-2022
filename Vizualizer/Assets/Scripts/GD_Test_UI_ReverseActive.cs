@@ -12,6 +12,8 @@ public class GD_Test_UI_ReverseActive : MonoBehaviour
 
     bool isActive = false;
 
+    public bool hideOnStart = false;
+
     private void OnEnable()
     {
         newGo = GameObject.Find(objName);
@@ -31,11 +33,35 @@ public class GD_Test_UI_ReverseActive : MonoBehaviour
         {
             animtr = GetComponent<Animator>();
         }
+
+        if (hideOnStart == true)
+        {
+            PureDisable();
+        }
     }
 
     public void ReverseActive()
     {
         isActive = !isActive;
+
+        foreach (GameObject go in toReverseList)
+        {
+            if (go != null)
+            {
+                go.SetActive(isActive);
+            }
+        }
+
+        if (newGo != null)
+            newGo.SetActive(isActive);
+
+        if (animtr != null)
+            animtr.SetBool("Activated", isActive);
+    }
+
+    public void PureDisable()
+    {
+        isActive = false;
 
         foreach (GameObject go in toReverseList)
         {
