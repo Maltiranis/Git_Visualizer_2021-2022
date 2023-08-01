@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Custom_door_vortex 2
+  m_Shader: {fileID: 4800000, guid: f736fdb8ac5ff454097494199d96b374, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Float0: 0.77
+    - _Float2: 1.79
+    - _Glossiness: 0.5
+    - _Metallic: 0
+    - _Norm: 0
+    - _OP: 3.23
+    - _Offset3D: 0
+    - _POWERONOFF: 1.2
+    - _PaternRotate: 0
+    - _PaternWaving: 0
+    - _Size: 1
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Steponoff: -0.1
+    - _Tess: 0
+    - _TwirlStrength: 10
+    - _UseUIAlphaClip: 0
+    - _VoroScale: 0
+    - __dirty: 0
+    - _addvar: -0.15
+    - _closedoor: 0
+    - _dotForce: 1
+    - _fresnelpower: 2
+    - _overpowerstart: 182.27
+    - _powerize: 0.015
+    - _scale: 3
+    - _scale2: 20
+    - _smoothonoff: 1
+    - _speed: -100
+    - _speed0: 0.05
+    - _speed1: 0.5
+    - _speed2: -0.3
+    - _ssstep: 0.1
+    - _stepify: 0.05
+    - _stepmod: 0.01
+    - _sub: -0.5
+    - _thickness: 1
+    - _thicknesspow: 2.28
+    - _unsub: 2
+    - _voroscale: 2.02
+    - _vorostrength: 4.19
+    - _waveforce: 2
+    - _wavelerp: 1.06
+    m_Colors:
+    - _BSP: {r: -2, g: 0.8, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 2.670157, g: 2.670157, b: 2.670157, a: 1}
+    - _Color1: {r: 0.43081754, g: 0.647206, b: 1, a: 1}
+    - _Colornullify: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _FakeLightSource: {r: 0, g: 0, b: 0, a: 0}
+    - _OffsetAxe: {r: 0, g: 0, b: 1, a: 0}
+    - _Vector0: {r: 0.25, g: -2.5, b: 20, a: 0}
+    - _Vector1: {r: 0.5, g: 0, b: 0, a: 0}
+    - _Vector3: {r: 0, g: 0, b: 0, a: 0}
+    - _counterstep: {r: 0.25, g: 0.5, b: 0.5, a: 1}
+    - _em: {r: 21.766706, g: 24.217262, b: 27.53272, a: 1}
+    - _em2: {r: 1, g: 1, b: 1, a: 1}
+    - _smooth: {r: 0, g: 0.5, b: 0, a: 0}
+    - _speed: {r: 0.5, g: 0, b: 0, a: 0}
+    - _steeep: {r: 0.13, g: 0.91, b: 0, a: 0}
+    - _step: {r: 0, g: 1, b: 0, a: 0}
+    - _step1: {r: 0.1, g: 1, b: 0, a: 0}
+    - _step2: {r: 0.4, g: 0.4, b: 0, a: 0}
+    - _step3: {r: -0.5, g: 0.75, b: 0, a: 0}
+    - _thickness: {r: 10, g: 10, b: 0, a: 0}
+    - _tilinoffset: {r: 1.37, g: 1, b: -0.6, a: -1.47}
+    - _tilinoffset1: {r: 1.5, g: 2.11, b: 0, a: 0}
+    - _verticalhole: {r: -1, g: 1.5, b: 0.5, a: 0}
+    - _waveforce: {r: 0, g: 2.82, b: 0, a: 0}
+    - _wavesdetails: {r: -2, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
