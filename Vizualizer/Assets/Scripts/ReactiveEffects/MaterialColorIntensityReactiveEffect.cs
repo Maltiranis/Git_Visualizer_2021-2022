@@ -17,6 +17,7 @@ namespace Assets.Scripts.ReactiveEffects
 
         #region Public Properties
 
+        public bool RGB_method = true;
         public float MinIntensity;
         public float IntensityScale;
         public float MinEmissionIntensity;
@@ -26,13 +27,13 @@ namespace Assets.Scripts.ReactiveEffects
 
         #region Startup / Shutdown
 
-        private void Awake()
+        /*private void Awake()
         {
             if (this.transform.childCount > 0)
                 this.transform.GetChild(0).gameObject.GetComponent<Renderer>().material = Instantiate(Resources.Load("NeonMat") as Material);
             else
                 this.gameObject.GetComponent<Renderer>().material = Instantiate(Resources.Load("SphereMat") as Material);
-        }
+        }*/
 
         public override void Start()
         {
@@ -54,6 +55,42 @@ namespace Assets.Scripts.ReactiveEffects
 
         #endregion
 
+        public Color GetGradientColor(int index, int totalItems)
+        {
+            // Calcule la position normalisée (de 0.0 à 1.0) sur le gradient
+            // On divise par (totalItems - 1) pour s'assurer que le dernier objet (index = totalItems - 1) reçoive bien la couleur de fin (valeur 1.0)
+            float t = (float)index / (totalItems - 1);
+
+            // Le gradient a deux parties : Rouge -> Vert (pour t de 0.0 à 0.5) et Vert -> Bleu (pour t de 0.5 à 1.0)
+            if (t < 0.5f)
+            {
+                // Interpole entre le rouge et le vert
+                // On remet t à l'échelle de 0.0-1.0 pour cette moitié de gradient (en multipliant par 2)
+                return Color.Lerp(Color.red, Color.green, t * 2);
+            }
+            else
+            {
+                // Interpole entre le vert et le bleu
+                // On remet t à l'échelle de 0.0-1.0 pour cette deuxième moitié (en soustrayant 0.5 puis en multipliant par 2)
+                return Color.Lerp(Color.green, Color.blue, (t - 0.5f) * 2);
+            }
+        }
+
+        int GetMyPosition()
+        {
+            for (int i = 0; i < transform.parent.childCount; i++)
+            {
+                if (transform.parent.GetChild(i) == this.transform)
+                    return i;
+            }
+            return 0;
+        }
+
+        int GetTotalItems()
+        {
+            return transform.parent.childCount;
+        }
+
         #region Render
 
         public void Update()
@@ -69,6 +106,13 @@ namespace Assets.Scripts.ReactiveEffects
 
             Color scaledColor = _initialColor * scaledEmissionAmount;
             Color scaledEmissionColor = _initialEmissionColor * scaledEmissionAmount;
+
+            if (RGB_method)
+            {
+                scaledColor = GetGradientColor(GetMyPosition(), GetTotalItems()) * scaledEmissionAmount;
+                scaledEmissionColor = GetGradientColor(GetMyPosition(), GetTotalItems()) * scaledEmissionAmount;
+            }
+
             //scaledColor.a = scaledColor.r;
 
             //this.gameObject.GetComponent<Renderer>().material.SetColor("_Color", scaledColor);

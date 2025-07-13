@@ -4,23 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 using TMPro;
+using static UnityEngine.GridBrushBase;
 
 public class Stargate_DoorParameters : MonoBehaviour
 {
     [Header("Keyboard & rotation")]
-    public bool haveDHD = false;
-    public float degrees;
     public GameObject disc;
 
     public GameObject[] Keys;
     public Color ActivatedKey;
     public Color DesactivatedKey;
 
-    public float dir = 1.0f;
-    public float speed = 20.0f;
-
     public bool isStatic = true;
-    public float nextDegToReach = 0.0f;
+    public float discSpeed = 1.0f;
     [Space(10)]
     [Header("Sequence")]
     public int sequence = 0;
@@ -38,13 +34,16 @@ public class Stargate_DoorParameters : MonoBehaviour
     public bool lockChevron = false;
     public bool unlockChevron = false;
     bool ChevronLockingSequenceSucces = true;
-    [HideInInspector]public GameObject[] chevrons;
+    [HideInInspector] public GameObject[] chevrons;
     GameObject[] lights;
+    public GameObject kawoosh;
+    public GameObject vortexLight;
     [Space(10)]
     [Header("Animations")]
     public AnimationClip[] anim;
     public bool irisOpen = true;
     public bool irisMoving = false;
+    public GameObject vortexObject;
     [Space(10)]
     [Header("Sounds")]
     public AudioClip[] audioClip;
@@ -52,19 +51,94 @@ public class Stargate_DoorParameters : MonoBehaviour
     GameObject parallelSoundObject;
     public GameObject soundPrefab;
 
-    //Sequençage
     GameObject[] chevronsS7;
     GameObject[] chevronsS8;
     GameObject[] chevronsS9;
     GameObject[] lightsS7;
     GameObject[] lightsS8;
     GameObject[] lightsS9;
-     
+
+    private bool isLocking = false;
+
+    bool discRotating = false;
+    int discIndex = 0;
+
+    private float targetDiscRotationX;  // Sera l'angle d'Euler X cible pour le disque
+    public float rotationStopTolerance = 0.01f; // Tolérance pour arrêter la rotation
+    private int rotationDirection = 0; // 1 pour sens positif, -1 pour sens négatif, 0 pour pas de rotation
+
+    float currentDiscRotationX;
+    float angleRemaining;
+    float currentFrameRotationDirection;
+
+    [Space(10)]
+    [Header("Disc Rotation Parameters")]
+    public int numberOfSymbolsOnDisc = 39;
+    public int debugSelectedSliceIndex = 0;
+    public Color sliceLineColor = Color.cyan;
+    public Color centerLineColor = Color.yellow;
+    public float debugLineLength = 2f;
+
     void Start()
     {
-        disc.transform.localRotation = new Quaternion(0, 0, 0, 0);
-
         ModulesSequencing();
+    }
+
+    void Update()
+    {
+        if (isLocking == true)
+        {
+            ChevronLockingProcess();
+        }
+        if (discRotating)
+        {
+            RotateDiscToTargetAngle();
+        }
+    }
+
+    public void OnManualGlyphEntered()
+    {
+        if (isStatic == false)
+            return;
+        if (discRotating == true || seqValidated == true)
+            return;
+        if (ChevronLockingSequenceSucces == false)
+            return;
+
+        isStatic = false;
+        canClose = true;
+
+        isLocking = true;
+    }
+
+    public void OnDhdGlyphClic(int glyphnum)
+    {
+        if (seqValidated == true)
+            return;
+        if (ChevronLockingSequenceSucces == false)
+            return;
+
+        isLocking = false;
+        lockChevron = false;
+
+        discIndex = glyphnum;
+
+        RotationCalculus();
+
+        currentDiscRotationX = disc.transform.localEulerAngles.x;
+        angleRemaining = Mathf.DeltaAngle(currentDiscRotationX, targetDiscRotationX);
+        currentFrameRotationDirection = Mathf.Sign(angleRemaining);
+
+        if (isStatic == true)
+            discRotating = false;
+        else
+            discRotating = true;
+
+        canClose = true;
+
+        //isLocking = true;
+
+        ChevronSound(true);
     }
 
     public void OnKeyPressed(GameObject go)
@@ -73,8 +147,6 @@ public class Stargate_DoorParameters : MonoBehaviour
             return;
         if (ChevronLockingSequenceSucces == false)
             return;
-
-        haveDHD = false;
 
         Image imageComp = go.GetComponent<Image>();
         Material mat = Instantiate(imageComp.material);
@@ -109,7 +181,6 @@ public class Stargate_DoorParameters : MonoBehaviour
 
         lights = new GameObject[lightsS7.Length];
         lights = lightsS7;
-
 
         for (int i = 0; i < chevronsS7.Length; i++)
         {
@@ -160,21 +231,12 @@ public class Stargate_DoorParameters : MonoBehaviour
         lightsS9[8] = _lights[6];
     }
 
-    void Update()
+    public void ChevronSound(bool dhd)
     {
-        if (haveDHD == true)
-        {
-            ChevronLockingProcess();
-        }
+        if (dhd == false)
+            PlaySound(Random.Range(0, 2), false);
         else
-        {
-            if (isStatic == false)
-            {
-                RotateDoor();
-            }
-
-            ChevronLockingProcess();
-        }
+            PlaySound(Random.Range(9, 15), false);
     }
 
     public void ChevronLockingProcess()
@@ -184,17 +246,10 @@ public class Stargate_DoorParameters : MonoBehaviour
             if (chevrons[sequence].transform.GetChild(1).localPosition.y > 3.95f)
             {
                 chevrons[sequence].transform.GetChild(1).localPosition = new Vector3(0, Mathf.Lerp(chevrons[sequence].transform.GetChild(1).localPosition.y, 3.95f, Time.deltaTime * 4), 0);
-
-                if (haveDHD == false)
-                    PlaySound(Random.Range(0,2), false);
-                else
-                {
-                    PlaySound(Random.Range(9, 15), false);
-                }
+                ActivateLight();
             }
             if (chevrons[sequence].transform.GetChild(1).localPosition.y <= 3.96f)
             {
-                ActivateLight();
                 unlockChevron = true;
                 lockChevron = false;
             }
@@ -212,7 +267,7 @@ public class Stargate_DoorParameters : MonoBehaviour
         }
     }
 
-    public void PlaySound(int n, bool looped) //instancie un gameobject avec une audiosource dessus, pas un préfab
+    public void PlaySound(int n, bool looped)
     {
         if (soundObject != null)
         {
@@ -226,7 +281,7 @@ public class Stargate_DoorParameters : MonoBehaviour
         Destroy(soundObject, loopsource.clip.length);
     }
 
-    public void PlayParallelSound(int n, bool looped) //instancie un gameobject avec une audiosource dessus, pas un préfab
+    public void PlayParallelSound(int n, bool looped)
     {
         if (parallelSoundObject != null)
         {
@@ -247,50 +302,7 @@ public class Stargate_DoorParameters : MonoBehaviour
         soundObject = null;
     }
 
-    public void OnGlyphClic(int glyphnum)
-    {
-        if (unlockChevron == true || lockChevron == true)
-            return;
-        if (seqValidated == true)
-            return;
-        if (ChevronLockingSequenceSucces == false)
-            return;
-
-        nextDegToReach = -degrees * (glyphnum - 1);
-
-        if (nextDegToReach < disc.transform.localRotation.x)
-        {
-            dir = -1;
-        }
-        else
-        {
-            dir = 1;
-        }
-
-        isStatic = false;
-
-        canClose = true;
-    }
-
-    public void RotateDoor ()
-    {
-        ChevronLockingSequenceSucces = false;
-
-        PlaySound(3, true);
-
-        //disc.transform.localRotation = Quaternion.RotateTowards(disc.transform.localRotation, Quaternion.Euler(nextDegToReach * 360 + 360, 0, 0), -Time.deltaTime * speed);
-        disc.transform.Rotate(Vector3.right * dir * speed * Time.deltaTime, Space.Self);
-
-        if (disc.transform.localRotation == Quaternion.Euler(nextDegToReach * 360, 0, 0))
-        {
-            isStatic = true;
-            lockChevron = true;
-
-            StopSound();
-        }
-    }
-
-    public void ForceChevronStep ()
+    public void ForceChevronStep()
     {
         ChevronLockingSequenceSucces = false;
 
@@ -308,13 +320,10 @@ public class Stargate_DoorParameters : MonoBehaviour
 
         ChevronLockingSequenceSucces = true;
 
-        if (!haveDHD)
+        /*if (sequence == chevrons.Length)
         {
-            if (sequence == chevrons.Length)
-            {
-                ActivateVortex();
-            }
-        }
+            ActivateVortex();
+        }*/
     }
 
     public void ActivateLight()
@@ -322,13 +331,21 @@ public class Stargate_DoorParameters : MonoBehaviour
         _lights[sequence].gameObject.SetActive(true);
     }
 
-    public void OnForceActivation ()
+    public void OnForceActivation()
     {
-        foreach (var l in _lights)
-        {
-            l.gameObject.SetActive(true);
-        }
+        _lights[0].gameObject.SetActive(true);
+        _lights[1].gameObject.SetActive(true);
+        _lights[2].gameObject.SetActive(true);
+        _lights[3].gameObject.SetActive(true);
+        _lights[4].gameObject.SetActive(true);
+        _lights[5].gameObject.SetActive(true);
+        _lights[6].gameObject.SetActive(true);
+
         ActivateVortex();
+
+        unlockChevron = false;
+        sequence = chevrons.Length;
+        canClose = true;
     }
 
     public void ActivateVortex()
@@ -338,12 +355,18 @@ public class Stargate_DoorParameters : MonoBehaviour
         PlaySound(4, false);
 
         if (irisOpen == true)
-            transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+        {
+            kawoosh.SetActive(false);
+            vortexLight.SetActive(false);
+        }
         else
-            transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
+        {
+            kawoosh.SetActive(true);
+            vortexLight.SetActive(true);
+        }
 
-        transform.GetChild(0).GetComponent<Animation>().clip = anim[0];
-        transform.GetChild(0).GetComponent<Animation>().Play();
+        vortexObject.GetComponent<Animation>().clip = anim[0];
+        vortexObject.GetComponent<Animation>().Play();
 
         seqValidated = true;
         canClose = false;
@@ -367,8 +390,20 @@ public class Stargate_DoorParameters : MonoBehaviour
 
         PlaySound(5, false);
 
-        transform.GetChild(0).GetComponent<Animation>().clip = anim[1];
-        transform.GetChild(0).GetComponent<Animation>().Play();
+        vortexObject.GetComponent<Animation>().clip = anim[1];
+        vortexObject.GetComponent<Animation>().Play();
+
+        StartCoroutine(Chrono2(anim[0].length));
+    }
+
+    public void ForceCloseDoor()
+    {
+        StopSound();
+
+        PlaySound(5, false);
+
+        vortexObject.GetComponent<Animation>().clip = anim[1];
+        vortexObject.GetComponent<Animation>().Play();
 
         StartCoroutine(Chrono2(anim[0].length));
     }
@@ -390,6 +425,9 @@ public class Stargate_DoorParameters : MonoBehaviour
         canClose = false;
         OnResetKeyboard();
         sequence = 0;
+
+        kawoosh.SetActive(false);
+        vortexLight.SetActive(false);
     }
 
     public void ActivateIris()
@@ -424,6 +462,18 @@ public class Stargate_DoorParameters : MonoBehaviour
 
         irisMoving = false;
         irisOpen = !irisOpen;
+
+        if (seqValidated == true)
+            if (irisOpen == true)
+            {
+                kawoosh.SetActive(false);
+                vortexLight.SetActive(false);
+            }
+            else
+            {
+                kawoosh.SetActive(true);
+                vortexLight.SetActive(true);
+            }
     }
 
     public void ActivateGenerator()
@@ -448,7 +498,7 @@ public class Stargate_DoorParameters : MonoBehaviour
             lights = new GameObject[lightsS7.Length];
             lights = lightsS7;
         }
-}
+    }
 
     public void ActivateEPPZ()
     {
@@ -473,4 +523,95 @@ public class Stargate_DoorParameters : MonoBehaviour
             lights = lightsS7;
         }
     }
+
+    public void RotationCalculus()
+    {
+        float anglePerSlice = 360f / numberOfSymbolsOnDisc;
+        float desiredAngleForSymbolUp = -(discIndex * anglePerSlice);
+
+        targetDiscRotationX = WrapAngle(desiredAngleForSymbolUp);
+
+        float currentDiscRotationX = disc.transform.localEulerAngles.x;
+        float angleRemainingAtStart = Mathf.DeltaAngle(currentDiscRotationX, targetDiscRotationX);
+
+        rotationDirection = Mathf.RoundToInt(Mathf.Sign(angleRemainingAtStart));
+
+        if (Mathf.Abs(angleRemainingAtStart) < float.Epsilon)
+        {
+            rotationDirection = 0;
+        }
+    }
+
+    public void RotateDiscToTargetAngle()
+    {
+        float step = discSpeed * Time.deltaTime;
+        currentDiscRotationX = disc.transform.localEulerAngles.x;
+        angleRemaining = Mathf.DeltaAngle(currentDiscRotationX, targetDiscRotationX);
+
+        if (angleRemaining <= rotationStopTolerance && currentFrameRotationDirection == 1 || 
+            angleRemaining >= rotationStopTolerance && currentFrameRotationDirection == -1)
+        {
+            discRotating = false;
+            isLocking = true;
+            lockChevron = true;
+
+            StopSound();
+        }
+        else
+            disc.transform.Rotate(currentFrameRotationDirection * step, 0, 0, Space.Self);
+    }
+
+    float WrapAngle(float angle)
+    {
+        angle %= 360f;
+        if (angle > 180f)
+        {
+            return angle - 360f;
+        }
+        if (angle < -180f)
+        {
+            return angle + 360f;
+        }
+        return angle;
+    }
+
+    /*void OnDrawGizmosSelected()
+    {
+        if (disc == null)
+        {
+            disc = this.gameObject;
+            if (disc == null) return;
+        }
+
+        Gizmos.matrix = disc.transform.localToWorldMatrix;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(Vector3.zero, Vector3.right * debugLineLength);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(Vector3.zero, Vector3.up * debugLineLength);
+
+        float anglePerSlice = 360f / numberOfSymbolsOnDisc;
+
+        for (int i = 0; i < numberOfSymbolsOnDisc; i++)
+        {
+            Gizmos.color = sliceLineColor;
+
+            float startAngle = i * anglePerSlice;
+            Quaternion rotation = Quaternion.Euler(startAngle, 0, 0);
+            Vector3 direction = rotation * Vector3.up;
+
+            Gizmos.DrawRay(Vector3.zero, direction * debugLineLength);
+        }
+
+        if (debugSelectedSliceIndex >= 0 && debugSelectedSliceIndex < numberOfSymbolsOnDisc)
+        {
+            Gizmos.color = centerLineColor;
+            float centerAngle = debugSelectedSliceIndex * anglePerSlice;
+            Quaternion centerRotation = Quaternion.Euler(centerAngle, 0, 0);
+            Vector3 centerDirection = centerRotation * Vector3.up;
+
+            Gizmos.DrawRay(Vector3.zero, centerDirection * debugLineLength * 1.2f);
+        }
+    }*/
 }

@@ -63,12 +63,9 @@ public class Use_DHD : MonoBehaviour
                     {
                         if (hit.transform.name == buttonsDHD[i].name)
                         {
-                            SDP.haveDHD = true;
+                            ActivatedTile(buttonsDHD[i]);
 
-                            MeshRenderer bdhdRend = buttonsDHD[i].GetComponent<MeshRenderer>();
-
-                            SDP.ForceChevronStep();
-                            bdhdRend.materials = _activated;
+                            SDP.OnDhdGlyphClic(buttonsDHDint[i]);
 
                             PlaySound(Random.Range(0, 6));
                         }
@@ -103,6 +100,12 @@ public class Use_DHD : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ActivatedTile(GameObject thisButton)
+    {
+        MeshRenderer bdhdRend = thisButton.GetComponent<MeshRenderer>();
+        bdhdRend.materials = _activated;
     }
 
     public void PlaySound(int n)

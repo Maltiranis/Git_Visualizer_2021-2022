@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/MatchMacking.unity
-    guid: 1ac26ca043e883547b947f99eb4534cc
-  - enabled: 1
-    path: Assets/_Scenes/multiplayer.unity
-    guid: 3a19ff20750c8b44da5cd3ce3d4531e8
+    path: Assets/_Scenes/Stargate.unity
+    guid: 812bd5110b934f14cae75a79ab7ee434
   m_configObjects: {}

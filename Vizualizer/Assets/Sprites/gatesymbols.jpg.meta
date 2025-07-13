@@ -129,7 +129,7 @@ TextureImporter:
       213: 7676657090074674069
     second: gatesymbols_41
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -146,10 +146,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -188,6 +190,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 1
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -199,6 +203,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -211,6 +216,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1108,9 +1127,51 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      gatesymbols_0: -4709908422996584555
+      gatesymbols_1: 6846143589421426063
+      gatesymbols_10: -2551243895650674756
+      gatesymbols_11: -164292864599813894
+      gatesymbols_12: -8261765938991691687
+      gatesymbols_13: 771180488012270046
+      gatesymbols_14: 2687368141382404400
+      gatesymbols_15: -2473129317635844970
+      gatesymbols_16: 5579262789633615656
+      gatesymbols_17: -3110913954079131672
+      gatesymbols_18: -4580568919568008176
+      gatesymbols_19: 2598921567209216405
+      gatesymbols_2: -9217873865887154197
+      gatesymbols_20: 9065837229530378533
+      gatesymbols_21: -8243049147305076435
+      gatesymbols_22: 5280203919965901913
+      gatesymbols_23: 4488441361159627999
+      gatesymbols_24: -2649089031242530124
+      gatesymbols_25: 8528441274677700805
+      gatesymbols_26: 8018800019704953546
+      gatesymbols_27: 6394451989935771953
+      gatesymbols_28: -5702438077916475724
+      gatesymbols_29: 735214342323857255
+      gatesymbols_3: 642231691798287512
+      gatesymbols_30: 3973859267476980029
+      gatesymbols_31: 26337184775679637
+      gatesymbols_32: 2050541976760812534
+      gatesymbols_33: -6889516013976971078
+      gatesymbols_34: 4951738079519714834
+      gatesymbols_35: -1844182317018020767
+      gatesymbols_36: -5458735031884316888
+      gatesymbols_37: -7118478585822576150
+      gatesymbols_38: 8526116915155807161
+      gatesymbols_39: 5523085148564676179
+      gatesymbols_4: 3823252512168545115
+      gatesymbols_40: 3116352716457485053
+      gatesymbols_41: 7676657090074674069
+      gatesymbols_5: -6854173466751264135
+      gatesymbols_6: 4087344597759862605
+      gatesymbols_7: -5934419570374884559
+      gatesymbols_8: -452210348231327159
+      gatesymbols_9: 4743138737583357572
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
